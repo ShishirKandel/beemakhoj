@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="BeemaKhoj">
+  <rect width="32" height="32" rx="8" fill="#14213D"/>
+  <path d="M16 5l9 3.4v6.6c0 5.2-3.6 9.2-9 11.4C10.6 24.2 7 20.2 7 15V8.4L16 5z" fill="#fff"/>
+  <path d="M16 5l9 3.4v6.6c0 5.2-3.6 9.2-9 11.4V5z" fill="#C8102E"/>
+  <circle cx="15.2" cy="14.4" r="3.4" fill="none" stroke="#E0A526" stroke-width="1.8"/>
+  <path d="M17.7 16.9l3.3 3.3" stroke="#E0A526" stroke-width="2" stroke-linecap="round"/>
+</svg>
