@@ -1,0 +1,346 @@
+{
+  "company": {
+    "id": "suryajyoti-life",
+    "name": "SuryaJyoti Life Insurance Company Limited",
+    "shortName": "SuryaJyoti Life",
+    "type": "life",
+    "established": 2022,
+    "website": "https://suryajyotilife.com/",
+    "phone": "01-4545941",
+    "tollFree": "16600160000",
+    "email": "info@suryajyotilife.com",
+    "headquarters": "Shanta Plaza, Gyaneshwor, Kathmandu",
+    "paidUpCapitalNPR": 5011947800,
+    "nepseSymbol": "SJLIC",
+    "mergerHistory": "Surya Life and Jyoti Life merged; joint operations as SuryaJyoti Life began on 22 Dec 2022 (7 Poush 2079). Established year shown is the merger date.",
+    "about": "SuryaJyoti Life was formed by merging Surya Life and Jyoti Life. It sells endowment, money-back, child, term and foreign-employment plans and offers a critical illness rider covering 35 illnesses.",
+    "highlights": [
+      "First merger among Nepal's life insurers",
+      "Paid-up capital about Rs 5.01 billion",
+      "Critical illness rider covers 35 illnesses up to Rs 5 million"
+    ],
+    "sources": [
+      "https://suryajyotilife.com/",
+      "https://en.beemapost.com/2025/03/7178/",
+      "https://beemaportal.com/best-life-insurance-companies/"
+    ],
+    "dataConfidence": "partial",
+    "claimSettlementRatio": 97.5,
+    "claimSettlementNote": "FY 2081/82, by amount: claims paid / (claims paid + claims outstanding), derived by Beema Portal from NIA Annual Report FY 2081/82 schedules 14-15 (NIA publishes no per-company ratio; year-end snapshot, excludes rejected claims). Third-party derived estimate."
+  },
+  "policies": [
+    {
+      "id": "suryajyoti-life-sahi-plan",
+      "companyId": "suryajyoti-life",
+      "name": "SuryaJyoti Sahi Plan (Term)",
+      "category": "term-life",
+      "summary": "Low-cost pure protection that pays your family a lump sum if you die during the term.",
+      "features": [
+        "Pure risk cover, no maturity payout",
+        "Very low premium for high cover",
+        "Flexible term",
+        "Optional riders"
+      ],
+      "benefits": [
+        "Death benefit: full sum assured to nominee"
+      ],
+      "exclusions": [
+        "Death by suicide within the first policy year",
+        "Claims arising from false or concealed information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 5,
+        "maxTerm": 30,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 3.5,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Young earners with loans or dependents"
+      ],
+      "sourceUrl": "https://suryajyotilife.com/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "suryajyoti-life-surakshit-bhawishya",
+      "companyId": "suryajyoti-life",
+      "name": "SuryaJyoti Surakshit Bhawishya Jeevan Beema (Endowment)",
+      "category": "endowment",
+      "summary": "Savings plus life cover that pays a lump sum with bonus at maturity or on earlier death.",
+      "features": [
+        "Participating plan with annual bonus",
+        "Life cover throughout the term",
+        "Loan facility against policy",
+        "Tax deduction on premium"
+      ],
+      "benefits": [
+        "Maturity: sum assured plus accrued bonus",
+        "Death: sum assured plus bonus"
+      ],
+      "exclusions": [
+        "Death by suicide within the first policy year",
+        "Claims arising from false or concealed information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 50,
+      "taxBenefit": true,
+      "bestFor": [
+        "Savers wanting disciplined 15-20 year savings"
+      ],
+      "sourceUrl": "https://suryajyotilife.com/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "suryajyoti-life-sawadhik",
+      "companyId": "suryajyoti-life",
+      "name": "SuryaJyoti Sawadhik Jeevan Beema (Whole Life Endowment)",
+      "category": "whole-life",
+      "summary": "Life cover with savings that continues to a high maturity age.",
+      "features": [
+        "Long cover period",
+        "Bonus participation",
+        "Loan facility",
+        "Premium paying term can be limited"
+      ],
+      "benefits": [
+        "Death: sum assured plus bonus",
+        "Maturity: sum assured plus bonus"
+      ],
+      "exclusions": [
+        "Death by suicide within the first policy year",
+        "Claims arising from false or concealed information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 80,
+        "minTerm": 10,
+        "maxTerm": 40,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 30,
+        "referenceTerm": 25
+      },
+      "bonusRatePer1000": 45,
+      "taxBenefit": true,
+      "bestFor": [
+        "People wanting long-term protection and legacy"
+      ],
+      "sourceUrl": "https://suryajyotilife.com/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "suryajyoti-life-dhanbridhi",
+      "companyId": "suryajyoti-life",
+      "name": "SuryaJyoti Dhanbridhi Jeevan Beema (Money Back)",
+      "category": "money-back",
+      "summary": "Get a share of the sum assured back at set intervals, plus a final payout at maturity.",
+      "features": [
+        "Periodic survival benefits",
+        "Life cover for full sum assured",
+        "Bonus on sum assured",
+        "Loan facility"
+      ],
+      "benefits": [
+        "Survival benefit at fixed intervals",
+        "Maturity: balance plus bonus",
+        "Death: full sum assured plus bonus"
+      ],
+      "exclusions": [
+        "Death by suicide within the first policy year",
+        "Claims arising from false or concealed information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 70,
+        "minTerm": 15,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 65,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 50,
+      "taxBenefit": true,
+      "bestFor": [
+        "Families needing cash at milestones like education"
+      ],
+      "sourceUrl": "https://suryajyotilife.com/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "suryajyoti-life-naulo-baal",
+      "companyId": "suryajyoti-life",
+      "name": "SuryaJyoti Naulo Baal Jeevan Beema (Child Plan)",
+      "category": "child-plan",
+      "summary": "Builds a fund for a child's education or marriage with parent premium waiver.",
+      "features": [
+        "Parent is the proposer",
+        "Premium waiver on parent's death",
+        "Benefits timed for child's milestones"
+      ],
+      "benefits": [
+        "Maturity or milestone payouts for the child",
+        "Death of child: as per policy terms"
+      ],
+      "exclusions": [
+        "Death by suicide within the first policy year",
+        "Claims arising from false or concealed information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 50,
+        "maxMaturityAge": 25,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 55,
+        "referenceTerm": 18
+      },
+      "bonusRatePer1000": 45,
+      "taxBenefit": true,
+      "bestFor": [
+        "Parents planning for children's education"
+      ],
+      "sourceUrl": "https://suryajyotilife.com/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "suryajyoti-life-baideshik-rojgar",
+      "companyId": "suryajyoti-life",
+      "name": "SuryaJyoti Baideshik Rojgar Jeevan Beema (Foreign Employment)",
+      "category": "foreign-employment",
+      "summary": "Term cover for Nepalis working abroad, protecting family against death during employment.",
+      "features": [
+        "Short-term cover for contract period",
+        "Accidental death cover",
+        "Low premium"
+      ],
+      "benefits": [
+        "Death benefit to nominee"
+      ],
+      "exclusions": [
+        "Death by suicide within the first policy year",
+        "Claims arising from false or concealed information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 60,
+        "minTerm": 1,
+        "maxTerm": 5,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 6,
+        "referenceTerm": 3
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Migrant workers going abroad"
+      ],
+      "sourceUrl": "https://suryajyotilife.com/",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

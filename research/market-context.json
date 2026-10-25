@@ -1,0 +1,170 @@
+{
+  "asOf": "2026-10",
+  "researchNote": "Compiled from web search snippets (Khalti, Beema Post, Sharesansar, Republica, Kathmandu Post, HIB, MetLife Nepal NIA listing, Surya Jyoti Life). WebFetch of several pages failed (HTTP 502), so many figures are secondary-source and flagged estimate:true. Verify against nia.gov.np, ird.gov.np, hib.gov.np before publishing as fact.",
+  "regulator": {
+    "name": "Nepal Insurance Authority (NIA)",
+    "nameNe": "नेपाल बीमा प्राधिकरण",
+    "website": "https://nia.gov.np",
+    "complaintHotline": "1660-01-56789 (toll-free; listed on a third-party page, verify on nia.gov.np)",
+    "complaintHotlineEstimate": true,
+    "about": "NIA (formerly Beema Samiti / Insurance Board) licenses and supervises all life, non-life, reinsurance and micro insurers, agents and surveyors under the Insurance Act 2079. It receives complaints about insurers and claim delays; complaints can be filed through the grievance form on its website, in person at the registration branch at Kupandole, Lalitpur, or by email/post, with policy number, claim number and evidence."
+  },
+  "taxBenefits": [
+    { "type": "Life insurance premium deduction (individual)", "limitNPR": 40000, "estimate": true, "note": "Lower of actual premium or cap, deducted from taxable income. Some sources say Rs 40,000 is a combined ceiling for life and health together; one older source says Rs 20,000 for life. Confirm with Inland Revenue Department / current Finance Act." },
+    { "type": "Health insurance premium deduction (individual)", "limitNPR": 20000, "estimate": true, "note": "Lower of actual premium or Rs 20,000 per several sources; a 2025 news report describes a combined Rs 40,000 ceiling for life plus health. Verify." },
+    { "type": "Residential building insurance premium deduction", "limitNPR": 5000, "estimate": true, "note": "Resident owner insuring a private building with a resident insurer: lower of actual premium or Rs 5,000 (FY 2022/23 tax-rate document). Reports on the FY 2083/84 budget mention this rising to Rs 10,000; not confirmed in an official text." }
+  ],
+  "motorThirdPartyTariff": [
+    { "vehicle": "Motorcycle / scooter", "ccBand": "Up to 150cc", "annualPremiumNPR": 1706, "estimate": true, "coverNote": "Retailer (Khalti/Himalayan Everest) price, likely incl. VAT; undated. Third-party liability roughly Rs 5 lakh per death and Rs 3 lakh per injured person." },
+    { "vehicle": "Motorcycle / scooter", "ccBand": "151-249cc", "annualPremiumNPR": 1932, "estimate": true, "coverNote": "Same source and caveats as above." },
+    { "vehicle": "Motorcycle / scooter", "ccBand": "250cc and above", "annualPremiumNPR": 2158, "estimate": true, "coverNote": "Same source and caveats as above." },
+    { "vehicle": "Private car", "ccBand": "Up to 1000cc", "annualPremiumNPR": 5500, "estimate": true, "coverNote": "Rough estimate only; no verified NIA schedule found. Check the insurer quote." },
+    { "vehicle": "Private car", "ccBand": "1001-1500cc", "annualPremiumNPR": 6500, "estimate": true, "coverNote": "Rough estimate only; no verified NIA schedule found." },
+    { "vehicle": "Private car", "ccBand": "Above 1500cc", "annualPremiumNPR": 8500, "estimate": true, "coverNote": "Rough estimate only; no verified NIA schedule found." }
+  ],
+  "motorTariffNote": "Third-party motor cover has been mandatory since 2009. Premiums are set by the regulator's motor directive (Motor Bimaadar Sambandhi Nirdeshika 2073 and updates), plus stamp duty and 13% VAT; no-claim discount applies. No official 2082/83 table could be retrieved.",
+  "motorComprehensiveRate": {
+    "ratePercentOfValueTypical": 2.5,
+    "estimate": true,
+    "note": "Typically about 1.5-3.5% of insured vehicle value per year for private vehicles, depending on age, make and add-ons (zero-depreciation, natural calamity, terrorism/riot cover). Deductible/excess applies. Estimate; get quotes."
+  },
+  "governmentHealthInsurance": {
+    "name": "Social Health Insurance Programme (Health Insurance Board, hib.gov.np)",
+    "premiumPerFamilyNPR": 3500,
+    "coverNPR": 100000,
+    "estimate": true,
+    "note": "Per HIB 2075/76 report: Rs 3,500 per year for a family of up to 5, Rs 700 per extra member; cover Rs 100,000 per family (extra Rs 20,000 per added member up to Rs 200,000; extra Rs 100,000 for elderly or chronic disease). Full subsidy for ultra-poor and listed diseases, and for people over 70. A January 2025 task force proposed a progressive premium system and a rise toward Rs 7,000-15,000; adoption not confirmed. HIB faces a reported funding gap. Verify current rates at hib.gov.np."
+  },
+  "foreignEmploymentInsurance": {
+    "mandatory": true,
+    "typicalCoverNPR": 1000000,
+    "typicalPremiumNPR": 6500,
+    "estimate": true,
+    "note": "Insurance is mandatory for workers going abroad via formal channels. 2019 reporting: minimum premium Rs 3,900-9,000 by age plus Rs 1,500 to the welfare fund, with about Rs 500,000 cover; a Rs 10 lakh cover and the current premium could not be confirmed. Agent commissions were removed. Some insurers sell digitally via eSewa using passport number. Verify with Foreign Employment Board / NIA."
+  },
+  "agricultureInsurance": {
+    "subsidyPercent": 80,
+    "estimate": true,
+    "note": "Government subsidises crop and livestock premiums. Long-standing rate was 75%; a notice reported from Kartik 2081 gives tiered subsidy of 80% (sum insured up to Rs 5 million), 65% (Rs 5-10 million), 50% (above Rs 10 million). Insurers have complained of delayed subsidy payments. Verify with the Ministry of Agriculture and Livestock Development."
+  },
+  "marketStats": {
+    "lifeInsurers": 14,
+    "nonLifeInsurers": 14,
+    "microInsurers": 4,
+    "insurancePenetrationPercent": 3.5,
+    "year": "2025/26",
+    "estimate": true,
+    "note": "Counts are estimates: older sources (2019) listed 19 life and 20 non-life insurers; mergers since reduced the number, and one reinsurer (Nepal Re) exists. Four micro non-life insurers wrote about Rs 1.10 billion premium in the first ten months of FY 2025/26. Penetration figures in sources conflict (18% of population covered by policy count vs about 3-4% of GDP in premium terms); the figure here is a GDP-premium estimate. Verify against the NIA annual report."
+  },
+  "claimProcess": {
+    "life": [
+      "Inform the insurer (branch or agent) in writing as soon as possible after the death or event.",
+      "Collect the original policy bond, premium receipts and the nominee's citizenship/ID.",
+      "Get the death certificate from the local ward office, plus a medical certificate and cause-of-death report from the hospital or doctor.",
+      "Fill in the claim form; attach police report/post-mortem if death was accidental or unnatural.",
+      "Submit all documents and keep acknowledged copies and a claim number.",
+      "Insurer investigates (usually within the legal time limit); answer queries promptly.",
+      "Payment is made by bank transfer to the nominee. If delayed or rejected unfairly, escalate to the insurer's grievance officer and then to NIA."
+    ],
+    "health": [
+      "For hospitalisation, show the insurance card/policy at a network hospital for cashless treatment; otherwise pay and claim reimbursement.",
+      "Inform the insurer within the time stated in the policy (often 24-48 hours for emergencies, in advance for planned treatment).",
+      "Keep discharge summary, itemised bills, original receipts, prescriptions and lab reports.",
+      "Submit the claim form with documents (usually within 15-30 days of discharge).",
+      "Insurer or TPA reviews, may ask for more information, and approves a reimbursement amount after deductions/co-pay.",
+      "Payment goes to your bank account. Complain to NIA if unreasonably rejected or delayed. For HIB scheme, treatment is at listed health facilities with the HIB card."
+    ],
+    "motor": [
+      "Do not move the vehicle unnecessarily; take photos and inform the insurer immediately.",
+      "For injury, death or third-party damage, report to the Traffic Police / nearest police and get the report (mandatory for third-party and theft claims).",
+      "Submit claim form with policy, bluebook (registration), driving licence, police report and photos.",
+      "Insurer appoints a licensed surveyor to inspect the damage and assess the loss.",
+      "Repair at an approved or agreed workshop; surveyor approves the estimate and final bill.",
+      "Pay the deductible/excess; the insurer pays the workshop or reimburses you. Third-party injury or death claims are settled with the victim or family under the policy limits."
+    ]
+  },
+  "glossary": [
+    { "term": "Premium", "termNe": "बीमा शुल्क (प्रिमियम)", "meaning": "The money you pay the insurer (monthly, quarterly or yearly) to keep your policy active." },
+    { "term": "Sum assured", "termNe": "बीमाङ्क रकम", "meaning": "The fixed amount the insurer promises to pay on death or maturity of a life policy." },
+    { "term": "Bonus", "termNe": "बोनस", "meaning": "A share of the insurer's profit added to participating life policies, paid with the sum assured at maturity or death." },
+    { "term": "Maturity", "termNe": "परिपक्वता", "meaning": "The end of the policy term when the insurer pays the maturity benefit if you are alive." },
+    { "term": "Surrender value", "termNe": "समर्पण मूल्य", "meaning": "The money you get back if you stop a life policy early, after the minimum years of premium payment." },
+    { "term": "Nominee", "termNe": "हकवाला / मनोनीत व्यक्ति", "meaning": "The person you name to receive the claim money if you die." },
+    { "term": "Rider", "termNe": "राइडर (थप सुविधा)", "meaning": "An optional add-on cover such as accidental death or critical illness attached to your base policy for extra premium." },
+    { "term": "Third-party insurance", "termNe": "तेस्रो पक्ष बीमा", "meaning": "Mandatory vehicle insurance that pays for injury, death or damage you cause to other people or their property, not for your own vehicle." },
+    { "term": "Comprehensive insurance", "termNe": "व्यापक बीमा", "meaning": "Motor cover that includes your own vehicle damage and theft as well as third-party liability." },
+    { "term": "Deductible (excess)", "termNe": "कटौती रकम", "meaning": "The part of a claim you pay yourself before the insurer pays the rest." },
+    { "term": "No Claim Discount (NCD)", "termNe": "दावी नगरेको छुट", "meaning": "A discount on next year's motor premium if you made no claim in the previous year." },
+    { "term": "Endowment policy", "termNe": "सावधिक बीमालेख (इन्डाउमेन्ट)", "meaning": "A life policy that pays a lump sum on death during the term or on survival at maturity, combining savings and protection." },
+    { "term": "Term insurance", "termNe": "अवधिगत बीमा (टर्म)", "meaning": "Pure protection life cover for a fixed period with low premium and no payout if you survive the term." },
+    { "term": "Grace period", "termNe": "छुट अवधि", "meaning": "Extra days after the premium due date during which you can still pay without the policy lapsing." },
+    { "term": "Free-look period", "termNe": "पुनरावलोकन अवधि", "meaning": "A short window after you receive the policy to read it and cancel for a refund if you disagree with the terms." },
+    { "term": "Lapse", "termNe": "बीमालेख खारेज (ल्याप्स)", "meaning": "When a policy stops because premiums were not paid; it may be revived within a set time." },
+    { "term": "Revival", "termNe": "पुनर्जीवन", "meaning": "Restarting a lapsed life policy by paying overdue premiums with penalty and sometimes a health check." },
+    { "term": "Claim", "termNe": "दावी", "meaning": "Your formal request to the insurer to pay under the policy after a covered event." },
+    { "term": "Policy document / bond", "termNe": "बीमालेख", "meaning": "The contract that lists what is covered, excluded and the amounts and conditions." },
+    { "term": "Exclusion", "termNe": "बहिष्करण", "meaning": "Situations or conditions the policy does not cover, such as pre-existing diseases for an initial waiting period." },
+    { "term": "Waiting period", "termNe": "प्रतीक्षा अवधि", "meaning": "Time after buying a health policy before certain illnesses become claimable." },
+    { "term": "Co-payment", "termNe": "सह-भुक्तानी", "meaning": "A percentage of each health bill you share with the insurer." },
+    { "term": "Surveyor", "termNe": "सर्भेयर (क्षति मूल्याङ्कनकर्ता)", "meaning": "A licensed expert who inspects and assesses the loss on a non-life claim." },
+    { "term": "Insurable interest", "termNe": "बीमायोग्य हित", "meaning": "You must stand to suffer a real loss to buy cover, for example, you can insure your own house or a close family member." },
+    { "term": "Micro insurance", "termNe": "लघु बीमा", "meaning": "Low-premium, small-cover policies designed for low-income people, farmers and small businesses." },
+    { "term": "Agent", "termNe": "बीमा अभिकर्ता", "meaning": "A licensed person who sells policies on behalf of an insurer and earns a commission." }
+  ],
+  "faqs": [
+    { "q": "Is vehicle insurance compulsory in Nepal?", "a": "Yes. Third-party insurance is mandatory for every registered vehicle, and you need it to renew the bluebook and road permit. Comprehensive cover is optional but recommended for your own vehicle." },
+    { "q": "What is the difference between third-party and comprehensive vehicle insurance?", "a": "Third-party pays for harm you cause to other people and their property. Comprehensive also covers damage or theft of your own vehicle." },
+    { "q": "How much tax can I save with life insurance?", "a": "Premiums paid are deductible from taxable income up to a yearly cap (reported as Rs 40,000 for life and health, though sources differ). Check the current Finance Act or the Inland Revenue Department." },
+    { "q": "What happens if I miss a premium payment?", "a": "You normally have a grace period to pay. After that the policy can lapse, but you can often revive it by paying the arrears with penalty within the allowed time." },
+    { "q": "Who gets the money if I die?", "a": "Your nominee named in the policy. Keep the nominee updated after marriage, birth or other life changes, and tell your family where the policy is." },
+    { "q": "Is life insurance a good savings plan?", "a": "Endowment plans combine savings and cover but usually return less than other investments if you stop early. If you only want protection for your family, term insurance is cheaper. Choose by your goal." },
+    { "q": "Can I cancel a policy after buying it?", "a": "Yes, within the free-look period you can return it for a refund (minus small charges). After that, ending a life policy early gives only the surrender value, which can be less than you paid." },
+    { "q": "What is the government health insurance scheme?", "a": "The Health Insurance Board runs a social scheme where a family pays a small yearly premium (about Rs 3,500 for up to 5 members, check current rates) for treatment cover up to about Rs 100,000 at listed hospitals." },
+    { "q": "Does health insurance cover diseases I already have?", "a": "Usually not immediately. Pre-existing illnesses often have a waiting period or exclusion. Always disclose them honestly when applying." },
+    { "q": "Is foreign employment insurance mandatory?", "a": "Yes. Workers going abroad through formal channels must buy it, and it pays for death, disability and some other losses. Keep your policy number with your family." },
+    { "q": "Are crops and livestock insured in Nepal?", "a": "Yes. Crop and livestock insurance is available with a large government premium subsidy (about 75-80%). Ask your local agriculture office or an insurer." },
+    { "q": "What if my claim is rejected or delayed?", "a": "First write to the insurer's grievance officer and ask for the reason in writing. If unresolved, complain to the Nepal Insurance Authority with policy number, claim number and documents." },
+    { "q": "How do I know an insurer or agent is genuine?", "a": "Only buy from insurers licensed by NIA and agents with a valid licence. Check the NIA website, pay premiums to the company account (not personal accounts), and always get an official receipt." },
+    { "q": "Do I need to pay VAT or stamp duty on premiums?", "a": "Non-life premiums carry 13% VAT and a small stamp duty. Life insurance is generally not charged VAT. Quotes should show the total, so ask for the final amount." },
+    { "q": "Can I compare plans online before buying?", "a": "Yes. Compare cover, exclusions, claim settlement record and total cost, not just the lowest price. Read the policy document before paying." },
+    { "q": "Will a claim reduce my motor no-claim discount?", "a": "Making a comprehensive claim usually loses the NCD on renewal. For small damages you may prefer to pay yourself, which is worth comparing." }
+  ],
+  "tips": [
+    "Decide the purpose first: protection (term), savings (endowment), health, or vehicle, then compare plans for that purpose only.",
+    "Compare at least three insurers on total premium, cover, exclusions and claim-settlement record, not only the price.",
+    "Buy term or protection cover large enough for your family, roughly 10-15 times annual income, before adding savings plans.",
+    "Read the policy document and exclusions before paying; use the free-look period if something is unclear.",
+    "Disclose your health, smoking, occupation and existing policies honestly; hiding facts can lead to claim rejection.",
+    "Name a nominee, keep details updated, and tell your family where the policy papers are.",
+    "Pay premiums on time, set reminders or auto-debit, and use the grace period only for emergencies.",
+    "Avoid stopping a life policy early; surrender value in the first years is often much lower than what you paid.",
+    "Pay only through official company channels and get an official receipt; never pay an agent personally into a private account.",
+    "For vehicles, choose comprehensive cover for newer or valuable vehicles and add zero-depreciation or natural-calamity cover if affordable.",
+    "Use the tax deduction: keep premium receipts and claim the allowed life, health and building insurance deductions.",
+    "Check hospital network, room-rent limits, waiting periods and co-pay before buying health insurance.",
+    "Renew policies before expiry; a gap can void cover or lose your no-claim discount.",
+    "After any loss, report to the insurer and police quickly and keep photos, bills and receipts."
+  ],
+  "sources": [
+    "https://nia.gov.np",
+    "https://nia.gov.np/grievence-handling",
+    "https://hib.gov.np",
+    "https://hib.gov.np/public/uploads/shares/notice_hib/health_insurance_report_2075-76.pdf",
+    "https://www.ird.gov.np",
+    "https://blog.khalti.com/home/third-party-vehicle-insurance-service/",
+    "https://nepalmicro.com/en/premiumcalculator",
+    "https://en.beemapost.com/2025/07/10469/",
+    "https://www.suryajyotilife.com/blog/tax-benefits-of-life-insurance-in-nepal",
+    "https://en.beemapost.com/2026/05/13624/",
+    "https://en.beemapost.com/2025/01/5784/",
+    "https://www.sharesansar.com/newsdetail/insurance-penetration-in-nepal-as-of-falgun-2075-at-18-2009-branches-of-insurance-companies-contributing-26-of-gdp",
+    "https://kathmandupost.com/national/2019/12/22/insurance-firms-overcharge-migrant-workers-over-premium-duration",
+    "https://thehimalayantimes.com/business/ib-bars-commission-foreign-employment-insurance-policies",
+    "https://en.beemapost.com/2024/12/5266/",
+    "https://nepsetrading.com/news/government-disburses-npr-630-billion-in-agricultural-and-livestock-insurance-subsidies-over-12-years?lang=en",
+    "https://rbcl.gov.np/services/micro-insurance",
+    "https://www.metlife.com.np/en/support/aml-cft/",
+    "https://english.ratopati.com/story/69914/authority-calls-for-complaints-if-there-is-a-problem-with-insurance-claim-payment",
+    "https://myrepublica.nagariknetwork.com/news/dont-charge-more-than-agreed-premium-ib-says-insurers"
+  ]
+}

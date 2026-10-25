@@ -1,0 +1,292 @@
+{
+  "company": {
+    "id": "national-insurance",
+    "name": "National Insurance Company Limited",
+    "shortName": "National Insurance",
+    "type": "nonlife",
+    "established": 1974,
+    "headquarters": "KKM Building (2nd Floor), Tripureshwor, Kathmandu",
+    "website": "https://nicnepal.com.np",
+    "phone": "01-5360366, 01-5345045, 01-5354146, 01-5366681",
+    "email": "info@nicnepal.com.np",
+    "mergerHistory": "Not merged. Operates in Nepal as a branch of National Insurance Company Limited, India (founded 1906 in Kolkata).",
+    "about": "National Insurance Nepal is the Nepal branch of India's oldest general insurer. It offers property, vehicle, marine, engineering, personal accident and group mediclaim insurance.",
+    "highlights": [
+      "Branch of India's oldest general insurer (est. 1906)",
+      "Product range from the official site: property, vehicle, marine, engineering, cash-in-transit, group mediclaim, overseas mediclaim, personal accident",
+      "Website notes Nepal start as 1959 in one place and 1974 in another; 1974 used here"
+    ],
+    "sources": [
+      "https://nicnepal.com.np",
+      "https://nicnepal.com.np/contact-us"
+    ],
+    "dataConfidence": "partial"
+  },
+  "policies": [
+    {
+      "id": "national-insurance-motor-bike",
+      "companyId": "national-insurance",
+      "sourceUrl": "https://nicnepal.com.np",
+      "dataConfidence": "partial",
+      "name": "Motor Bike Insurance",
+      "category": "motor-bike",
+      "summary": "Covers your motorbike or scooter against accident damage, theft and third-party liability.",
+      "features": [
+        "Third-party liability cover as per NIA tariff",
+        "Optional comprehensive own-damage cover",
+        "Theft and fire cover (comprehensive)",
+        "Claims through nearest branch"
+      ],
+      "benefits": [
+        "Third-party death/injury and property damage compensation",
+        "Repair cost of own bike in comprehensive plan"
+      ],
+      "exclusions": [
+        "Driving without valid licence",
+        "Drunk driving",
+        "Wear and tear"
+      ],
+      "riders": [
+        "Pillion rider cover",
+        "Natural disaster cover"
+      ],
+      "eligibility": {},
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 1500,
+        "coverAmount": 1000000,
+        "note": "Third-party premium for bikes under 150cc (about NPR 1,500 before tax, per an older NIA directive; 150-250cc about 1,700). Comprehensive priced by vehicle value."
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Everyday bike and scooter owners"
+      ],
+      "nameNe": "मोटरसाइकल बीमा"
+    },
+    {
+      "id": "national-insurance-private-car",
+      "companyId": "national-insurance",
+      "sourceUrl": "https://nicnepal.com.np",
+      "dataConfidence": "partial",
+      "name": "Vehicle Insurance (Private Car)",
+      "category": "motor-car",
+      "summary": "Protects your private car against accidents, theft, fire and damage to others.",
+      "features": [
+        "Comprehensive own-damage cover",
+        "Third-party liability per NIA tariff",
+        "Theft and fire cover",
+        "Cashless-style repair at partner garages where available"
+      ],
+      "benefits": [
+        "Repair or replacement cost up to insured value",
+        "Third-party injury and property compensation"
+      ],
+      "exclusions": [
+        "Driving under influence",
+        "Wear and tear",
+        "Use outside permitted purpose"
+      ],
+      "riders": [
+        "Natural disaster cover",
+        "Strike, riot and terrorism cover",
+        "Zero depreciation (where offered)"
+      ],
+      "eligibility": {},
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 2,
+        "minPremium": 12000
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Private car owners"
+      ]
+    },
+    {
+      "id": "national-insurance-group-mediclaim",
+      "companyId": "national-insurance",
+      "sourceUrl": "https://nicnepal.com.np",
+      "dataConfidence": "partial",
+      "category": "health",
+      "summary": "Reimburses hospital bills for illness or injury up to the sum insured.",
+      "features": [
+        "Hospitalisation cover",
+        "Pre and post hospitalisation costs",
+        "Day-care procedures",
+        "Group or individual enrolment"
+      ],
+      "benefits": [
+        "Reimbursement of hospital expenses up to sum insured",
+        "Room and doctor fee coverage within limits"
+      ],
+      "exclusions": [
+        "Pre-existing conditions during waiting period",
+        "Cosmetic treatment",
+        "Maternity unless added"
+      ],
+      "riders": [
+        "Maternity cover",
+        "Critical illness add-on"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "health-bands",
+        "bands": [
+          {
+            "sumInsured": 200000,
+            "annualPremiumAge30": 4500
+          },
+          {
+            "sumInsured": 500000,
+            "annualPremiumAge30": 9000
+          },
+          {
+            "sumInsured": 1000000,
+            "annualPremiumAge30": 15000
+          }
+        ]
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Individuals and families wanting hospital cover"
+      ],
+      "name": "National Group Mediclaim Insurance"
+    },
+    {
+      "id": "national-insurance-overseas-mediclaim",
+      "companyId": "national-insurance",
+      "sourceUrl": "https://nicnepal.com.np",
+      "dataConfidence": "partial",
+      "name": "Overseas Mediclaim Insurance",
+      "category": "travel",
+      "summary": "Covers medical emergencies and trip problems while travelling abroad.",
+      "features": [
+        "Overseas hospitalisation cover",
+        "Emergency evacuation",
+        "Baggage and passport loss (varies)"
+      ],
+      "benefits": [
+        "Medical costs abroad up to cover amount",
+        "Emergency assistance"
+      ],
+      "exclusions": [
+        "Pre-existing conditions",
+        "Adventure sports unless added"
+      ],
+      "riders": [
+        "Trip cancellation"
+      ],
+      "eligibility": {
+        "minEntryAge": 1,
+        "maxEntryAge": 70
+      },
+      "premiumModes": [
+        "single"
+      ],
+      "pricing": {
+        "model": "per-day",
+        "perDayPremium": 150,
+        "coverAmount": 5000000
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Students, tourists and business travellers abroad"
+      ]
+    },
+    {
+      "id": "national-insurance-personal-accident",
+      "companyId": "national-insurance",
+      "sourceUrl": "https://nicnepal.com.np",
+      "dataConfidence": "partial",
+      "name": "Personal Accident Insurance",
+      "category": "personal-accident",
+      "summary": "Pays a lump sum if you die or are disabled because of an accident.",
+      "features": [
+        "Accidental death cover",
+        "Permanent disability cover",
+        "Medical expense reimbursement option"
+      ],
+      "benefits": [
+        "Lump sum on accidental death",
+        "Percentage of sum insured on disability"
+      ],
+      "exclusions": [
+        "Self-inflicted injury",
+        "Intoxication",
+        "Hazardous sports"
+      ],
+      "riders": [
+        "Temporary disability weekly benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 1500,
+        "coverAmount": 1000000,
+        "note": "Indicative premium"
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Frequent travellers and workers"
+      ]
+    },
+    {
+      "id": "national-insurance-property",
+      "companyId": "national-insurance",
+      "sourceUrl": "https://nicnepal.com.np",
+      "dataConfidence": "partial",
+      "name": "Property Insurance",
+      "category": "home",
+      "summary": "Covers your house, shop or contents against fire, earthquake and other listed risks.",
+      "features": [
+        "Fire and lightning cover",
+        "Earthquake, flood and landslide add-ons",
+        "Building and contents options"
+      ],
+      "benefits": [
+        "Repair or rebuild cost up to sum insured"
+      ],
+      "exclusions": [
+        "War and nuclear risks",
+        "Wear and tear",
+        "Intentional damage"
+      ],
+      "riders": [
+        "Earthquake",
+        "Flood and landslide",
+        "Burglary"
+      ],
+      "eligibility": {},
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 0.15,
+        "minPremium": 2000
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Home and shop owners"
+      ]
+    }
+  ]
+}

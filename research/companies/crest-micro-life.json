@@ -1,0 +1,176 @@
+{
+  "company": {
+    "id": "crest-micro-life",
+    "name": "Crest Micro Life Insurance Limited",
+    "shortName": "Crest Micro Life",
+    "type": "micro-life",
+    "established": 2023,
+    "headquarters": "Surkhet (head office); registered office Sanepa, Lalitpur",
+    "website": "https://cmli.com.np/",
+    "paidUpCapitalNPR": 525000000,
+    "about": "Crest Micro Life is a newer micro life insurer licensed in 2023 that offers low-cost life cover to lower-income households. Its business so far is mostly term-style and credit-linked cover sold through institutions such as microfinance lenders.",
+    "highlights": [
+      "Licensed in 2080 BS (2023)",
+      "Went public with an IPO in early 2025",
+      "Himalayan Reinsurance is a major shareholder",
+      "Business is mostly term and credit-linked cover"
+    ],
+    "sources": [
+      "https://www.sharesansar.com/newsdetail/things-to-know-before-applying-for-ipo-of-crest-micro-life-insurance-ipo-opens-today-for-foreign-nepalese-immigrants-2025-01-28",
+      "https://www.beemapost.com/wp-content/uploads/2025/08/A.1259-Crest-Micro-Life-Insurance-Limited_Issuer-Rating-Surveillance_August-2025_final.pdf",
+      "https://cmli.com.np/"
+    ],
+    "dataConfidence": "partial"
+  },
+  "policies": [
+    {
+      "id": "crest-micro-life-samriddhi-laghu-jeevan",
+      "companyId": "crest-micro-life",
+      "name": "Samriddhi Laghu Life Insurance Scheme",
+      "category": "endowment",
+      "summary": "A small savings-plus-cover plan for low-income families, starting from small sums assured.",
+      "features": [
+        "Entry age 18 to 60",
+        "Term of 5 to 20 years",
+        "Small sums assured suited to micro-insurance",
+        "Premiums can be paid in instalments"
+      ],
+      "benefits": [
+        "Lump sum paid if the insured dies during the term",
+        "Sum assured with bonus paid on maturity"
+      ],
+      "exclusions": [
+        "Suicide within the first year of the policy",
+        "Death from war, riots or criminal acts by the insured"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver on disability"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 5,
+        "maxTerm": 20,
+        "minSumAssured": 50000,
+        "maxSumAssured": 500000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 15
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Low-income families building small savings"
+      ],
+      "sourceUrl": "https://www.sharesansar.com/newsdetail/crest-micro-life-insurance-launches-micro-insurance-scheme-to-support-marginalized-communities-2024-07-05",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "crest-micro-life-micro-term-life",
+      "companyId": "crest-micro-life",
+      "name": "Micro Term Life Insurance",
+      "category": "term-life",
+      "summary": "Pure low-cost cover that pays your family if you die during the term.",
+      "features": [
+        "Very low premium, no savings part",
+        "Suited to group and credit-linked cover",
+        "Simple application"
+      ],
+      "benefits": [
+        "Sum assured paid to family on death during the term"
+      ],
+      "exclusions": [
+        "Suicide within the first year",
+        "Death from war or criminal acts by the insured"
+      ],
+      "riders": [
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 65,
+        "minTerm": 1,
+        "maxTerm": 20,
+        "minSumAssured": 50000,
+        "maxSumAssured": 500000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 4,
+        "referenceTerm": 10
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Borrowers and low-income earners wanting cheap protection"
+      ],
+      "sourceUrl": "https://cmli.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "crest-micro-life-sana-bachat-laghu",
+      "companyId": "crest-micro-life",
+      "name": "Small Savings Micro Plan (Prosperity Advance)",
+      "category": "endowment",
+      "summary": "A micro plan with sums assured of NPR 50,000 to 500,000 launched in late 2024.",
+      "features": [
+        "Sum assured NPR 50,000 to 500,000",
+        "Designed for marginalised communities",
+        "Regular premium payment"
+      ],
+      "benefits": [
+        "Death benefit during the term",
+        "Maturity benefit at end of term"
+      ],
+      "exclusions": [
+        "Suicide within the first year of the policy",
+        "Death from war, riots or criminal acts by the insured"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver on disability"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 5,
+        "maxTerm": 20,
+        "minSumAssured": 50000,
+        "maxSumAssured": 500000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 15
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Households wanting a first savings-linked cover"
+      ],
+      "sourceUrl": "https://www.sharesansar.com/newsdetail/crest-micro-life-insurance-introduces-innovative-micro-insurance-plan-to-support-marginalized-communities-2024-11-21",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

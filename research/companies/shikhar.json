@@ -1,0 +1,328 @@
+{
+  "company": {
+    "id": "shikhar",
+    "name": "Shikhar Insurance Company Limited",
+    "shortName": "Shikhar",
+    "type": "nonlife",
+    "established": 2004,
+    "headquarters": "Shikhar Biz Centre, Thapathali, Kathmandu",
+    "website": "https://shikharinsurance.com",
+    "phone": "01-5346101",
+    "email": "sales@shikharinsurance.com",
+    "branches": 96,
+    "nepseSymbol": "SICL",
+    "mergerHistory": "Not merged.",
+    "about": "Shikhar Insurance is a Kathmandu-based non-life insurer that began operating in 2004. It sells motor, health, accident, travel and property cover through branches across Nepal.",
+    "highlights": [
+      "About 14% of general insurance gross premium in FY2019 per Sharesansar (older figure)",
+      "Listed on NEPSE as SICL",
+      "Separate claim lines for private, commercial vehicles and motorcycles"
+    ],
+    "sources": [
+      "https://shikharinsurance.com/products",
+      "https://www.sharesansar.com/newsdetail/know-the-financial-performance-of-leading-non-life-insurance-company-of-nepal-shikhar-insurance-company-limited"
+    ],
+    "dataConfidence": "partial"
+  },
+  "policies": [
+    {
+      "id": "shikhar-health",
+      "companyId": "shikhar",
+      "name": "Shikhar Health Insurance",
+      "category": "health",
+      "summary": "Covers hospital bills for illness and accidents, up to your chosen sum insured.",
+      "features": [
+        "Hospitalisation cover",
+        "Pre and post hospitalisation costs",
+        "Cashless at network hospitals (check list)",
+        "Annual renewable policy"
+      ],
+      "benefits": [
+        "Reimbursement of eligible hospital expenses",
+        "Room, surgery and medicine costs"
+      ],
+      "exclusions": [
+        "Pre-existing conditions in the waiting period",
+        "Cosmetic treatment",
+        "Self-inflicted injury"
+      ],
+      "riders": [
+        "Critical illness add-on",
+        "Maternity add-on"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "health-bands",
+        "bands": [
+          {
+            "sumInsured": 200000,
+            "annualPremiumAge30": 4500
+          },
+          {
+            "sumInsured": 500000,
+            "annualPremiumAge30": 9000
+          },
+          {
+            "sumInsured": 1000000,
+            "annualPremiumAge30": 15000
+          }
+        ]
+      },
+      "bestFor": [
+        "Individuals and families wanting hospital cover"
+      ],
+      "sourceUrl": "https://shikharinsurance.com/products",
+      "dataConfidence": "estimated",
+      "taxBenefit": true
+    },
+    {
+      "id": "shikhar-personal-accident",
+      "companyId": "shikhar",
+      "name": "Shikhar Personal Accident Insurance",
+      "category": "personal-accident",
+      "summary": "Pays a lump sum if you die or are disabled in an accident.",
+      "features": [
+        "Accidental death cover",
+        "Permanent disability cover",
+        "Medical expenses after accident",
+        "Covers 24 hours a day"
+      ],
+      "benefits": [
+        "Death benefit to nominee",
+        "Disability benefit as per schedule"
+      ],
+      "exclusions": [
+        "Self-harm",
+        "War and riot (unless added)",
+        "Intoxicated driving"
+      ],
+      "riders": [
+        "Temporary disability weekly benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 1500,
+        "coverAmount": 1000000,
+        "note": "Indicative; varies by cover and occupation"
+      },
+      "bestFor": [
+        "Daily commuters and workers"
+      ],
+      "sourceUrl": "https://shikharinsurance.com/products",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "shikhar-motor-bike",
+      "companyId": "shikhar",
+      "name": "Shikhar Motorcycle Insurance",
+      "category": "motor-bike",
+      "summary": "Third-party and own-damage cover for your motorbike or scooter.",
+      "features": [
+        "Third-party liability at NIA tariff",
+        "Own-damage option (comprehensive)",
+        "Theft and fire cover",
+        "Claim lines for motorcycles"
+      ],
+      "benefits": [
+        "Third-party injury and property damage",
+        "Repair cost of your bike (comprehensive)"
+      ],
+      "exclusions": [
+        "Driving without licence",
+        "Wear and tear",
+        "Drunk driving"
+      ],
+      "riders": [
+        "Pillion rider cover",
+        "Driver accident cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 2100,
+        "coverAmount": 1000000,
+        "note": "Indicative third-party, 150cc-250cc bike; follows NIA tariff, verify current rate"
+      },
+      "bestFor": [
+        "Bike and scooter owners"
+      ],
+      "sourceUrl": "https://shikharinsurance.com/products",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "shikhar-motor-car",
+      "companyId": "shikhar",
+      "name": "Shikhar Private Vehicle Insurance",
+      "category": "motor-car",
+      "summary": "Comprehensive cover for your private car or jeep against accidents, theft and damage.",
+      "features": [
+        "Own damage and third-party cover",
+        "Fire, theft and natural disaster",
+        "Driver and passenger cover options",
+        "Claim lines for private vehicles"
+      ],
+      "benefits": [
+        "Repair or replacement cost up to insured value",
+        "Third-party liability"
+      ],
+      "exclusions": [
+        "Driving without valid licence",
+        "Wear and tear",
+        "Drunk driving"
+      ],
+      "riders": [
+        "Zero depreciation",
+        "Passenger accident cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 2.5,
+        "minPremium": 12000
+      },
+      "bestFor": [
+        "Private car owners"
+      ],
+      "sourceUrl": "https://shikharinsurance.com/products",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "shikhar-travel",
+      "companyId": "shikhar",
+      "name": "Shikhar Travel Medical Insurance",
+      "category": "travel",
+      "summary": "Medical and trip cover for Nepalis travelling abroad.",
+      "features": [
+        "Overseas medical expenses",
+        "Emergency evacuation",
+        "Baggage loss",
+        "Trip delay cover"
+      ],
+      "benefits": [
+        "Medical bills abroad up to cover amount",
+        "Repatriation"
+      ],
+      "exclusions": [
+        "Pre-existing conditions",
+        "Adventure sports unless added"
+      ],
+      "riders": [
+        "Adventure sports add-on"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 70,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "per-day",
+        "perDayPremium": 150,
+        "coverAmount": 5000000
+      },
+      "bestFor": [
+        "Students, tourists and business travellers"
+      ],
+      "sourceUrl": "https://shikharinsurance.com/products",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "shikhar-property",
+      "companyId": "shikhar",
+      "name": "Shikhar Property and Home Insurance",
+      "category": "home",
+      "summary": "Covers your house, shop or contents against fire and natural disasters.",
+      "features": [
+        "Fire and allied perils",
+        "Earthquake option",
+        "Burglary option",
+        "Building and contents"
+      ],
+      "benefits": [
+        "Repair or rebuild cost up to sum insured"
+      ],
+      "exclusions": [
+        "Wear and tear",
+        "Intentional damage",
+        "War"
+      ],
+      "riders": [
+        "Earthquake",
+        "Burglary"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 0.15,
+        "minPremium": 2000
+      },
+      "bestFor": [
+        "Home and shop owners"
+      ],
+      "sourceUrl": "https://shikharinsurance.com/products",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

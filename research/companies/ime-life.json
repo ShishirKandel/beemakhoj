@@ -1,0 +1,452 @@
+{
+  "company": {
+    "id": "ime-life",
+    "name": "IME Life Insurance Company Limited",
+    "shortName": "IME Life",
+    "type": "life",
+    "established": 2017,
+    "headquarters": "Hathway Complex, Lainchaur, Kathmandu",
+    "website": "https://imelifeinsurance.com/",
+    "phone": "01-4024071",
+    "email": "info@imelifeinsurance.com",
+    "paidUpCapitalNPR": 5000000000,
+    "nepseSymbol": "ILI",
+    "creditRating": "CARE Ratings Nepal A- (upgraded from BBB+)",
+    "mergerHistory": "No merger; operating independently since 2017.",
+    "about": "IME Life is a life insurer promoted by the IME Group and listed on NEPSE (ILI). It offers endowment, money-back, whole life, foreign employment and term plans.",
+    "highlights": [
+      "Part of the IME Group",
+      "Plans include child, whole life and foreign employment cover",
+      "Rating upgraded to A- by CARE Ratings Nepal"
+    ],
+    "sources": [
+      "https://imelifeinsurance.com/",
+      "https://en.beemapost.com/?p=13856",
+      "https://beemaportal.com/best-life-insurance-companies/"
+    ],
+    "dataConfidence": "partial",
+    "claimSettlementRatio": 79.9,
+    "claimSettlementNote": "FY 2081/82, by amount: claims paid / (claims paid + claims outstanding), derived by Beema Portal from NIA Annual Report FY 2081/82 schedules 14-15 (NIA publishes no per-company ratio; year-end snapshot, excludes rejected claims). Third-party derived estimate."
+  },
+  "policies": [
+    {
+      "id": "ime-life-simple-endowment",
+      "companyId": "ime-life",
+      "name": "IME Simple Endowment Plan (Saral Sawadhik Bima Yojana)",
+      "category": "endowment",
+      "summary": "A straightforward savings plan paying a lump sum with bonus at maturity, with life cover.",
+      "features": [
+        "Fixed term savings",
+        "Bonus on sum assured",
+        "Flexible modes"
+      ],
+      "benefits": [
+        "Death benefit with bonus",
+        "Maturity benefit with bonus"
+      ],
+      "exclusions": [
+        "Death due to suicide within the first year",
+        "Misstatement or concealment of material facts",
+        "Death from war or criminal acts of the insured"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Young earners saving long term"
+      ],
+      "sourceUrl": "https://imelifeinsurance.com/",
+      "dataConfidence": "estimated",
+      "nameNe": "सरल साबधिक बीमा योजना",
+      "bonusRatePer1000": 50
+    },
+    {
+      "id": "ime-life-limited-payment-endowment",
+      "companyId": "ime-life",
+      "name": "IME Limited Payment Endowment (Sabal Jeevan Beema)",
+      "category": "endowment",
+      "summary": "Pay premiums for fewer years than the term while staying covered throughout.",
+      "features": [
+        "Shorter premium payment period",
+        "Bonus on sum assured",
+        "Full-term cover"
+      ],
+      "benefits": [
+        "Death benefit with bonus",
+        "Maturity benefit with bonus"
+      ],
+      "exclusions": [
+        "Death due to suicide within the first year",
+        "Misstatement or concealment of material facts",
+        "Death from war or criminal acts of the insured"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 70,
+        "minTerm": 12,
+        "maxTerm": 30,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 58,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "People wanting to stop paying early"
+      ],
+      "sourceUrl": "https://imelifeinsurance.com/",
+      "dataConfidence": "estimated",
+      "nameNe": "सबल जीवन बीमा योजना",
+      "bonusRatePer1000": 50
+    },
+    {
+      "id": "ime-life-dhanbardhan-moneyback",
+      "companyId": "ime-life",
+      "name": "IME Dhanbardhan Money Back Plan",
+      "category": "money-back",
+      "summary": "Receive periodic cash payments during the term and the balance with bonus at the end.",
+      "features": [
+        "Periodic survival payments",
+        "Full cover continues",
+        "Bonus on sum assured"
+      ],
+      "benefits": [
+        "Money-back installments",
+        "Death benefit: full sum assured plus bonus"
+      ],
+      "exclusions": [
+        "Death due to suicide within the first year",
+        "Misstatement or concealment of material facts",
+        "Death from war or criminal acts of the insured"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 75,
+        "minTerm": 15,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 65,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Families wanting regular cash back"
+      ],
+      "sourceUrl": "https://imelifeinsurance.com/",
+      "dataConfidence": "estimated",
+      "nameNe": "धनवर्धन",
+      "bonusRatePer1000": 45
+    },
+    {
+      "id": "ime-life-bal-ujjwal",
+      "companyId": "ime-life",
+      "name": "IME Child Endowment Plan (Bal Ujjwal)",
+      "category": "child-plan",
+      "summary": "Saves for a child's future with a lump sum at maturity and protection if the parent dies.",
+      "features": [
+        "Policy on the child",
+        "Premium waiver on parent death",
+        "Bonus on sum assured"
+      ],
+      "benefits": [
+        "Maturity benefit for education or marriage",
+        "Death benefit"
+      ],
+      "exclusions": [
+        "Death due to suicide within the first year",
+        "Misstatement or concealment of material facts",
+        "Death from war or criminal acts of the insured"
+      ],
+      "riders": [
+        "Premium waiver benefit",
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 0,
+        "maxEntryAge": 15,
+        "maxMaturityAge": 25,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 18
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Parents planning for a child"
+      ],
+      "sourceUrl": "https://imelifeinsurance.com/",
+      "dataConfidence": "estimated",
+      "nameNe": "बाल उज्ज्वल",
+      "bonusRatePer1000": 50
+    },
+    {
+      "id": "ime-life-aajeevan-sawadhik",
+      "companyId": "ime-life",
+      "name": "IME Endowment cum Whole Life (Aajeevan Sawadhik)",
+      "category": "whole-life",
+      "summary": "A maturity payout at a set point and continuing lifelong cover afterwards.",
+      "features": [
+        "Lifelong cover",
+        "Maturity-style payout",
+        "Bonus on sum assured"
+      ],
+      "benefits": [
+        "Death benefit with bonus at any age",
+        "Survival benefit at set age"
+      ],
+      "exclusions": [
+        "Death due to suicide within the first year",
+        "Misstatement or concealment of material facts",
+        "Death from war or criminal acts of the insured"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 99,
+        "minTerm": 20,
+        "maxTerm": 60,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 32,
+        "referenceTerm": 30
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "People wanting lifelong cover"
+      ],
+      "sourceUrl": "https://imelifeinsurance.com/",
+      "dataConfidence": "estimated",
+      "nameNe": "आजीवन साबधिक बीमा योजना",
+      "bonusRatePer1000": 45
+    },
+    {
+      "id": "ime-life-best-term",
+      "companyId": "ime-life",
+      "name": "IME Best Term (Individual Term)",
+      "category": "term-life",
+      "summary": "Low-cost pure protection paying your family if you die during the term.",
+      "features": [
+        "High cover at low premium",
+        "No maturity payout",
+        "Terms up to 30 years"
+      ],
+      "benefits": [
+        "Death benefit equal to sum assured"
+      ],
+      "exclusions": [
+        "Suicide within first year",
+        "Misstatement of facts",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 5,
+        "maxTerm": 30,
+        "minSumAssured": 500000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 4,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Breadwinners wanting cheap high cover"
+      ],
+      "sourceUrl": "https://imelifeinsurance.com/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "ime-life-foreign-employment",
+      "companyId": "ime-life",
+      "name": "IME Foreign Employment Plan",
+      "category": "foreign-employment",
+      "summary": "Short-term life cover for Nepalis working abroad.",
+      "features": [
+        "Cover for the contract period",
+        "Low premium",
+        "Accidental death cover"
+      ],
+      "benefits": [
+        "Death benefit to family",
+        "Accidental death benefit"
+      ],
+      "exclusions": [
+        "Suicide within first year",
+        "Death from illegal acts"
+      ],
+      "riders": [
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 60,
+        "minTerm": 1,
+        "maxTerm": 5,
+        "minSumAssured": 500000,
+        "maxSumAssured": 2000000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 5,
+        "referenceTerm": 2
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Migrant workers"
+      ],
+      "sourceUrl": "https://imelifeinsurance.com/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "ime-life-micro-term",
+      "companyId": "ime-life",
+      "name": "IME Micro Term (One Year)",
+      "category": "term-life",
+      "summary": "Low-cost one-year term cover for low-income households.",
+      "features": [
+        "Small premium",
+        "One-year cover",
+        "Easy enrolment"
+      ],
+      "benefits": [
+        "Death benefit of cover amount"
+      ],
+      "exclusions": [
+        "Suicide within first year",
+        "Misstatement of facts"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 59,
+        "maxMaturityAge": 60,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 50000,
+        "maxSumAssured": 200000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 500,
+        "coverAmount": 100000,
+        "note": "Indicative micro term premium"
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Low-income families"
+      ],
+      "sourceUrl": "https://imelifeinsurance.com/",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

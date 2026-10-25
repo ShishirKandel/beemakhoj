@@ -1,0 +1,28 @@
+{
+ "company": {
+  "id": "himalayan-reinsurance",
+  "name": "Himalayan Reinsurance Limited",
+  "shortName": "Himalayan Re",
+  "type": "reinsurance",
+  "headquarters": "Lalita Bhawan, Maharajgunj, Kathmandu",
+  "website": "https://himalayanre.com/",
+  "phone": "+977-1-4543432",
+  "paidUpCapitalNPR": 10000000000,
+  "nepseSymbol": "HRL",
+  "creditRating": "AM Best B+; ICRA-A",
+  "about": "Himalayan Re is a Nepali reinsurer that takes on part of the risk from other insurance companies. It does not sell policies to the public, so there is nothing to buy from it directly. It listed on NEPSE after an IPO in late 2023, with Rs 106 premium over Rs 100 face value.",
+  "highlights": [
+   "Reinsurer only: works with insurers, not individual customers",
+   "Rated AM Best B+ and ICRA-A (per its website)",
+   "Listed on NEPSE as HRL; IPO priced at Rs 206 per share (2023)"
+  ],
+  "sources": [
+   "https://himalayanre.com/",
+   "https://www.sharesansar.com/newsdetail/ipo-shares-of-himalayan-reinsurance-listed-in-nepse-what-is-the-opening-range-2024-01-07",
+   "https://www.sharesansar.com/newsdetail/4-bonus-shares-of-himalayan-reinsurance-limited-listed-in-nepse-2024-05-05"
+  ],
+  "dataConfidence": "partial",
+  "established": 2021
+ },
+ "policies": []
+}

@@ -1,0 +1,408 @@
+{
+  "company": {
+    "id": "nepal-life",
+    "name": "Nepal Life Insurance Company Limited",
+    "nameNe": "नेपाल लाइफ इन्स्योरेन्स कम्पनी लिमिटेड",
+    "shortName": "Nepal Life",
+    "type": "life",
+    "established": 2001,
+    "headquarters": "Kamaladi, Kathmandu",
+    "website": "http://www.nepallife.com.np/",
+    "phone": "01-5970971",
+    "email": "info@nepallife.com.np",
+    "paidUpCapitalNPR": 8200000000,
+    "nepseSymbol": "NLIC",
+    "about": "Nepal Life is one of the oldest and largest private life insurers in Nepal, operating since 2001 and listed on NEPSE. It sells endowment, anticipated (money-back), whole life, term, child and micro plans through agents and branches across the country.",
+    "highlights": [
+      "Operating since 2001 with no merger",
+      "Wide range of with-profit plans that declare yearly bonuses",
+      "Customer care open 7 AM to 6 PM every day, with WhatsApp/Viber support",
+      "Paid-up capital about NPR 8.2 billion (FY 2079/80)"
+    ],
+    "sources": [
+      "http://www.nepallife.com.np/",
+      "https://www.sharesansar.com/newsdetail/nepal-life-insurance-company-increases-life-insurance-fund-by-3179-net-profit-at-rs-5232-crores",
+      "https://beemaportal.com/best-life-insurance-companies/"
+    ],
+    "dataConfidence": "partial",
+    "claimSettlementRatio": 90.54,
+    "claimSettlementNote": "FY 2081/82, by amount: claims paid / (claims paid + claims outstanding), derived by Beema Portal from NIA Annual Report FY 2081/82 schedules 14-15 (NIA publishes no per-company ratio; year-end snapshot, excludes rejected claims). Third-party derived estimate."
+  },
+  "policies": [
+    {
+      "id": "nepal-life-jeevan-laxmi",
+      "companyId": "nepal-life",
+      "name": "Jeevan Laxmi Jeevan Beema Yojana (Triple Benefit Endowment)",
+      "nameNe": "जीवन लक्ष्मी जीवन बीमा योजना",
+      "category": "endowment",
+      "summary": "A savings-plus-protection plan that pays benefits during the term and a lump sum with bonus at maturity.",
+      "features": [
+        "Triple-benefit endowment with bonus",
+        "Policy term 7 to 25 years",
+        "Yearly bonus declared on a with-profit basis",
+        "Loan facility against surrender value"
+      ],
+      "benefits": [
+        "Death benefit: sum assured plus accrued bonus",
+        "Maturity benefit: sum assured plus bonus"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false information at application"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Critical illness benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 7,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bonusRatePer1000": 50,
+      "bestFor": [
+        "Salaried people saving steadily for 15-20 years"
+      ],
+      "sourceUrl": "https://nepallife.com.np/products/endowment/jeevan-laxmi-jeevan-beema-yojana",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "nepal-life-sunaulo-bhabisya",
+      "companyId": "nepal-life",
+      "name": "Sunaulo Bhabisya Jeevan Beema Yojana",
+      "nameNe": "सुनौलो भविष्य जीवन बीमा योजना",
+      "category": "money-back",
+      "summary": "An endowment plan where you can choose yearly money-back payouts when you buy it.",
+      "features": [
+        "Optional yearly money-back feature, chosen at purchase",
+        "With-profit bonus",
+        "Flexible premium modes",
+        "Loan against policy"
+      ],
+      "benefits": [
+        "Periodic money-back payments if chosen",
+        "Maturity sum with bonus",
+        "Death benefit with bonus"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false information at application"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Critical illness benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 62,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bonusRatePer1000": 45,
+      "bestFor": [
+        "People wanting regular cash back during the policy"
+      ],
+      "sourceUrl": "https://nepallife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "nepal-life-ketaketi-sunaulo-bhawishya",
+      "companyId": "nepal-life",
+      "name": "Ketaketi Sunaulo Bhawishya Jeevan Beema Yojana",
+      "nameNe": "केटाकेटी सुनौलो भविष्य जीवन बीमा योजना",
+      "category": "child-plan",
+      "summary": "A children's plan that pays at planned stages for education, marriage or other needs.",
+      "features": [
+        "With-profit children's endowment",
+        "Payouts timed for education and life events",
+        "Bonus declared yearly",
+        "Parent or guardian as proposer"
+      ],
+      "benefits": [
+        "Staged payouts for the child's needs",
+        "Maturity benefit with bonus",
+        "Death benefit on the life of the parent"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false information at application"
+      ],
+      "riders": [
+        "Premium waiver on parent's death or disability",
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 0,
+        "maxEntryAge": 15,
+        "maxMaturityAge": 25,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 18
+      },
+      "taxBenefit": true,
+      "bonusRatePer1000": 45,
+      "bestFor": [
+        "Parents planning a child's education fund"
+      ],
+      "sourceUrl": "https://nepallife.com.np/products/endowment/nepal-life-ketaketi-sunaulo-bhawishya-jeevan-bemma-yojana",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "nepal-life-anmol-jeevan",
+      "companyId": "nepal-life",
+      "name": "Anmol Jeevan Beema Yojana (Whole Life)",
+      "nameNe": "अनमोल जीवन बीमा योजना",
+      "category": "whole-life",
+      "summary": "A lifelong with-profit plan that pays your family a sum plus bonuses whenever you pass away.",
+      "features": [
+        "Cover for whole life",
+        "Annual simple reversionary bonuses",
+        "Premium paying term shorter than cover",
+        "Loan facility"
+      ],
+      "benefits": [
+        "Death benefit with accrued bonus",
+        "Survival benefit at the end of the premium term where applicable"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false information at application"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Critical illness benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 100,
+        "minTerm": 15,
+        "maxTerm": 40,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 30,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bonusRatePer1000": 40,
+      "bestFor": [
+        "Families wanting lifelong protection and a legacy"
+      ],
+      "sourceUrl": "https://nepallife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "nepal-life-iensure",
+      "companyId": "nepal-life",
+      "name": "iEnsure Jeevan Beema Yojana (Term, Return of Premium)",
+      "nameNe": "आइएन्स्योर जीवन बीमा योजना",
+      "category": "term-life",
+      "summary": "A low-cost term plan that covers your life and returns the premiums at the end if you survive.",
+      "features": [
+        "Non-participating term plan",
+        "Return of premium at maturity",
+        "High cover for low premium"
+      ],
+      "benefits": [
+        "Death benefit: full sum assured",
+        "Return of premiums paid on survival"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death from hazardous activities not disclosed"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Critical illness benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 70,
+        "minTerm": 10,
+        "maxTerm": 30,
+        "minSumAssured": 500000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 14,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Breadwinners wanting big cover on a budget"
+      ],
+      "sourceUrl": "https://nepallife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "nepal-life-rakshya-kawach",
+      "companyId": "nepal-life",
+      "name": "Rakshya Kawach Jeewan Beema Yojana",
+      "nameNe": "रक्षा कवच जीवन बीमा योजना",
+      "category": "term-life",
+      "summary": "A pure protection term plan that pays a lump sum to your family if you die during the term.",
+      "features": [
+        "Pure term cover",
+        "Low premium",
+        "Choose a term to match loans or dependents' needs"
+      ],
+      "benefits": [
+        "Death benefit: full sum assured"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death caused by undisclosed pre-existing conditions"
+      ],
+      "riders": [
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 5,
+        "maxTerm": 30,
+        "minSumAssured": 500000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 4,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Loan holders and young families wanting the cheapest cover"
+      ],
+      "sourceUrl": "https://nepallife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "nepal-life-nari-suraksha",
+      "companyId": "nepal-life",
+      "name": "Nari Suraksha Jeevan Beema Yojana (Anticipated)",
+      "nameNe": "नारी सुरक्षा जीवन बीमा योजना",
+      "category": "money-back",
+      "summary": "An anticipated (money-back) plan designed for women, paying part of the cover at set intervals.",
+      "features": [
+        "Anticipated payouts during the term",
+        "With-profit bonus",
+        "Designed for women policyholders"
+      ],
+      "benefits": [
+        "Survival payments at set intervals",
+        "Maturity benefit with bonus",
+        "Death benefit"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false information at application"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Critical illness benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 70,
+        "minTerm": 12,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 65,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bonusRatePer1000": 40,
+      "bestFor": [
+        "Women wanting savings with periodic payouts"
+      ],
+      "sourceUrl": "https://nepallife.com.np/",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

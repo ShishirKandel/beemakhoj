@@ -1,0 +1,448 @@
+{
+  "company": {
+    "id": "asian-life",
+    "name": "Asian Life Insurance Company Limited",
+    "shortName": "Asian Life",
+    "type": "life",
+    "established": 2008,
+    "headquarters": "Maitidevi-30, Kathmandu",
+    "website": "http://www.asianlife.com.np/",
+    "phone": "01-4510115",
+    "email": "asianlife@asianlife.com.np",
+    "branches": 126,
+    "paidUpCapitalNPR": 5000000000,
+    "nepseSymbol": "ALICL",
+    "mergerHistory": "No merger; operating independently since 2008.",
+    "about": "Asian Life Insurance is a Kathmandu-based life insurer listed on NEPSE. It sells endowment, money-back, term and micro plans through a nationwide branch network.",
+    "highlights": [
+      "About 126 branches nationwide (per its website)",
+      "Wide range: endowment, money-back, annuity, term and micro plans",
+      "Listed on NEPSE as ALICL"
+    ],
+    "sources": [
+      "http://www.asianlife.com.np/",
+      "https://www.sharesansar.com/index.php/newsdetail/comparative-analysis-of-life-insurance-companies-in-q4-fy-208182-profits-capital-and-ratios-unveiled-2025-08-24",
+      "https://beemaportal.com/best-life-insurance-companies/"
+    ],
+    "dataConfidence": "partial",
+    "claimSettlementRatio": 98.85,
+    "claimSettlementNote": "FY 2081/82, by amount: claims paid / (claims paid + claims outstanding), derived by Beema Portal from NIA Annual Report FY 2081/82 schedules 14-15 (NIA publishes no per-company ratio; year-end snapshot, excludes rejected claims). Third-party derived estimate."
+  },
+  "policies": [
+    {
+      "id": "asian-life-asian-sawadhik-plus",
+      "companyId": "asian-life",
+      "name": "Asian Sawadhik Plus",
+      "category": "endowment",
+      "summary": "A savings plan that pays a lump sum with bonus at the end of the term, with life cover meanwhile.",
+      "features": [
+        "Fixed term savings with life cover",
+        "Yearly bonus added to sum assured",
+        "Flexible premium payment modes"
+      ],
+      "benefits": [
+        "Death benefit: sum assured plus accrued bonus",
+        "Maturity benefit: sum assured plus bonus"
+      ],
+      "exclusions": [
+        "Death due to suicide within the first year",
+        "Misstatement or concealment of material facts",
+        "Death from war or criminal acts of the insured"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Salaried people saving for 15-20 years"
+      ],
+      "sourceUrl": "http://www.asianlife.com.np/",
+      "dataConfidence": "estimated",
+      "bonusRatePer1000": 50
+    },
+    {
+      "id": "asian-life-jeevan-ratna",
+      "companyId": "asian-life",
+      "name": "Asian Limited Payment Endowment (Jeevan Ratna)",
+      "category": "endowment",
+      "summary": "Pay premiums for a shorter period but stay covered for the full term and get a maturity payout.",
+      "features": [
+        "Premiums paid for fewer years than the policy term",
+        "Bonus on sum assured",
+        "Life cover for full term"
+      ],
+      "benefits": [
+        "Death benefit with bonus",
+        "Maturity benefit with bonus"
+      ],
+      "exclusions": [
+        "Death due to suicide within the first year",
+        "Misstatement or concealment of material facts",
+        "Death from war or criminal acts of the insured"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 70,
+        "minTerm": 12,
+        "maxTerm": 30,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 58,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "People wanting to finish paying early"
+      ],
+      "sourceUrl": "http://www.asianlife.com.np/",
+      "dataConfidence": "estimated",
+      "bonusRatePer1000": 50
+    },
+    {
+      "id": "asian-life-moneyback-20",
+      "companyId": "asian-life",
+      "name": "Asian Moneyback-20",
+      "category": "money-back",
+      "summary": "Get part of your sum assured back at set intervals, with the rest and bonus at the end.",
+      "features": [
+        "Periodic survival payments",
+        "Life cover continues on full sum assured",
+        "Bonus on sum assured"
+      ],
+      "benefits": [
+        "Periodic money-back installments",
+        "Death benefit: full sum assured plus bonus"
+      ],
+      "exclusions": [
+        "Death due to suicide within the first year",
+        "Misstatement or concealment of material facts",
+        "Death from war or criminal acts of the insured"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 75,
+        "minTerm": 20,
+        "maxTerm": 20,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 65,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Families wanting regular cash back"
+      ],
+      "sourceUrl": "http://www.asianlife.com.np/",
+      "dataConfidence": "estimated",
+      "bonusRatePer1000": 45
+    },
+    {
+      "id": "asian-life-child-endowment",
+      "companyId": "asian-life",
+      "name": "Child Endowment Plan",
+      "category": "child-plan",
+      "summary": "Builds a lump sum for a child's education or marriage, with cover on the parent.",
+      "features": [
+        "Policy on the child with parent as proposer",
+        "Premium waiver if parent dies",
+        "Bonus on sum assured"
+      ],
+      "benefits": [
+        "Maturity benefit when child reaches target age",
+        "Death benefit to the child's family"
+      ],
+      "exclusions": [
+        "Death due to suicide within the first year",
+        "Misstatement or concealment of material facts",
+        "Death from war or criminal acts of the insured"
+      ],
+      "riders": [
+        "Premium waiver benefit",
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 0,
+        "maxEntryAge": 15,
+        "maxMaturityAge": 25,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 18
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Parents saving for a child's future"
+      ],
+      "sourceUrl": "http://www.asianlife.com.np/",
+      "dataConfidence": "estimated",
+      "bonusRatePer1000": 50
+    },
+    {
+      "id": "asian-life-annuity-plan",
+      "companyId": "asian-life",
+      "name": "Asian Annuity Plan",
+      "category": "pension",
+      "summary": "Build savings during working life and receive regular pension income after retirement.",
+      "features": [
+        "Regular pension after vesting age",
+        "Life cover during accumulation",
+        "Bonus accumulates"
+      ],
+      "benefits": [
+        "Annuity payments after retirement",
+        "Death benefit to nominee"
+      ],
+      "exclusions": [
+        "Death due to suicide within the first year",
+        "Misstatement or concealment of material facts",
+        "Death from war or criminal acts of the insured"
+      ],
+      "riders": [
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 70,
+        "minTerm": 10,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 45,
+        "referenceTerm": 25
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Self-employed people planning retirement income"
+      ],
+      "sourceUrl": "http://www.asianlife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "asian-life-surachha-plus",
+      "companyId": "asian-life",
+      "name": "Asian Surachha Plus (Term)",
+      "category": "term-life",
+      "summary": "Low-cost pure protection: a payout to your family if you die during the term, nothing on survival.",
+      "features": [
+        "High cover at low premium",
+        "No maturity benefit",
+        "Simple underwriting"
+      ],
+      "benefits": [
+        "Death benefit equal to sum assured"
+      ],
+      "exclusions": [
+        "Suicide within the first year",
+        "Misstatement of facts",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 5,
+        "maxTerm": 30,
+        "minSumAssured": 500000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 4,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Breadwinners wanting cheap high cover"
+      ],
+      "sourceUrl": "http://www.asianlife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "asian-life-sukhi-jiwan-plus",
+      "companyId": "asian-life",
+      "name": "Sukhi Jiwan Plus Whole Life Endowment",
+      "category": "whole-life",
+      "summary": "Cover for your whole life with payouts along the way and a payout to your family later.",
+      "features": [
+        "Lifelong cover",
+        "Bonus on sum assured",
+        "Endowment-style payouts"
+      ],
+      "benefits": [
+        "Death benefit with bonus at any age",
+        "Survival benefit at specified age"
+      ],
+      "exclusions": [
+        "Death due to suicide within the first year",
+        "Misstatement or concealment of material facts",
+        "Death from war or criminal acts of the insured"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 99,
+        "minTerm": 20,
+        "maxTerm": 60,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 32,
+        "referenceTerm": 30
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "People wanting lifelong cover and legacy"
+      ],
+      "sourceUrl": "http://www.asianlife.com.np/",
+      "dataConfidence": "estimated",
+      "bonusRatePer1000": 45
+    },
+    {
+      "id": "asian-life-micro-term",
+      "companyId": "asian-life",
+      "name": "Saral Surachha (Micro Term)",
+      "category": "term-life",
+      "summary": "Very low-cost one-year cover for low-income households.",
+      "features": [
+        "Small fixed premium",
+        "Short one-year cover",
+        "Easy enrolment"
+      ],
+      "benefits": [
+        "Death benefit of the cover amount"
+      ],
+      "exclusions": [
+        "Suicide within first year",
+        "Misstatement of facts"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 59,
+        "maxMaturityAge": 60,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 50000,
+        "maxSumAssured": 200000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 500,
+        "coverAmount": 100000,
+        "note": "Indicative micro term premium"
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Low-income families, group members"
+      ],
+      "sourceUrl": "http://www.asianlife.com.np/",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

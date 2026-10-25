@@ -1,0 +1,425 @@
+{
+  "company": {
+    "id": "united-ajod",
+    "name": "United Ajod Insurance Company Limited",
+    "shortName": "United Ajod",
+    "type": "nonlife",
+    "website": "https://uail.com.np/",
+    "headquarters": "CTC Mall, Sundhara, Kathmandu",
+    "phone": "01-5333743",
+    "tollFree": "1660-01-84696",
+    "email": "info@uail.com.np",
+    "branches": 100,
+    "paidUpCapitalNPR": 1904568000,
+    "mergerHistory": "Merger of United Insurance Company (Nepal) and Ajod Insurance; joint operation began Jestha 14, 2080 (May 2023); 1.90 crore merged shares listed July 2023.",
+    "about": "United Ajod Insurance is a non-life insurer created by merging United Insurance and Ajod Insurance. It offers personal, motor, farm and business insurance through about 100 offices.",
+    "highlights": [
+      "Formed by 2023 merger of United Insurance and Ajod Insurance",
+      "About 100 offices nationwide",
+      "Covers crops, herbs and livestock besides motor and health"
+    ],
+    "sources": [
+      "https://uail.com.np/",
+      "https://www.sharesansar.com/newsdetail/after-the-successful-merger-190-crore-unit-shares-of-united-ajod-insurance-listed-in-nepse-for-trading-2023-07-16"
+    ],
+    "dataConfidence": "partial",
+    "nameNe": "युनाइटेड अजोड इन्स्योरेन्स लिमिटेड",
+    "established": 1994
+  },
+  "policies": [
+    {
+      "id": "united-ajod-health",
+      "companyId": "united-ajod",
+      "sourceUrl": "https://uail.com.np/",
+      "dataConfidence": "estimated",
+      "premiumModes": [
+        "yearly"
+      ],
+      "riders": [],
+      "taxBenefit": true,
+      "name": "Health Insurance",
+      "nameNe": "स्वास्थ्य बीमा",
+      "category": "health",
+      "summary": "Covers hospital bills for illness and accidents, with cashless or reimbursement claims.",
+      "features": [
+        "In-patient hospitalisation cover",
+        "Room and doctor fee cover",
+        "Pre- and post-hospitalisation expenses",
+        "Network hospitals across Nepal"
+      ],
+      "benefits": [
+        "Reimbursement of hospital bills up to sum insured",
+        "Ambulance and day-care costs covered"
+      ],
+      "exclusions": [
+        "Pre-existing conditions during waiting period",
+        "Cosmetic treatment",
+        "Self-inflicted injury"
+      ],
+      "eligibility": {
+        "minEntryAge": 1,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 100000,
+        "maxSumAssured": 1000000
+      },
+      "pricing": {
+        "model": "health-bands",
+        "bands": [
+          {
+            "sumInsured": 300000,
+            "annualPremiumAge30": 4500
+          },
+          {
+            "sumInsured": 500000,
+            "annualPremiumAge30": 6800
+          },
+          {
+            "sumInsured": 1000000,
+            "annualPremiumAge30": 11500
+          }
+        ]
+      },
+      "bestFor": [
+        "Individuals and families wanting hospital cover"
+      ]
+    },
+    {
+      "id": "united-ajod-critical-illness",
+      "companyId": "united-ajod",
+      "sourceUrl": "https://uail.com.np/",
+      "dataConfidence": "estimated",
+      "premiumModes": [
+        "yearly"
+      ],
+      "riders": [],
+      "taxBenefit": true,
+      "name": "Critical Illness Insurance",
+      "nameNe": "गम्भीर रोग बीमा",
+      "category": "critical-illness",
+      "summary": "Pays a lump sum if you are diagnosed with a listed serious illness such as cancer.",
+      "features": [
+        "Lump-sum payout on diagnosis",
+        "Covers listed major illnesses",
+        "Survival period applies"
+      ],
+      "benefits": [
+        "Full sum insured on diagnosis of covered illness",
+        "Cover ends once the claim is paid"
+      ],
+      "exclusions": [
+        "Pre-existing illness",
+        "Illness within waiting period"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 65,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 300000,
+        "maxSumAssured": 2000000
+      },
+      "pricing": {
+        "model": "health-bands",
+        "bands": [
+          {
+            "sumInsured": 500000,
+            "annualPremiumAge30": 3500
+          },
+          {
+            "sumInsured": 1000000,
+            "annualPremiumAge30": 6500
+          }
+        ]
+      },
+      "bestFor": [
+        "People wanting cash cover for serious disease"
+      ]
+    },
+    {
+      "id": "united-ajod-accidental",
+      "companyId": "united-ajod",
+      "sourceUrl": "https://uail.com.np/",
+      "dataConfidence": "estimated",
+      "premiumModes": [
+        "yearly"
+      ],
+      "riders": [],
+      "taxBenefit": false,
+      "name": "Personal Accident Insurance",
+      "nameNe": "दुर्घटना बीमा",
+      "category": "personal-accident",
+      "summary": "Pays you or your family a fixed amount if an accident causes death or disability.",
+      "features": [
+        "Accidental death cover",
+        "Permanent total and partial disability cover",
+        "Medical expense cover for accidents",
+        "24-hour cover"
+      ],
+      "benefits": [
+        "Full sum insured on accidental death",
+        "Percentage of sum insured on disability"
+      ],
+      "exclusions": [
+        "Suicide or self-harm",
+        "Injuries under influence of alcohol or drugs",
+        "War and riots"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 200000,
+        "maxSumAssured": 5000000
+      },
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 1500,
+        "coverAmount": 1000000,
+        "note": "Indicative, NPR 1 million cover"
+      },
+      "bestFor": [
+        "Anyone who travels or works outdoors"
+      ]
+    },
+    {
+      "id": "united-ajod-bike-scooter",
+      "companyId": "united-ajod",
+      "sourceUrl": "https://uail.com.np/",
+      "dataConfidence": "estimated",
+      "premiumModes": [
+        "yearly"
+      ],
+      "riders": [],
+      "taxBenefit": false,
+      "name": "Motorcycle / Scooter Insurance",
+      "nameNe": "मोटरसाइकल बीमा",
+      "category": "motor-bike",
+      "summary": "Third-party cover is compulsory by law; comprehensive also covers damage to your own bike.",
+      "features": [
+        "Compulsory third-party liability cover",
+        "Comprehensive option for own damage and theft",
+        "Driver and pillion accident cover optional",
+        "Garage repair network"
+      ],
+      "benefits": [
+        "Third-party death, injury and property damage as per tariff",
+        "Own damage repair or total loss payout (comprehensive)"
+      ],
+      "exclusions": [
+        "Driving without valid licence",
+        "Drunk driving",
+        "Wear and tear"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 80,
+        "maxMaturityAge": 85,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 2,
+        "minPremium": 2500
+      },
+      "bestFor": [
+        "Bike and scooter owners"
+      ]
+    },
+    {
+      "id": "united-ajod-private-car",
+      "companyId": "united-ajod",
+      "sourceUrl": "https://uail.com.np/",
+      "dataConfidence": "estimated",
+      "premiumModes": [
+        "yearly"
+      ],
+      "riders": [],
+      "taxBenefit": false,
+      "name": "Private Car Insurance",
+      "nameNe": "निजी कार बीमा",
+      "category": "motor-car",
+      "summary": "Covers damage to your car plus legal liability to others, with optional add-ons.",
+      "features": [
+        "Own damage and theft cover",
+        "Third-party liability as per NIA tariff",
+        "Optional add-ons",
+        "Natural calamity cover"
+      ],
+      "benefits": [
+        "Repair cost or total loss payout",
+        "Third-party claims paid as per tariff"
+      ],
+      "exclusions": [
+        "Driving without valid licence",
+        "Drunk driving",
+        "Wear and tear and tyres"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 80,
+        "maxMaturityAge": 85,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 1.8,
+        "minPremium": 12000
+      },
+      "bestFor": [
+        "Private car owners"
+      ]
+    },
+    {
+      "id": "united-ajod-travel",
+      "companyId": "united-ajod",
+      "sourceUrl": "https://uail.com.np/",
+      "dataConfidence": "estimated",
+      "premiumModes": [
+        "yearly"
+      ],
+      "riders": [],
+      "taxBenefit": false,
+      "name": "Travel Insurance",
+      "nameNe": "यात्रा बीमा",
+      "category": "travel",
+      "summary": "Covers medical emergencies and trip problems while you are abroad.",
+      "features": [
+        "Overseas medical emergency cover",
+        "Emergency evacuation",
+        "Baggage loss and delay",
+        "Trip cancellation options"
+      ],
+      "benefits": [
+        "Hospital costs abroad up to cover limit",
+        "Repatriation if needed"
+      ],
+      "exclusions": [
+        "Pre-existing conditions",
+        "Adventure sports unless added",
+        "Travel against medical advice"
+      ],
+      "eligibility": {
+        "minEntryAge": 1,
+        "maxEntryAge": 70,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "per-day",
+        "perDayPremium": 130,
+        "coverAmount": 5000000
+      },
+      "bestFor": [
+        "Students, tourists and business travellers going abroad"
+      ]
+    },
+    {
+      "id": "united-ajod-household",
+      "companyId": "united-ajod",
+      "sourceUrl": "https://uail.com.np/",
+      "dataConfidence": "estimated",
+      "premiumModes": [
+        "yearly"
+      ],
+      "riders": [],
+      "taxBenefit": false,
+      "name": "Household Insurance",
+      "nameNe": "घरायसी बीमा",
+      "category": "home",
+      "summary": "Protects your house and belongings against fire, earthquake and burglary.",
+      "features": [
+        "Fire and allied perils",
+        "Earthquake and flood cover options",
+        "Burglary of contents",
+        "Optional household items cover"
+      ],
+      "benefits": [
+        "Repair or rebuild cost up to sum insured",
+        "Contents loss payout"
+      ],
+      "exclusions": [
+        "Wear and tear",
+        "War and nuclear risk",
+        "Intentional damage"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 99,
+        "maxMaturityAge": 99,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 500000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 0.25,
+        "minPremium": 1500
+      },
+      "bestFor": [
+        "Home owners and tenants with valuables"
+      ]
+    },
+    {
+      "id": "united-ajod-livestock",
+      "companyId": "united-ajod",
+      "sourceUrl": "https://uail.com.np/",
+      "dataConfidence": "estimated",
+      "premiumModes": [
+        "yearly"
+      ],
+      "riders": [],
+      "taxBenefit": false,
+      "name": "Livestock Insurance",
+      "nameNe": "पशुधन बीमा",
+      "category": "livestock",
+      "summary": "Pays farmers if insured cattle, buffalo or goats die from disease or accident.",
+      "features": [
+        "Covers cattle, buffalo, goat and poultry",
+        "Death from disease or accident",
+        "Government premium subsidy often available"
+      ],
+      "benefits": [
+        "Compensation up to insured animal value",
+        "Government premium subsidy may reduce your cost"
+      ],
+      "exclusions": [
+        "Slaughter or deliberate harm",
+        "Death from negligence"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 99,
+        "maxMaturityAge": 99,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 2500,
+        "coverAmount": 100000,
+        "note": "Indicative, about 3-4% of animal value"
+      },
+      "bestFor": [
+        "Small farmers"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,448 @@
+{
+  "company": {
+    "id": "prabhu-mahalaxmi-life",
+    "name": "Prabhu Mahalaxmi Life Insurance Limited",
+    "shortName": "Prabhu Mahalaxmi Life",
+    "type": "life",
+    "established": 2023,
+    "headquarters": "Kamaladi, Kathmandu",
+    "website": "https://www.pmlil.com/",
+    "phone": "01-5352012",
+    "email": "info@pmlil.com",
+    "paidUpCapitalNPR": 4725600000,
+    "nepseSymbol": "PMLI",
+    "mergerHistory": "Merger of Prabhu Life and Mahalaxmi Life (1:1 share swap); joint operation from Ashad 29, 2080 (July 2023).",
+    "about": "Prabhu Mahalaxmi Life was formed in July 2023 by merging Prabhu Life and Mahalaxmi Life. It sells with-profit endowment, term, child and money-back plans, including Super Surakshit Beema.",
+    "highlights": [
+      "Formed by 1:1 merger of Prabhu Life and Mahalaxmi Life",
+      "Super Surakshit Beema is listed as one of its main savings plans",
+      "About 185,000 policies in force (Q1 FY 2081/82)",
+      "Paid-up capital about NPR 4.73 billion (Q1 FY 2081/82)"
+    ],
+    "sources": [
+      "https://www.pmlil.com/",
+      "https://www.sharesansar.com/company/pmli",
+      "https://en.beemapost.com/2025/04/7736/",
+      "https://en.beemapost.com/2024/12/5296/",
+      "https://beemaportal.com/best-life-insurance-companies/"
+    ],
+    "dataConfidence": "partial",
+    "claimSettlementRatio": 98.33,
+    "claimSettlementNote": "FY 2081/82, by amount: claims paid / (claims paid + claims outstanding), derived by Beema Portal from NIA Annual Report FY 2081/82 schedules 14-15 (NIA publishes no per-company ratio; year-end snapshot, excludes rejected claims). Third-party derived estimate."
+  },
+  "policies": [
+    {
+      "id": "prabhu-mahalaxmi-life-super-surakshit",
+      "companyId": "prabhu-mahalaxmi-life",
+      "name": "Super Surakshit Beema",
+      "category": "endowment",
+      "summary": "A savings plan that pays the sum insured plus bonus at maturity, with extra accident and illness cover.",
+      "features": [
+        "Entry age 18 to 65",
+        "Sum insured from NPR 50,000 up to NPR 50 million",
+        "Accidental death pays double the sum insured (up to NPR 10 million)",
+        "Critical illness cover for 15 illnesses up to NPR 5 million",
+        "Loan up to 90% of surrender value after 3 years"
+      ],
+      "benefits": [
+        "Maturity: sum insured plus earned bonuses",
+        "Death benefit with bonus"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false information at application"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Critical illness benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 30,
+        "minSumAssured": 50000,
+        "maxSumAssured": 50000000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bonusRatePer1000": 40,
+      "bestFor": [
+        "First-time buyers wanting savings with built-in cover"
+      ],
+      "sourceUrl": "https://en.beemapost.com/2024/12/5296/",
+      "dataConfidence": "partial"
+    },
+    {
+      "id": "prabhu-mahalaxmi-life-mahalaxmi-endowment",
+      "companyId": "prabhu-mahalaxmi-life",
+      "name": "Mahalaxmi Endowment Life Insurance",
+      "category": "endowment",
+      "summary": "A classic endowment plan paying the sum assured with a flat yearly bonus at maturity.",
+      "features": [
+        "Flat bonus of NPR 38 per 1,000 (2025 declaration)",
+        "Fixed-term savings",
+        "Standard premium modes"
+      ],
+      "benefits": [
+        "Maturity: sum assured plus bonus",
+        "Death benefit with bonus"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false information at application"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Critical illness benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bonusRatePer1000": 38,
+      "bestFor": [
+        "Steady savers wanting a predictable bonus"
+      ],
+      "sourceUrl": "https://en.beemapost.com/2025/04/7736/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "prabhu-mahalaxmi-life-mahalaxmi-term",
+      "companyId": "prabhu-mahalaxmi-life",
+      "name": "Mahalaxmi Term Life Insurance",
+      "category": "term-life",
+      "summary": "Term cover for your family with a small bonus on top.",
+      "features": [
+        "Bonus NPR 45-52 per 1,000 depending on term",
+        "Death cover over the chosen term"
+      ],
+      "benefits": [
+        "Death benefit: sum assured plus bonus",
+        "Maturity benefit with bonus"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Undisclosed pre-existing conditions"
+      ],
+      "riders": [
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 10,
+        "maxTerm": 30,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 5,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bonusRatePer1000": 45,
+      "bestFor": [
+        "People wanting protection with some return"
+      ],
+      "sourceUrl": "https://en.beemapost.com/2025/04/7736/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "prabhu-mahalaxmi-life-saral-jeevan",
+      "companyId": "prabhu-mahalaxmi-life",
+      "name": "Mahalaxmi Saral Jeevan Beema",
+      "category": "endowment",
+      "summary": "A simple savings and protection plan that pays a declared yearly bonus.",
+      "features": [
+        "Bonus NPR 52-55 per 1,000 by term",
+        "Simple product design"
+      ],
+      "benefits": [
+        "Maturity with bonus",
+        "Death benefit with bonus"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false information at application"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Critical illness benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bonusRatePer1000": 53,
+      "bestFor": [
+        "Beginners who want a straightforward plan"
+      ],
+      "sourceUrl": "https://en.beemapost.com/2025/04/7736/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "prabhu-mahalaxmi-life-baal-bachat",
+      "companyId": "prabhu-mahalaxmi-life",
+      "name": "Mahalaxmi Baal Bachat",
+      "category": "child-plan",
+      "summary": "A savings plan for children's future education and needs.",
+      "features": [
+        "Bonus NPR 32-39 per 1,000 by term",
+        "Built for child savings"
+      ],
+      "benefits": [
+        "Maturity with bonus",
+        "Death benefit on the parent"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false information at application"
+      ],
+      "riders": [
+        "Premium waiver on parent's death"
+      ],
+      "eligibility": {
+        "minEntryAge": 0,
+        "maxEntryAge": 15,
+        "maxMaturityAge": 25,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 18
+      },
+      "taxBenefit": true,
+      "bonusRatePer1000": 35,
+      "bestFor": [
+        "Parents saving for a child's education"
+      ],
+      "sourceUrl": "https://en.beemapost.com/2025/04/7736/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "prabhu-mahalaxmi-life-barsik-dhanfirta",
+      "companyId": "prabhu-mahalaxmi-life",
+      "name": "Mahalaxmi Barsik Dhanfirta Beema",
+      "category": "money-back",
+      "summary": "A money-back plan that returns part of the sum assured every year.",
+      "features": [
+        "Yearly money-back payments",
+        "Flat bonus NPR 35 per 1,000"
+      ],
+      "benefits": [
+        "Yearly survival payments",
+        "Maturity with bonus",
+        "Death benefit"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false information at application"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Critical illness benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 65,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bonusRatePer1000": 35,
+      "bestFor": [
+        "People wanting regular payouts during the term"
+      ],
+      "sourceUrl": "https://en.beemapost.com/2025/04/7736/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "prabhu-mahalaxmi-life-dhandhanya",
+      "companyId": "prabhu-mahalaxmi-life",
+      "name": "Mahalaxmi Dhandhanya Beema",
+      "category": "money-back",
+      "summary": "A money-back style plan with a flat NPR 45 per 1,000 bonus.",
+      "features": [
+        "Periodic payouts",
+        "Flat bonus NPR 45 per 1,000"
+      ],
+      "benefits": [
+        "Periodic payments",
+        "Maturity with bonus",
+        "Death benefit"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false information at application"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Critical illness benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 62,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bonusRatePer1000": 45,
+      "bestFor": [
+        "Savers wanting cash flow and growth"
+      ],
+      "sourceUrl": "https://en.beemapost.com/2025/04/7736/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "prabhu-mahalaxmi-life-term-and-lifetime",
+      "companyId": "prabhu-mahalaxmi-life",
+      "name": "Term and Lifetime (Whole Life) Plan",
+      "category": "whole-life",
+      "summary": "A lifelong cover plan with a bonus of NPR 38-73 per 1,000 depending on term.",
+      "features": [
+        "Lifetime cover",
+        "Bonus varies by policy term"
+      ],
+      "benefits": [
+        "Death benefit with bonus"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false information at application"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Permanent disability benefit",
+        "Critical illness benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 100,
+        "minTerm": 15,
+        "maxTerm": 40,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 30,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bonusRatePer1000": 55,
+      "bestFor": [
+        "Families wanting lifelong cover"
+      ],
+      "sourceUrl": "https://en.beemapost.com/2025/04/7736/",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

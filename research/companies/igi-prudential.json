@@ -1,0 +1,366 @@
+{
+  "company": {
+    "id": "igi-prudential",
+    "name": "IGI Prudential Insurance Limited",
+    "shortName": "IGI Prudential",
+    "type": "nonlife",
+    "established": 2023,
+    "headquarters": "IGI Complex, Panipokhari, Kathmandu",
+    "website": "https://igiprudential.com",
+    "paidUpCapitalNPR": 3020000000,
+    "mergerHistory": "Formed in 2023 by merging IME General Insurance and Prudential Insurance (1:1 share swap); joint operations began 10 May 2023.",
+    "about": "IGI Prudential is one of the largest general insurers in Nepal, created by the 2023 merger of IME General Insurance and Prudential Insurance. It offers health, motor, travel, tourist and property insurance. It opened a new head office complex in 2026.",
+    "highlights": [
+      "Rs 3.02 arba paid-up capital after merger",
+      "IGI Health Care cashless treatment in Nepal and India",
+      "IGI Tourist Insurance for foreign trekkers",
+      "Merger of two established insurers"
+    ],
+    "sources": [
+      "https://www.sharesansar.com/newsdetail/ime-general-prudential-insurance-signs-final-merger-agreement-at-swap-ratio-of-11-new-company-to-be-named-as-igi-prudential-insurance-2023-03-20",
+      "https://www.sharesansar.com/newsdetail/igi-prudential-insurance-holds-28th-agm-approves-5-cash-dividend-and-expands-digital-health-insurance-services-2026-01-09",
+      "https://www.sharesansar.com/newsdetail/igi-prudential-inaugurates-modern-igi-complex-to-strengthen-services-and-digital-growth-2026-02-27"
+    ],
+    "dataConfidence": "partial"
+  },
+  "policies": [
+    {
+      "id": "igi-prudential-health-care",
+      "companyId": "igi-prudential",
+      "name": "IGI Health Care",
+      "category": "health",
+      "summary": "Medical insurance with cashless treatment at network hospitals in Nepal and India.",
+      "features": [
+        "Cashless hospital network",
+        "Covers Nepal and India",
+        "Inpatient cover"
+      ],
+      "benefits": [
+        "Hospital expenses",
+        "Surgery costs"
+      ],
+      "exclusions": [
+        "Pre-existing conditions during waiting period",
+        "Cosmetic treatment"
+      ],
+      "riders": [
+        "Maternity",
+        "OPD cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 1,
+        "maxEntryAge": 65,
+        "maxMaturityAge": null,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "health-bands",
+        "bands": [
+          {
+            "sumInsured": 300000,
+            "annualPremiumAge30": 6500
+          },
+          {
+            "sumInsured": 500000,
+            "annualPremiumAge30": 9500
+          },
+          {
+            "sumInsured": 1000000,
+            "annualPremiumAge30": 15000
+          }
+        ]
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Individuals and families"
+      ],
+      "sourceUrl": "https://igiprudential.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "igi-prudential-motor-bike",
+      "companyId": "igi-prudential",
+      "name": "Motor Insurance - Motorcycle (Third Party)",
+      "category": "motor-bike",
+      "summary": "Mandatory cover for damage or injury your bike causes to others.",
+      "features": [
+        "Third-party liability as per NIA tariff",
+        "Renewable yearly",
+        "Covers legal third-party liability for the bike"
+      ],
+      "benefits": [
+        "Third-party injury or death compensation",
+        "Third-party property damage"
+      ],
+      "exclusions": [
+        "Your own bike damage",
+        "Unlicensed driving"
+      ],
+      "riders": [
+        "Driver and passenger accident cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 1800,
+        "coverAmount": 500000,
+        "note": "Third-party, indicative NIA tariff for a mid-size bike"
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Bike owners needing the legal minimum"
+      ],
+      "sourceUrl": "https://igiprudential.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "igi-prudential-motor-car",
+      "companyId": "igi-prudential",
+      "name": "Motor Insurance - Private Car (Comprehensive)",
+      "category": "motor-car",
+      "summary": "Covers your car against accident, theft and fire plus third-party claims.",
+      "features": [
+        "Own damage cover",
+        "Third-party liability",
+        "Theft and fire"
+      ],
+      "benefits": [
+        "Repair costs",
+        "Total loss payout"
+      ],
+      "exclusions": [
+        "Wear and tear",
+        "Drunk driving"
+      ],
+      "riders": [
+        "Passenger accident cover",
+        "Strike and riot cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 2.5,
+        "minPremium": 8000
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Private car owners"
+      ],
+      "sourceUrl": "https://igiprudential.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "igi-prudential-travel",
+      "companyId": "igi-prudential",
+      "name": "Travel Insurance",
+      "category": "travel",
+      "summary": "Medical and trip cover for overseas travel.",
+      "features": [
+        "Per-day pricing",
+        "Medical cover abroad",
+        "Baggage cover"
+      ],
+      "benefits": [
+        "Overseas medical costs",
+        "Emergency evacuation"
+      ],
+      "exclusions": [
+        "Pre-existing conditions",
+        "Risky sports unless added"
+      ],
+      "riders": [
+        "Adventure sports extension"
+      ],
+      "eligibility": {
+        "minEntryAge": 1,
+        "maxEntryAge": 70,
+        "maxMaturityAge": null,
+        "minTerm": 1,
+        "maxTerm": 180,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "per-day",
+        "perDayPremium": 125,
+        "coverAmount": 5000000
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Students and travellers"
+      ],
+      "sourceUrl": "https://igiprudential.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "igi-prudential-tourist",
+      "companyId": "igi-prudential",
+      "name": "IGI Tourist Insurance",
+      "category": "travel",
+      "summary": "Rescue and treatment cover for foreign trekkers and mountaineers in Nepal.",
+      "features": [
+        "Offered with Himalayan Guardian Nepal",
+        "Rescue and treatment cover",
+        "Per-day pricing"
+      ],
+      "benefits": [
+        "Rescue costs",
+        "Medical treatment"
+      ],
+      "exclusions": [
+        "Extreme climbs not declared"
+      ],
+      "riders": [
+        "Extended altitude cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 10,
+        "maxEntryAge": 70,
+        "maxMaturityAge": null,
+        "minTerm": 1,
+        "maxTerm": 90,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "per-day",
+        "perDayPremium": 150,
+        "coverAmount": 3000000
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Foreign trekkers"
+      ],
+      "sourceUrl": "https://igiprudential.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "igi-prudential-personal-accident",
+      "companyId": "igi-prudential",
+      "name": "Personal Accident Insurance",
+      "category": "personal-accident",
+      "summary": "Payout if you die or are disabled in an accident.",
+      "features": [
+        "24-hour cover",
+        "Low premium",
+        "Covers accidents at home, work and on the road"
+      ],
+      "benefits": [
+        "Accidental death benefit",
+        "Disability benefit"
+      ],
+      "exclusions": [
+        "Self-inflicted injury",
+        "Injury while intoxicated"
+      ],
+      "riders": [
+        "Hospital cash"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 1500,
+        "coverAmount": 1000000,
+        "note": "Indicative individual cover"
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Daily commuters and workers"
+      ],
+      "sourceUrl": "https://igiprudential.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "igi-prudential-property",
+      "companyId": "igi-prudential",
+      "name": "Property and Home Insurance",
+      "category": "home",
+      "summary": "Protects your building and contents against fire and allied perils.",
+      "features": [
+        "Fire and allied perils",
+        "Optional earthquake cover",
+        "Contents cover can be added to the building"
+      ],
+      "benefits": [
+        "Repair or rebuild cost",
+        "Contents loss"
+      ],
+      "exclusions": [
+        "War",
+        "Intentional damage"
+      ],
+      "riders": [
+        "Earthquake cover",
+        "Burglary cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 0.15,
+        "minPremium": 2000
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Homeowners"
+      ],
+      "sourceUrl": "https://igiprudential.com",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

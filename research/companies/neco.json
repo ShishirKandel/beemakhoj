@@ -1,0 +1,343 @@
+{
+  "company": {
+    "id": "neco",
+    "name": "Neco Insurance Limited",
+    "shortName": "Neco",
+    "type": "nonlife",
+    "established": 1994,
+    "headquarters": "Beema Bhawan, Gyaneshwor, Kathmandu",
+    "website": "https://neco.com.np",
+    "phone": "01-4542263",
+    "email": "info@neco.com.np",
+    "paidUpCapitalNPR": 2010000000,
+    "mergerHistory": "Not merged; operating independently since 1994.",
+    "about": "Neco Insurance is one of the older non-life insurers in Nepal. It sells motor, property, engineering, marine, aviation, agriculture and travel medical policies.",
+    "highlights": [
+      "Operating since 1994",
+      "Wide range of general insurance products"
+    ],
+    "sources": [
+      "https://neco.com.np",
+      "https://www.sharesansar.com"
+    ],
+    "dataConfidence": "partial"
+  },
+  "policies": [
+    {
+      "id": "neco-health",
+      "companyId": "neco",
+      "name": "Individual Health Insurance",
+      "category": "health",
+      "summary": "Covers hospital stays and treatment costs up to the sum insured.",
+      "features": [
+        "Inpatient hospitalisation cover",
+        "Cashless claims at network hospitals",
+        "Pre- and post-hospitalisation costs",
+        "Renewable yearly"
+      ],
+      "benefits": [
+        "Room, surgery and doctor fees",
+        "Medicines and diagnostics during admission"
+      ],
+      "exclusions": [
+        "Pre-existing conditions in the waiting period",
+        "Cosmetic treatment"
+      ],
+      "riders": [
+        "Maternity cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 1,
+        "maxEntryAge": 65,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 100000,
+        "maxSumAssured": 1000000
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "health-bands",
+        "bands": [
+          {
+            "sumInsured": 300000,
+            "annualPremiumAge30": 5000
+          },
+          {
+            "sumInsured": 500000,
+            "annualPremiumAge30": 7500
+          },
+          {
+            "sumInsured": 1000000,
+            "annualPremiumAge30": 12500
+          }
+        ]
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Individuals and families wanting hospital cover"
+      ],
+      "sourceUrl": "https://neco.com.np",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "neco-personal-accident",
+      "companyId": "neco",
+      "name": "Personal Accident Insurance",
+      "category": "personal-accident",
+      "summary": "Pays a lump sum if you die or are disabled in an accident.",
+      "features": [
+        "Accidental death and disability cover",
+        "Medical expenses reimbursement",
+        "Worldwide cover option"
+      ],
+      "benefits": [
+        "Full sum on accidental death",
+        "Percentage of sum for permanent disability"
+      ],
+      "exclusions": [
+        "Self-inflicted injury",
+        "Hazardous sports unless declared"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 5,
+        "maxEntryAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 500000,
+        "maxSumAssured": 5000000
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 1500,
+        "coverAmount": 1000000,
+        "note": "Indicative; varies by occupation"
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Anyone who travels or works outdoors"
+      ],
+      "sourceUrl": "https://neco.com.np",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "neco-motor-bike",
+      "companyId": "neco",
+      "name": "Motorcycle Insurance",
+      "category": "motor-bike",
+      "summary": "Covers your motorcycle against damage and third-party liability.",
+      "features": [
+        "Own damage and third-party cover",
+        "Theft and fire cover",
+        "Third-party premium follows NIA tariff"
+      ],
+      "benefits": [
+        "Repair cost of insured bike",
+        "Third-party injury and property liability"
+      ],
+      "exclusions": [
+        "Driving without a valid licence",
+        "Drunk driving"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 99,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 50000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 2,
+        "minPremium": 2500
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Motorbike owners"
+      ],
+      "sourceUrl": "https://neco.com.np",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "neco-motor-car",
+      "companyId": "neco",
+      "name": "Private Car Insurance",
+      "category": "motor-car",
+      "summary": "Comprehensive cover for private cars including third-party liability.",
+      "features": [
+        "Accident, fire and theft damage",
+        "Third-party liability",
+        "Natural disaster cover optional"
+      ],
+      "benefits": [
+        "Repair or replacement of the car",
+        "Third-party legal liability"
+      ],
+      "exclusions": [
+        "Wear and tear",
+        "Driving under influence"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 99,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 500000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 1.8,
+        "minPremium": 10000
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Private car owners"
+      ],
+      "sourceUrl": "https://neco.com.np",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "neco-travel",
+      "companyId": "neco",
+      "name": "Travel Medical Insurance",
+      "category": "travel",
+      "summary": "Medical and trip cover while travelling abroad.",
+      "features": [
+        "Emergency medical expenses",
+        "Baggage and passport loss",
+        "Trip delay cover"
+      ],
+      "benefits": [
+        "Hospital costs abroad",
+        "Emergency evacuation"
+      ],
+      "exclusions": [
+        "Pre-existing conditions",
+        "Travel against medical advice"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 1,
+        "maxEntryAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 1000000,
+        "maxSumAssured": 10000000
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "per-day",
+        "perDayPremium": 120,
+        "coverAmount": 5000000
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Visa applicants and holiday travellers"
+      ],
+      "sourceUrl": "https://neco.com.np",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "neco-home",
+      "companyId": "neco",
+      "name": "Property and Fire Insurance",
+      "category": "home",
+      "summary": "Protects your house and contents against fire and earthquake.",
+      "features": [
+        "Fire and allied perils",
+        "Earthquake cover add-on",
+        "Contents cover optional"
+      ],
+      "benefits": [
+        "Rebuilding or repair cost",
+        "Loss of contents"
+      ],
+      "exclusions": [
+        "Wilful damage",
+        "War"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 99,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 500000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 0.15,
+        "minPremium": 1500
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Home and shop owners"
+      ],
+      "sourceUrl": "https://neco.com.np",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "neco-livestock",
+      "companyId": "neco",
+      "name": "Livestock Insurance",
+      "category": "livestock",
+      "summary": "Pays out if your insured animal dies from illness or accident.",
+      "features": [
+        "Cattle, buffalo and goat cover",
+        "Subsidy may apply"
+      ],
+      "benefits": [
+        "Compensation for animal death"
+      ],
+      "exclusions": [
+        "Deliberate slaughter",
+        "Negligence"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 99,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 10000,
+        "maxSumAssured": 500000
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 2000,
+        "coverAmount": 60000,
+        "note": "Indicative per animal"
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Farmers"
+      ],
+      "sourceUrl": "https://neco.com.np",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

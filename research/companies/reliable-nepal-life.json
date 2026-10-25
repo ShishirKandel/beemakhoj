@@ -1,0 +1,337 @@
+{
+  "company": {
+    "id": "reliable-nepal-life",
+    "name": "Reliable Nepal Life Insurance Company Limited",
+    "shortName": "Reliable Nepal Life",
+    "type": "life",
+    "established": 2017,
+    "website": "http://www.reliablelife.com.np/",
+    "paidUpCapitalNPR": 4640000000,
+    "mergerHistory": "Operates independently; separate from Reliance Life, which merged into Sanima Reliance Life.",
+    "about": "Reliable Nepal Life Insurance is a Nepali life insurer that began operating on 31 August 2017 (Bhadra 15, 2074 BS) and has branches across the country. Plan details here are indicative because its website product pages could not be read.",
+    "highlights": [
+      "Paid-up capital about Rs 4.64 arba (Q2 FY 2081/82)",
+      "Sells the Reliable Sulabh Jeevan Bima Yojana, a 20-year plan with disability rider",
+      "Paid a Rs 50 lakh permanent disability claim in 2026"
+    ],
+    "sources": [
+      "https://www.sharesansar.com/newsdetail/reliable-nepal-life-insurance-provides-rs-50-lakh-permanent-disability-claim-to-policyholder-2026-08-02",
+      "https://www.sharesansar.com/newsdetail/reliable-nepal-life-insurance-q2-report-net-profit-surges-5276-net-premiums-rise-2659-investment-income-at-rs-6919-crores-2025-02-07",
+      "https://beemaportal.com/best-life-insurance-companies/"
+    ],
+    "dataConfidence": "estimated",
+    "headquarters": "Gyaneshwor, Kathmandu",
+    "phone": "01-4423618",
+    "email": "info@reliablelife.com.np",
+    "claimSettlementRatio": 97.92,
+    "claimSettlementNote": "FY 2081/82, by amount: claims paid / (claims paid + claims outstanding), derived by Beema Portal from NIA Annual Report FY 2081/82 schedules 14-15 (NIA publishes no per-company ratio; year-end snapshot, excludes rejected claims). Third-party derived estimate."
+  },
+  "policies": [
+    {
+      "id": "reliable-nepal-life-sulabh-jeevan",
+      "companyId": "reliable-nepal-life",
+      "name": "Reliable Sulabh Jeevan Bima Yojana",
+      "category": "endowment",
+      "summary": "A 20-year life plan that pays a lump sum at maturity or to your family on death, with a disability rider available.",
+      "features": [
+        "Fixed premium over the policy term",
+        "Life cover from day one (after underwriting)",
+        "Policy loan available after surrender value is acquired"
+      ],
+      "benefits": [
+        "Death benefit paid to nominee",
+        "Maturity benefit paid if you survive the term"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed pre-existing conditions or false declaration"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Total permanent disability benefit",
+        "Premium waiver benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 5,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Regular savers wanting a medium-term plan"
+      ],
+      "sourceUrl": "http://www.reliablelife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "reliable-nepal-life-endowment",
+      "companyId": "reliable-nepal-life",
+      "name": "Endowment Plan (indicative)",
+      "category": "endowment",
+      "summary": "A standard savings-plus-cover plan paying a lump sum at the end of the term.",
+      "features": [
+        "Fixed premium over the policy term",
+        "Life cover from day one (after underwriting)",
+        "Policy loan available after surrender value is acquired"
+      ],
+      "benefits": [
+        "Death benefit paid to nominee",
+        "Maturity benefit paid if you survive the term"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed pre-existing conditions or false declaration"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Total permanent disability benefit",
+        "Premium waiver benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 5,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Salaried people building long-term savings with cover"
+      ],
+      "sourceUrl": "http://www.reliablelife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "reliable-nepal-life-term",
+      "companyId": "reliable-nepal-life",
+      "name": "Term Plan (indicative)",
+      "category": "term-life",
+      "summary": "Low-cost pure protection paying your family if you die during the term.",
+      "features": [
+        "Fixed premium over the policy term",
+        "Life cover from day one (after underwriting)",
+        "Policy loan available after surrender value is acquired"
+      ],
+      "benefits": [
+        "Death benefit paid to nominee",
+        "No maturity benefit"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed pre-existing conditions or false declaration"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Total permanent disability benefit",
+        "Premium waiver benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 5,
+        "maxTerm": 35,
+        "minSumAssured": 500000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 3.5,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Breadwinners wanting high cover cheaply"
+      ],
+      "sourceUrl": "http://www.reliablelife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "reliable-nepal-life-money-back",
+      "companyId": "reliable-nepal-life",
+      "name": "Money-Back Plan (indicative)",
+      "category": "money-back",
+      "summary": "Pays portions of the sum assured at set intervals plus the balance at maturity.",
+      "features": [
+        "Fixed premium over the policy term",
+        "Life cover from day one (after underwriting)",
+        "Policy loan available after surrender value is acquired"
+      ],
+      "benefits": [
+        "Death benefit paid to nominee",
+        "Maturity benefit paid if you survive the term"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed pre-existing conditions or false declaration"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Total permanent disability benefit",
+        "Premium waiver benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 5,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 65,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Those wanting periodic cash back"
+      ],
+      "sourceUrl": "http://www.reliablelife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "reliable-nepal-life-child",
+      "companyId": "reliable-nepal-life",
+      "name": "Child Plan (indicative)",
+      "category": "child-plan",
+      "summary": "Builds a fund for your child's education or marriage with parent cover.",
+      "features": [
+        "Fixed premium over the policy term",
+        "Life cover from day one (after underwriting)",
+        "Policy loan available after surrender value is acquired"
+      ],
+      "benefits": [
+        "Death benefit paid to nominee",
+        "Maturity benefit paid if you survive the term"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed pre-existing conditions or false declaration"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Total permanent disability benefit",
+        "Premium waiver benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 75,
+        "minTerm": 5,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 55,
+        "referenceTerm": 18
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Salaried people building long-term savings with cover"
+      ],
+      "sourceUrl": "http://www.reliablelife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "reliable-nepal-life-whole-life",
+      "companyId": "reliable-nepal-life",
+      "name": "Whole Life Plan (indicative)",
+      "category": "whole-life",
+      "summary": "Lifelong cover with limited premium payment.",
+      "features": [
+        "Fixed premium over the policy term",
+        "Life cover from day one (after underwriting)",
+        "Policy loan available after surrender value is acquired"
+      ],
+      "benefits": [
+        "Death benefit paid to nominee",
+        "Maturity benefit paid if you survive the term"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed pre-existing conditions or false declaration"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Total permanent disability benefit",
+        "Premium waiver benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 5,
+        "maxTerm": 35,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 30,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Salaried people building long-term savings with cover"
+      ],
+      "sourceUrl": "http://www.reliablelife.com.np/",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

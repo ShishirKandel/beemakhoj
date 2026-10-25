@@ -1,0 +1,309 @@
+{
+  "company": {
+    "id": "siddhartha-premier",
+    "name": "Siddhartha Premier Insurance Limited",
+    "nameNe": "सिद्धार्थ प्रिमियर इन्स्योरेन्स लिमिटेड",
+    "shortName": "SPIL",
+    "type": "nonlife",
+    "established": 2023,
+    "headquarters": "Siddhartha Premier Bhawan, Babarmahal, Kathmandu",
+    "website": "https://siddharthapremier.com.np",
+    "phone": "01-5705766",
+    "branches": 125,
+    "paidUpCapitalNPR": 2800000000,
+    "nepseSymbol": "SPIL",
+    "mergerHistory": "Formed by the merger of Siddhartha Insurance Limited and Premier Insurance Company (Nepal) Limited; joint operation began 1 March 2023 (Falgun 17, 2079) on a 1:1 share swap.",
+    "about": "SPIL is a general (non-life) insurer created in 2023 when Siddhartha Insurance and Premier Insurance merged. It sells motor, health, accident, travel, property and other everyday covers through about 125 branches.",
+    "highlights": [
+      "Active and operating: still publishing results and paying claims in FY 2025/26",
+      "Paid over Rs 2.43 billion in claims (14,194 claims) in the first 11 months of FY 2081/82",
+      "Listed on NEPSE as SPIL with about 28 million shares"
+    ],
+    "sources": [
+      "https://www.sharesansar.com/newsdetail/premier-insurance-completes-merger-deal-with-siddhartha-insurance-strong-company-with-28-arba-paid-up-capital-and-125-branches-come-into-being-2023-03-02",
+      "https://en.beemapost.com/2025/06/9594/",
+      "https://en.beemapost.com/2025/12/12846/",
+      "https://siddharthapremier.com.np",
+      "https://siddharthapremier.com.np/citizen-charter"
+    ],
+    "dataConfidence": "partial"
+  },
+  "policies": [
+    {
+      "id": "siddhartha-premier-health-insurance",
+      "companyId": "siddhartha-premier",
+      "premiumModes": [
+        "yearly"
+      ],
+      "dataConfidence": "estimated",
+      "name": "Health Insurance",
+      "category": "health",
+      "summary": "Covers hospital bills and treatment costs for you or your family up to the sum insured.",
+      "features": [
+        "Hospitalisation and surgery cover",
+        "Cashless treatment at network hospitals",
+        "Family floater options",
+        "Pre- and post-hospitalisation expenses"
+      ],
+      "benefits": [
+        "Reimbursement of in-patient treatment costs",
+        "Room, doctor and medicine charges covered up to limits"
+      ],
+      "exclusions": [
+        "Pre-existing conditions during the waiting period",
+        "Cosmetic treatment"
+      ],
+      "riders": [
+        "Critical illness add-on",
+        "Maternity cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 1,
+        "maxEntryAge": 65,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "health-bands",
+        "bands": [
+          {
+            "sumInsured": 300000,
+            "annualPremiumAge30": 6000
+          },
+          {
+            "sumInsured": 500000,
+            "annualPremiumAge30": 9000
+          },
+          {
+            "sumInsured": 1000000,
+            "annualPremiumAge30": 15000
+          }
+        ]
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Individuals and families wanting hospital cover"
+      ],
+      "sourceUrl": "https://siddharthapremier.com.np"
+    },
+    {
+      "id": "siddhartha-premier-personal-accident",
+      "companyId": "siddhartha-premier",
+      "premiumModes": [
+        "yearly"
+      ],
+      "dataConfidence": "estimated",
+      "name": "Personal Accident Insurance",
+      "category": "personal-accident",
+      "summary": "Pays a lump sum if an accident causes death or disability.",
+      "features": [
+        "Accidental death and disability cover",
+        "Worldwide or Nepal-only options",
+        "Medical expense add-on"
+      ],
+      "benefits": [
+        "Lump sum on accidental death",
+        "Partial or total disability benefit"
+      ],
+      "exclusions": [
+        "Self-inflicted injury",
+        "Hazardous sports unless declared"
+      ],
+      "riders": [
+        "Medical expenses"
+      ],
+      "eligibility": {
+        "minEntryAge": 5,
+        "maxEntryAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 1500,
+        "coverAmount": 1000000,
+        "note": "Indicative premium for Rs 10 lakh accidental death cover"
+      },
+      "bestFor": [
+        "Anyone with a daily commute or field work"
+      ],
+      "sourceUrl": "https://siddharthapremier.com.np"
+    },
+    {
+      "id": "siddhartha-premier-motor-bike",
+      "companyId": "siddhartha-premier",
+      "premiumModes": [
+        "yearly"
+      ],
+      "dataConfidence": "estimated",
+      "name": "Motorcycle Insurance",
+      "category": "motor-bike",
+      "summary": "Covers your bike for third-party liability and own damage; tariff set by Nepal Insurance Authority.",
+      "features": [
+        "Third-party liability as per NIA tariff",
+        "Own damage cover on comprehensive plans",
+        "Rider and pillion accident cover"
+      ],
+      "benefits": [
+        "Pays for injury and damage to others",
+        "Repair cost of your bike on comprehensive plan"
+      ],
+      "exclusions": [
+        "Driving without a valid licence",
+        "Drunk driving"
+      ],
+      "riders": [
+        "Pillion rider cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1
+      },
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 1800,
+        "coverAmount": 500000,
+        "note": "Indicative third-party premium, 150cc-250cc bike (confirm against current NIA tariff)"
+      },
+      "bestFor": [
+        "Bike owners needing legal minimum cover"
+      ],
+      "sourceUrl": "https://siddharthapremier.com.np"
+    },
+    {
+      "id": "siddhartha-premier-motor-car",
+      "companyId": "siddhartha-premier",
+      "premiumModes": [
+        "yearly"
+      ],
+      "dataConfidence": "estimated",
+      "name": "Private Car Insurance (Comprehensive)",
+      "category": "motor-car",
+      "summary": "Covers repairs to your car and liability to others after an accident, theft or fire.",
+      "features": [
+        "Own damage cover",
+        "Third-party liability per NIA tariff",
+        "Theft and fire cover",
+        "Natural calamity cover as add-on"
+      ],
+      "benefits": [
+        "Repair or replacement of insured car",
+        "Third-party injury and property damage"
+      ],
+      "exclusions": [
+        "Wear and tear",
+        "Driving under influence"
+      ],
+      "riders": [
+        "Zero depreciation",
+        "Riot and strike cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1
+      },
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 2.5,
+        "minPremium": 15000
+      },
+      "bestFor": [
+        "Car owners with financed or new vehicles"
+      ],
+      "sourceUrl": "https://siddharthapremier.com.np"
+    },
+    {
+      "id": "siddhartha-premier-travel-insurance",
+      "companyId": "siddhartha-premier",
+      "premiumModes": [
+        "single"
+      ],
+      "dataConfidence": "estimated",
+      "name": "Travel Insurance",
+      "category": "travel",
+      "summary": "Medical and trip cover while you travel abroad.",
+      "features": [
+        "Emergency medical expenses",
+        "Baggage loss and delay",
+        "Trip cancellation"
+      ],
+      "benefits": [
+        "Overseas hospital costs",
+        "Emergency evacuation"
+      ],
+      "exclusions": [
+        "Pre-existing conditions",
+        "Travel against medical advice"
+      ],
+      "riders": [
+        "Adventure sports add-on"
+      ],
+      "eligibility": {
+        "minEntryAge": 1,
+        "maxEntryAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1
+      },
+      "pricing": {
+        "model": "per-day",
+        "perDayPremium": 150,
+        "coverAmount": 5000000
+      },
+      "bestFor": [
+        "Tourists, students and business travellers"
+      ],
+      "sourceUrl": "https://siddharthapremier.com.np"
+    },
+    {
+      "id": "siddhartha-premier-property-fire",
+      "companyId": "siddhartha-premier",
+      "premiumModes": [
+        "yearly"
+      ],
+      "dataConfidence": "estimated",
+      "name": "Property and Fire Insurance",
+      "category": "home",
+      "summary": "Protects your house, shop or goods against fire, earthquake and other damage.",
+      "features": [
+        "Fire, lightning and explosion cover",
+        "Earthquake and flood add-ons",
+        "Contents and building cover"
+      ],
+      "benefits": [
+        "Repair or rebuild cost up to sum insured"
+      ],
+      "exclusions": [
+        "War and nuclear risks",
+        "Intentional damage"
+      ],
+      "riders": [
+        "Earthquake",
+        "Flood and landslide",
+        "Burglary"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 99,
+        "minTerm": 1,
+        "maxTerm": 1
+      },
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 0.15,
+        "minPremium": 2000
+      },
+      "bestFor": [
+        "Homeowners and shopkeepers"
+      ],
+      "sourceUrl": "https://siddharthapremier.com.np"
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "company": {
+    "id": "rastriya-beema",
+    "name": "Rastriya Beema Company Limited",
+    "nameNe": "राष्ट्रिय बीमा कम्पनी लिमिटेड",
+    "shortName": "RBCL",
+    "type": "nonlife",
+    "established": 2014,
+    "headquarters": "RBCL Building, Ramshahpath, Kathmandu",
+    "website": "https://rbcl.gov.np",
+    "phone": "01-5358866",
+    "email": "info@rbcl.gov.np",
+    "mergerHistory": "Registered in June 2014 (Jestha 2071 BS) when general insurance was split off from the old Rastriya Beema Sansthan, which continued as the life insurer Rastriya Jeevan Beema.",
+    "about": "RBCL is the only non-life insurer owned by the Government of Nepal. It sells motor, property, engineering, marine, aviation, travel medical, medical and agriculture covers.",
+    "highlights": [
+      "Only government-owned general insurer",
+      "Handles agriculture and livestock insurance with an 80% government premium subsidy",
+      "Not the same company as Rastriya Jeevan Beema (life insurer)"
+    ],
+    "sources": [
+      "https://rbcl.gov.np",
+      "https://rbcl.gov.np/pages/introduction-to-rbcl"
+    ],
+    "dataConfidence": "partial"
+  },
+  "policies": [
+    {
+      "id": "rastriya-beema-medical-aid",
+      "companyId": "rastriya-beema",
+      "premiumModes": [
+        "yearly"
+      ],
+      "dataConfidence": "estimated",
+      "name": "Medical Aid Insurance",
+      "category": "health",
+      "summary": "Reimburses hospital and treatment costs up to the sum insured.",
+      "features": [
+        "Hospitalisation cover",
+        "Reimbursement of treatment cost",
+        "Individual or group"
+      ],
+      "benefits": [
+        "Pays eligible medical bills up to limit"
+      ],
+      "exclusions": [
+        "Pre-existing conditions in waiting period",
+        "Cosmetic treatment"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 1,
+        "maxEntryAge": 65,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "health-bands",
+        "bands": [
+          {
+            "sumInsured": 300000,
+            "annualPremiumAge30": 5500
+          },
+          {
+            "sumInsured": 500000,
+            "annualPremiumAge30": 8500
+          },
+          {
+            "sumInsured": 1000000,
+            "annualPremiumAge30": 14000
+          }
+        ]
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Individuals wanting a government-backed insurer"
+      ],
+      "sourceUrl": "https://rbcl.gov.np"
+    },
+    {
+      "id": "rastriya-beema-motor-bike",
+      "companyId": "rastriya-beema",
+      "premiumModes": [
+        "yearly"
+      ],
+      "dataConfidence": "estimated",
+      "name": "Motorcycle Insurance",
+      "category": "motor-bike",
+      "summary": "Covers third-party liability and optionally damage to your motorcycle.",
+      "features": [
+        "Third-party cover per NIA tariff",
+        "Own damage on comprehensive plan",
+        "Driver and pillion accident cover"
+      ],
+      "benefits": [
+        "Pays for injury or damage to others",
+        "Repair of your bike (comprehensive)"
+      ],
+      "exclusions": [
+        "No valid licence",
+        "Drunk driving"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1
+      },
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 1800,
+        "coverAmount": 500000,
+        "note": "Indicative third-party premium, 150cc-250cc bike (confirm against current NIA tariff)"
+      },
+      "bestFor": [
+        "Bike owners needing legal minimum cover"
+      ],
+      "sourceUrl": "https://rbcl.gov.np"
+    },
+    {
+      "id": "rastriya-beema-motor-car",
+      "companyId": "rastriya-beema",
+      "premiumModes": [
+        "yearly"
+      ],
+      "dataConfidence": "estimated",
+      "name": "Private Vehicle Insurance",
+      "category": "motor-car",
+      "summary": "Covers repairs to your car and liability to others.",
+      "features": [
+        "Own damage cover",
+        "Third-party liability per NIA tariff",
+        "Theft and fire cover"
+      ],
+      "benefits": [
+        "Repair or replacement of insured vehicle",
+        "Third-party injury and property damage"
+      ],
+      "exclusions": [
+        "Wear and tear",
+        "Driving under influence"
+      ],
+      "riders": [
+        "Riot and strike cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1
+      },
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 2.5,
+        "minPremium": 15000
+      },
+      "bestFor": [
+        "Private car owners"
+      ],
+      "sourceUrl": "https://rbcl.gov.np"
+    },
+    {
+      "id": "rastriya-beema-travel-medical",
+      "companyId": "rastriya-beema",
+      "premiumModes": [
+        "single"
+      ],
+      "dataConfidence": "estimated",
+      "name": "Travel Medical Insurance",
+      "category": "travel",
+      "summary": "Pays for illness or accident treatment while you travel abroad.",
+      "features": [
+        "Treatment and hospital fees abroad",
+        "Surgery cover",
+        "Per-day pricing"
+      ],
+      "benefits": [
+        "Emergency medical expenses overseas"
+      ],
+      "exclusions": [
+        "Pre-existing conditions",
+        "Travel against medical advice"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 1,
+        "maxEntryAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1
+      },
+      "pricing": {
+        "model": "per-day",
+        "perDayPremium": 120,
+        "coverAmount": 5000000
+      },
+      "bestFor": [
+        "Visa applicants, tourists and students"
+      ],
+      "sourceUrl": "https://rbcl.gov.np"
+    },
+    {
+      "id": "rastriya-beema-property-fire",
+      "companyId": "rastriya-beema",
+      "premiumModes": [
+        "yearly"
+      ],
+      "dataConfidence": "estimated",
+      "name": "Property Insurance",
+      "category": "home",
+      "summary": "Compensates for loss of house, equipment or goods mainly from fire, with extensions for earthquake and flood.",
+      "features": [
+        "Fire, lightning and explosion",
+        "Earthquake and flood extensions",
+        "Building and contents"
+      ],
+      "benefits": [
+        "Repair or rebuild cost up to sum insured"
+      ],
+      "exclusions": [
+        "War and nuclear risks",
+        "Intentional damage"
+      ],
+      "riders": [
+        "Earthquake",
+        "Flood",
+        "Burglary"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 99,
+        "minTerm": 1,
+        "maxTerm": 1
+      },
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 0.15,
+        "minPremium": 2000
+      },
+      "bestFor": [
+        "Homeowners and business owners"
+      ],
+      "sourceUrl": "https://rbcl.gov.np"
+    },
+    {
+      "id": "rastriya-beema-agriculture-livestock",
+      "companyId": "rastriya-beema",
+      "premiumModes": [
+        "yearly"
+      ],
+      "dataConfidence": "estimated",
+      "name": "Agriculture and Livestock Insurance",
+      "category": "livestock",
+      "summary": "Protects farmers against loss of livestock and crops; government subsidises 80% of the premium.",
+      "features": [
+        "Cattle, buffalo, goat and poultry cover",
+        "Crop cover against pests, hail and storms",
+        "80% government premium subsidy"
+      ],
+      "benefits": [
+        "Compensation on death of insured animal",
+        "Crop loss compensation"
+      ],
+      "exclusions": [
+        "Deliberate harm",
+        "Death from neglect"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 99,
+        "minTerm": 1,
+        "maxTerm": 1
+      },
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 600,
+        "coverAmount": 60000,
+        "note": "Indicative farmer-paid premium for one animal after subsidy"
+      },
+      "bestFor": [
+        "Smallholder farmers"
+      ],
+      "sourceUrl": "https://rbcl.gov.np"
+    }
+  ]
+}

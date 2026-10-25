@@ -1,0 +1,372 @@
+{
+  "company": {
+    "id": "himalayan-everest",
+    "name": "Himalayan Everest Insurance Company Limited",
+    "shortName": "Himalayan Everest",
+    "type": "nonlife",
+    "website": "https://hei.com.np",
+    "headquarters": "Babarmahal, Kathmandu",
+    "phone": "01-5245090",
+    "tollFree": "9801575858",
+    "email": "info@hei.com.np",
+    "nepseSymbol": "HEI",
+    "paidUpCapitalNPR": 2500000000,
+    "mergerHistory": "Merger of Himalayan General Insurance and Everest Insurance, completed July 2022 (swap ratio 85:100); merged shares listed on NEPSE in August 2022.",
+    "about": "Himalayan Everest Insurance is a Kathmandu-based general (non-life) insurer formed by merging two long-running Nepali companies. It sells motor, health, travel, accident, property, agriculture and business insurance.",
+    "highlights": [
+      "Formed by 2022 merger of Himalayan General and Everest Insurance",
+      "Wide range from motor and health to agriculture and marine",
+      "Listed on NEPSE"
+    ],
+    "sources": [
+      "https://hei.com.np",
+      "https://www.sharesansar.com/newsdetail/22399367-additional-shares-obtained-after-merger-listed-under-himalayan-everest-insurance-2022-08-10"
+    ],
+    "dataConfidence": "partial",
+    "nameNe": "हिमालयन एभरेस्ट इन्स्योरेन्स कम्पनी लिमिटेड",
+    "established": 1993
+  },
+  "policies": [
+    {
+      "id": "himalayan-everest-health",
+      "companyId": "himalayan-everest",
+      "sourceUrl": "https://hei.com.np",
+      "dataConfidence": "estimated",
+      "premiumModes": [
+        "yearly"
+      ],
+      "riders": [],
+      "taxBenefit": true,
+      "name": "Health Insurance",
+      "nameNe": "स्वास्थ्य बीमा",
+      "category": "health",
+      "summary": "Covers hospital bills for illness and accidents, with cashless or reimbursement claims.",
+      "features": [
+        "In-patient hospitalisation cover",
+        "Room and doctor fee cover",
+        "Pre- and post-hospitalisation expenses",
+        "Network hospitals across Nepal"
+      ],
+      "benefits": [
+        "Reimbursement of hospital bills up to sum insured",
+        "Ambulance and day-care costs covered"
+      ],
+      "exclusions": [
+        "Pre-existing conditions during waiting period",
+        "Cosmetic treatment",
+        "Self-inflicted injury"
+      ],
+      "eligibility": {
+        "minEntryAge": 1,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 100000,
+        "maxSumAssured": 1000000
+      },
+      "pricing": {
+        "model": "health-bands",
+        "bands": [
+          {
+            "sumInsured": 300000,
+            "annualPremiumAge30": 4500
+          },
+          {
+            "sumInsured": 500000,
+            "annualPremiumAge30": 6800
+          },
+          {
+            "sumInsured": 1000000,
+            "annualPremiumAge30": 11500
+          }
+        ]
+      },
+      "bestFor": [
+        "Individuals and families wanting hospital cover"
+      ]
+    },
+    {
+      "id": "himalayan-everest-accidental",
+      "companyId": "himalayan-everest",
+      "sourceUrl": "https://hei.com.np",
+      "dataConfidence": "estimated",
+      "premiumModes": [
+        "yearly"
+      ],
+      "riders": [],
+      "taxBenefit": false,
+      "name": "Personal Accident Insurance",
+      "nameNe": "दुर्घटना बीमा",
+      "category": "personal-accident",
+      "summary": "Pays you or your family a fixed amount if an accident causes death or disability.",
+      "features": [
+        "Accidental death cover",
+        "Permanent total and partial disability cover",
+        "Medical expense cover for accidents",
+        "24-hour cover"
+      ],
+      "benefits": [
+        "Full sum insured on accidental death",
+        "Percentage of sum insured on disability"
+      ],
+      "exclusions": [
+        "Suicide or self-harm",
+        "Injuries under influence of alcohol or drugs",
+        "War and riots"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 200000,
+        "maxSumAssured": 5000000
+      },
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 1500,
+        "coverAmount": 1000000,
+        "note": "Indicative, NPR 1 million cover"
+      },
+      "bestFor": [
+        "Anyone who travels or works outdoors"
+      ]
+    },
+    {
+      "id": "himalayan-everest-motorcycle-scooter",
+      "companyId": "himalayan-everest",
+      "sourceUrl": "https://hei.com.np",
+      "dataConfidence": "estimated",
+      "premiumModes": [
+        "yearly"
+      ],
+      "riders": [],
+      "taxBenefit": false,
+      "name": "Motorcycle / Scooter Insurance",
+      "nameNe": "मोटरसाइकल बीमा",
+      "category": "motor-bike",
+      "summary": "Third-party cover is compulsory by law; comprehensive also covers damage to your own bike.",
+      "features": [
+        "Compulsory third-party liability cover",
+        "Comprehensive option for own damage and theft",
+        "Driver and pillion accident cover optional",
+        "Garage repair network"
+      ],
+      "benefits": [
+        "Third-party death, injury and property damage as per tariff",
+        "Own damage repair or total loss payout (comprehensive)"
+      ],
+      "exclusions": [
+        "Driving without valid licence",
+        "Drunk driving",
+        "Wear and tear"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 80,
+        "maxMaturityAge": 85,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 2,
+        "minPremium": 2500
+      },
+      "bestFor": [
+        "Bike and scooter owners"
+      ]
+    },
+    {
+      "id": "himalayan-everest-private-car",
+      "companyId": "himalayan-everest",
+      "sourceUrl": "https://hei.com.np",
+      "dataConfidence": "estimated",
+      "premiumModes": [
+        "yearly"
+      ],
+      "riders": [],
+      "taxBenefit": false,
+      "name": "Private Car Insurance",
+      "nameNe": "निजी कार बीमा",
+      "category": "motor-car",
+      "summary": "Covers damage to your car plus legal liability to others, with optional add-ons.",
+      "features": [
+        "Own damage and theft cover",
+        "Third-party liability as per NIA tariff",
+        "Optional add-ons",
+        "Natural calamity cover"
+      ],
+      "benefits": [
+        "Repair cost or total loss payout",
+        "Third-party claims paid as per tariff"
+      ],
+      "exclusions": [
+        "Driving without valid licence",
+        "Drunk driving",
+        "Wear and tear and tyres"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 80,
+        "maxMaturityAge": 85,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 1.8,
+        "minPremium": 12000
+      },
+      "bestFor": [
+        "Private car owners"
+      ]
+    },
+    {
+      "id": "himalayan-everest-travel",
+      "companyId": "himalayan-everest",
+      "sourceUrl": "https://hei.com.np",
+      "dataConfidence": "estimated",
+      "premiumModes": [
+        "yearly"
+      ],
+      "riders": [],
+      "taxBenefit": false,
+      "name": "Travel Insurance",
+      "nameNe": "यात्रा बीमा",
+      "category": "travel",
+      "summary": "Covers medical emergencies and trip problems while you are abroad.",
+      "features": [
+        "Overseas medical emergency cover",
+        "Emergency evacuation",
+        "Baggage loss and delay",
+        "Trip cancellation options"
+      ],
+      "benefits": [
+        "Hospital costs abroad up to cover limit",
+        "Repatriation if needed"
+      ],
+      "exclusions": [
+        "Pre-existing conditions",
+        "Adventure sports unless added",
+        "Travel against medical advice"
+      ],
+      "eligibility": {
+        "minEntryAge": 1,
+        "maxEntryAge": 70,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "per-day",
+        "perDayPremium": 130,
+        "coverAmount": 5000000
+      },
+      "bestFor": [
+        "Students, tourists and business travellers going abroad"
+      ]
+    },
+    {
+      "id": "himalayan-everest-property",
+      "companyId": "himalayan-everest",
+      "sourceUrl": "https://hei.com.np",
+      "dataConfidence": "estimated",
+      "premiumModes": [
+        "yearly"
+      ],
+      "riders": [],
+      "taxBenefit": false,
+      "name": "Property Insurance",
+      "nameNe": "सम्पत्ति बीमा",
+      "category": "home",
+      "summary": "Protects your house and belongings against fire, earthquake and burglary.",
+      "features": [
+        "Fire and allied perils",
+        "Earthquake and flood cover options",
+        "Burglary of contents",
+        "Optional household items cover"
+      ],
+      "benefits": [
+        "Repair or rebuild cost up to sum insured",
+        "Contents loss payout"
+      ],
+      "exclusions": [
+        "Wear and tear",
+        "War and nuclear risk",
+        "Intentional damage"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 99,
+        "maxMaturityAge": 99,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 500000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 0.25,
+        "minPremium": 1500
+      },
+      "bestFor": [
+        "Home owners and tenants with valuables"
+      ]
+    },
+    {
+      "id": "himalayan-everest-agriculture",
+      "companyId": "himalayan-everest",
+      "sourceUrl": "https://hei.com.np",
+      "dataConfidence": "estimated",
+      "premiumModes": [
+        "yearly"
+      ],
+      "riders": [],
+      "taxBenefit": false,
+      "name": "Agriculture Insurance (Crop)",
+      "nameNe": "कृषि बीमा",
+      "category": "crop",
+      "summary": "Protects farmers against crop loss from natural disasters and pests.",
+      "features": [
+        "Covers major crops",
+        "Natural disaster cover",
+        "Subsidised premium schemes"
+      ],
+      "benefits": [
+        "Compensation for crop loss",
+        "Premium subsidy from government where the scheme applies"
+      ],
+      "exclusions": [
+        "Negligent farming",
+        "War"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 99,
+        "maxMaturityAge": 99,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 2000,
+        "coverAmount": 100000,
+        "note": "Indicative, depends on crop and area"
+      },
+      "bestFor": [
+        "Farmers"
+      ]
+    }
+  ]
+}

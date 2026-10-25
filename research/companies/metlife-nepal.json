@@ -1,0 +1,300 @@
+{
+  "company": {
+    "id": "metlife-nepal",
+    "name": "MetLife Nepal (American Life Insurance Company - Nepal)",
+    "shortName": "MetLife Nepal",
+    "type": "life",
+    "established": 2001,
+    "headquarters": "Pulchowk, Lalitpur",
+    "website": "https://www.metlife.com.np/en/",
+    "phone": "01-5970166",
+    "tollFree": "1660-01-55555",
+    "email": "service-Nepal@metlife.com.np",
+    "mergerHistory": "No merger; formerly ALICO, now MetLife.",
+    "about": "MetLife Nepal is the Nepal operation of the global MetLife group, operating since 2001 under the former ALICO name. It sells savings, education, health and retirement plans plus group and micro insurance.",
+    "highlights": [
+      "Foreign-promoted insurer, 20+ years in Nepal",
+      "Reported covering over 1.4 million lives as of December 2021",
+      "Launched Midterm Growth plan with 40% payout at mid-term in 2023"
+    ],
+    "sources": [
+      "https://www.metlife.com.np/en/",
+      "https://www.sharesansar.com/index.php/newsdetail/metlife-launches-new-insurance-plan-with-midterm-benefits-in-nepal-2023-02-02",
+      "https://www.sharesansar.com/newsdetail/metlife-celebrates-20-years-in-nepal-commits-to-continuously-provide-best-in-class-experience-to-customers-2021-12-07",
+      "https://en.wikipedia.org/wiki/MetLife_Nepal",
+      "https://beemaportal.com/best-life-insurance-companies/"
+    ],
+    "dataConfidence": "partial",
+    "claimSettlementRatio": 85.23,
+    "claimSettlementNote": "FY 2081/82, by amount: claims paid / (claims paid + claims outstanding), derived by Beema Portal from NIA Annual Report FY 2081/82 schedules 14-15 (NIA publishes no per-company ratio; year-end snapshot, excludes rejected claims). Third-party derived estimate."
+  },
+  "policies": [
+    {
+      "id": "metlife-nepal-midterm-growth",
+      "companyId": "metlife-nepal",
+      "name": "Midterm Growth Plan",
+      "category": "endowment",
+      "summary": "A savings plan that pays 40% of the sum assured halfway through and the rest at maturity, with life cover throughout.",
+      "features": [
+        "40% of face amount paid at mid-term",
+        "Cover continues after the mid-term payout",
+        "Term of 12 to 22 years",
+        "Riders can be added"
+      ],
+      "benefits": [
+        "Mid-term payout of 40% of face amount",
+        "Maturity benefit at end of term",
+        "Death benefit to nominee"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Non-disclosure of material facts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver",
+        "Critical illness"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 75,
+        "minTerm": 12,
+        "maxTerm": 22,
+        "minSumAssured": 250000,
+        "maxSumAssured": 50000000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 55,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "People wanting a cash payout midway plus long-term savings"
+      ],
+      "sourceUrl": "https://www.sharesansar.com/index.php/newsdetail/metlife-launches-new-insurance-plan-with-midterm-benefits-in-nepal-2023-02-02",
+      "dataConfidence": "partial"
+    },
+    {
+      "id": "metlife-nepal-childs-education-protection",
+      "companyId": "metlife-nepal",
+      "name": "My Child's Education Protection Plan",
+      "category": "child-plan",
+      "summary": "Helps parents save for a child's education, with protection if the parent passes away.",
+      "features": [
+        "Built for education funding",
+        "Parent is the insured life",
+        "Payouts timed to school and college years",
+        "Riders available"
+      ],
+      "benefits": [
+        "Education payouts at set intervals",
+        "Death benefit on the parent",
+        "Maturity benefit"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Non-disclosure of material facts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 50,
+        "maxMaturityAge": 65,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 58,
+        "referenceTerm": 18
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Parents of young children"
+      ],
+      "sourceUrl": "https://www.metlife.com.np/en/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "metlife-nepal-double-protection-plus",
+      "companyId": "metlife-nepal",
+      "name": "Double Protection Plus Plan",
+      "category": "endowment",
+      "summary": "A savings plan that pays a double benefit on death or disability, with a maturity benefit at the end of the term.",
+      "features": [
+        "Savings plus enhanced death cover",
+        "Fixed term",
+        "Rider options",
+        "Regular premium"
+      ],
+      "benefits": [
+        "Enhanced death benefit",
+        "Maturity benefit"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Non-disclosure of material facts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 48,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Breadwinners wanting more cover along with savings"
+      ],
+      "sourceUrl": "https://www.sharesansar.com/newsdetail/metlife-nepal-launches-first-of-its-kind-double-protection-plus-plan-with-dual-benefits-2025-04-22",
+      "dataConfidence": "partial"
+    },
+    {
+      "id": "metlife-nepal-subhabisya-beema",
+      "companyId": "metlife-nepal",
+      "name": "Subhabisya Beema (Retirement)",
+      "category": "pension",
+      "summary": "A retirement-focused plan that builds a fund for your later years.",
+      "features": [
+        "Long-term retirement savings",
+        "Life cover during accumulation",
+        "Regular premiums",
+        "Planned retirement payout"
+      ],
+      "benefits": [
+        "Retirement benefit at maturity",
+        "Death benefit before maturity"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Non-disclosure of material facts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 50,
+        "maxMaturityAge": 70,
+        "minTerm": 15,
+        "maxTerm": 30,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 45,
+        "referenceTerm": 25
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "People in their 30s planning for retirement"
+      ],
+      "sourceUrl": "https://www.metlife.com.np/en/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "metlife-nepal-lifecare",
+      "companyId": "metlife-nepal",
+      "name": "LifeCare (Critical Illness)",
+      "category": "critical-illness",
+      "summary": "Pays a lump sum if you are diagnosed with a covered serious illness.",
+      "features": [
+        "Lump sum on diagnosis of listed illnesses",
+        "Includes cover designed for women's illnesses",
+        "Fixed annual premium",
+        "Simple claim on diagnosis"
+      ],
+      "benefits": [
+        "Lump sum on covered critical illness diagnosis"
+      ],
+      "exclusions": [
+        "Pre-existing conditions",
+        "Illness within the waiting period",
+        "Self-inflicted conditions"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 65,
+        "minTerm": 5,
+        "maxTerm": 20,
+        "minSumAssured": 200000,
+        "maxSumAssured": 2000000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "health-bands",
+        "bands": [
+          {
+            "sumInsured": 500000,
+            "annualPremiumAge30": 4500
+          },
+          {
+            "sumInsured": 1000000,
+            "annualPremiumAge30": 8500
+          },
+          {
+            "sumInsured": 2000000,
+            "annualPremiumAge30": 16000
+          }
+        ]
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Earners wanting a safety net for a major illness"
+      ],
+      "sourceUrl": "https://www.metlife.com.np/en/",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

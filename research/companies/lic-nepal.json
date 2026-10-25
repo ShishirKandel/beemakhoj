@@ -1,0 +1,283 @@
+{
+  "company": {
+    "id": "lic-nepal",
+    "name": "Life Insurance Corporation (Nepal) Limited",
+    "shortName": "LIC Nepal",
+    "type": "life",
+    "established": 2001,
+    "headquarters": "Kathmandu",
+    "website": "http://www.licnepal.com.np/",
+    "phone": "01-4012613",
+    "paidUpCapitalNPR": 2653200000,
+    "nepseSymbol": "LICN",
+    "mergerHistory": "No merger; incorporated December 2000, licensed and operating since 2001.",
+    "about": "LIC Nepal is a Nepal-based life insurer, incorporated in 2000 and operating since 2001, with Life Insurance Corporation of India as its largest shareholder. It is listed on NEPSE and sells endowment, money-back, child and micro life plans through agents across the country.",
+    "highlights": [
+      "Listed on NEPSE (LICN)",
+      "Over 6.9 lakh policies sold up to FY 2079/80 per press reports",
+      "Wide plan range including child, money-back and micro plans"
+    ],
+    "sources": [
+      "http://www.licnepal.com.np/",
+      "https://www.sharesansar.com/newsdetail/life-insurance-corporation-nepal-becomes-profitable-in-q4-eps-at-rs-470-2023-08-14",
+      "https://beemaportal.com/best-life-insurance-companies/"
+    ],
+    "dataConfidence": "partial",
+    "claimSettlementRatio": 92.69,
+    "claimSettlementNote": "FY 2081/82, by amount: claims paid / (claims paid + claims outstanding), derived by Beema Portal from NIA Annual Report FY 2081/82 schedules 14-15 (NIA publishes no per-company ratio; year-end snapshot, excludes rejected claims). Third-party derived estimate."
+  },
+  "policies": [
+    {
+      "id": "lic-nepal-endowment-plan",
+      "companyId": "lic-nepal",
+      "name": "Endowment Plan",
+      "category": "endowment",
+      "summary": "A savings plan that pays a lump sum at the end of the term, or to your family if you pass away earlier.",
+      "features": [
+        "Fixed term savings with life cover",
+        "Yearly bonus declared on the sum assured",
+        "Flexible premium payment modes",
+        "Loan facility against the policy after it gains surrender value"
+      ],
+      "benefits": [
+        "Death benefit: sum assured plus accrued bonus",
+        "Maturity benefit: sum assured plus accrued bonus"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 30,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Salaried people saving steadily for 15-20 years"
+      ],
+      "sourceUrl": "http://www.licnepal.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "lic-nepal-money-back-plan",
+      "companyId": "lic-nepal",
+      "name": "Money Back Plan",
+      "category": "money-back",
+      "summary": "Pays you part of the sum assured at set intervals during the term, with life cover throughout.",
+      "features": [
+        "Periodic survival payments",
+        "Life cover continues for the full term",
+        "Bonus on the sum assured",
+        "Good for regular cash needs"
+      ],
+      "benefits": [
+        "Survival benefits at fixed points in the term",
+        "Death benefit: full sum assured plus bonus",
+        "Maturity benefit: remaining sum plus bonus"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Non-disclosure of material facts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 70,
+        "minTerm": 15,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 65,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Families wanting money back for milestones like education or a home"
+      ],
+      "sourceUrl": "https://www.licnepal.com.np/our-products/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "lic-nepal-baal-unnati",
+      "companyId": "lic-nepal",
+      "name": "Baal Unnati (Child Plan)",
+      "category": "child-plan",
+      "summary": "A plan for a parent to build funds for a child's education and future, with cover on the parent.",
+      "features": [
+        "Built around a child's future needs",
+        "Covers both the child and the parent proposer",
+        "Guaranteed additions (without-profit plan)",
+        "Optional disability rider for the proposer"
+      ],
+      "benefits": [
+        "Survival payments for education milestones",
+        "Death benefit on the parent's life",
+        "Maturity benefit with bonus"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Non-disclosure of material facts"
+      ],
+      "riders": [
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 50,
+        "maxMaturityAge": 65,
+        "minTerm": 8,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": 10000000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 58,
+        "referenceTerm": 18
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "New parents planning for school and college costs"
+      ],
+      "sourceUrl": "https://www.licnepal.com.np/product_posts/bal-unnati-2/",
+      "dataConfidence": "partial"
+    },
+    {
+      "id": "lic-nepal-jeevan-anand",
+      "companyId": "lic-nepal",
+      "name": "Jeevan Anand",
+      "category": "whole-life",
+      "summary": "An endowment-plus-whole-life plan that pays the sum assured with bonus at the end of the premium term and keeps life cover until death.",
+      "features": [
+        "Long-duration protection",
+        "Bonus on sum assured",
+        "Premium paid over a limited period",
+        "Loan facility available"
+      ],
+      "benefits": [
+        "Death benefit: sum assured plus bonus",
+        "Maturity benefit: sum assured plus bonus"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Non-disclosure of material facts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 80,
+        "minTerm": 15,
+        "maxTerm": 40,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 32,
+        "referenceTerm": 30
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Younger buyers wanting low-cost long-term cover with savings"
+      ],
+      "sourceUrl": "https://www.licnepal.com.np/product_posts/jeevan-anand/",
+      "dataConfidence": "partial"
+    },
+    {
+      "id": "lic-nepal-term-micro-insurance",
+      "companyId": "lic-nepal",
+      "name": "Term Micro Insurance",
+      "category": "term-life",
+      "summary": "Low-cost pure protection that pays your family only if you die during the term.",
+      "features": [
+        "Very low premium",
+        "Small sum assured aimed at lower-income households",
+        "Simple application",
+        "No maturity payment"
+      ],
+      "benefits": [
+        "Death benefit: sum assured to nominee"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Non-disclosure of material facts"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 65,
+        "minTerm": 5,
+        "maxTerm": 20,
+        "minSumAssured": 50000,
+        "maxSumAssured": 500000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 4,
+        "referenceTerm": 10
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Lower-income families wanting basic cover"
+      ],
+      "sourceUrl": "http://www.licnepal.com.np/",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

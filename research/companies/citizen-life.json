@@ -1,0 +1,452 @@
+{
+  "company": {
+    "id": "citizen-life",
+    "name": "Citizen Life Insurance Limited",
+    "nameNe": "सिटिजन लाइफ इन्स्योरेन्स लिमिटेड",
+    "shortName": "Citizen Life",
+    "type": "life",
+    "established": 2017,
+    "headquarters": "LS Complex, Thapathali, Kathmandu",
+    "website": "https://citizenlifenepal.com/",
+    "phone": "01-5970217",
+    "branches": 135,
+    "paidUpCapitalNPR": 5000000000,
+    "nepseSymbol": "CLI",
+    "mergerHistory": "No merger.",
+    "about": "Citizen Life is a Kathmandu-based life insurer that started in 2017. It offers savings, money-back, child, term and foreign-employment plans and listed on NEPSE after its 2023 IPO.",
+    "highlights": [
+      "135 branches reported on its website",
+      "Plans for savings, protection and migrant workers",
+      "Listed on NEPSE"
+    ],
+    "sources": [
+      "https://citizenlifenepal.com/",
+      "https://www.sharesansar.com/newsdetail/ipo-of-citizen-life-insurance-company-opens-from-today-a-thorough-look-into-company-performance-and-vital-fundamentals-2023-09-01",
+      "https://beemaportal.com/best-life-insurance-companies/"
+    ],
+    "dataConfidence": "partial",
+    "claimSettlementRatio": 93.87,
+    "claimSettlementNote": "FY 2081/82, by amount: claims paid / (claims paid + claims outstanding), derived by Beema Portal from NIA Annual Report FY 2081/82 schedules 14-15 (NIA publishes no per-company ratio; year-end snapshot, excludes rejected claims). Third-party derived estimate."
+  },
+  "policies": [
+    {
+      "id": "citizen-life-endowment-plus",
+      "companyId": "citizen-life",
+      "name": "Citizen Endowment Plus Insurance Plan",
+      "category": "endowment",
+      "summary": "Save for a fixed term and get a lump sum with bonus at maturity, with life cover throughout.",
+      "features": [
+        "Fixed-term savings with life cover",
+        "Yearly bonus added to the policy",
+        "Loan facility against the policy",
+        "Flexible premium modes"
+      ],
+      "benefits": [
+        "Sum assured plus accrued bonus on maturity",
+        "Sum assured plus bonus on death"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false health information",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Critical illness rider",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 10,
+        "maxTerm": 30,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 55,
+      "taxBenefit": true,
+      "bestFor": [
+        "Young earners saving for 15-20 years"
+      ],
+      "sourceUrl": "https://citizenlifenepal.com/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "citizen-life-regular-pay-money-back",
+      "companyId": "citizen-life",
+      "name": "Citizen Regular Pay Money Back Insurance Plan",
+      "category": "money-back",
+      "summary": "You get part of the sum assured back at regular intervals while staying covered.",
+      "features": [
+        "Periodic survival payments",
+        "Life cover for the full sum assured",
+        "Bonus on maturity",
+        "Loan facility"
+      ],
+      "benefits": [
+        "Survival benefits at set intervals",
+        "Maturity benefit with bonus",
+        "Full sum assured on death"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false health information",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Critical illness rider",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 70,
+        "minTerm": 15,
+        "maxTerm": 25,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 65,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 50,
+      "taxBenefit": true,
+      "bestFor": [
+        "People wanting regular cash back for goals"
+      ],
+      "sourceUrl": "https://citizenlifenepal.com/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "citizen-life-annual-money-back",
+      "companyId": "citizen-life",
+      "name": "Citizen Annual Money Back Insurance Plan",
+      "category": "money-back",
+      "summary": "Receive a share of your cover back every year of the policy.",
+      "features": [
+        "Yearly money-back payments",
+        "Life cover continues in full",
+        "Bonus at maturity"
+      ],
+      "benefits": [
+        "Annual survival benefit",
+        "Maturity benefit with bonus",
+        "Death benefit"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false health information",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Critical illness rider",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 70,
+        "minTerm": 12,
+        "maxTerm": 25,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 68,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 50,
+      "taxBenefit": true,
+      "bestFor": [
+        "Families wanting yearly cash flow"
+      ],
+      "sourceUrl": "https://citizenlifenepal.com/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "citizen-life-protection-plan",
+      "companyId": "citizen-life",
+      "name": "Citizen Protection Plan",
+      "category": "term-life",
+      "summary": "Low-cost pure protection that pays your family if you die during the term.",
+      "features": [
+        "Pure risk cover",
+        "Very low premium",
+        "No maturity benefit"
+      ],
+      "benefits": [
+        "Sum assured paid to family on death in term",
+        "No payout if you outlive the term"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false health information",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 5,
+        "maxTerm": 30,
+        "minSumAssured": 500000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 3.5,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Breadwinners with loans or dependents"
+      ],
+      "sourceUrl": "https://citizenlifenepal.com/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "citizen-life-child-future-plus",
+      "companyId": "citizen-life",
+      "name": "Citizen Child Future Plan Plus",
+      "category": "child-plan",
+      "summary": "Build a fund for your child's education and future with cover on the parent.",
+      "features": [
+        "Parent is the life assured",
+        "Benefits timed to education years",
+        "Premium waiver if parent dies"
+      ],
+      "benefits": [
+        "Lump sum or staged payouts for the child",
+        "Bonus at maturity"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false health information",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Premium waiver",
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 50,
+        "maxMaturityAge": 65,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 18
+      },
+      "bonusRatePer1000": 50,
+      "taxBenefit": true,
+      "bestFor": [
+        "Parents of young children"
+      ],
+      "sourceUrl": "https://citizenlifenepal.com/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "citizen-life-foreign-employment-term",
+      "companyId": "citizen-life",
+      "name": "Foreign Employment Term Life Policy",
+      "category": "foreign-employment",
+      "summary": "Short-term life cover for Nepalis going abroad to work.",
+      "features": [
+        "Covers death while working abroad",
+        "Short policy terms",
+        "Quick enrolment"
+      ],
+      "benefits": [
+        "Sum assured on death during term",
+        "Cover applies while working abroad, subject to policy terms"
+      ],
+      "exclusions": [
+        "Suicide in the first year",
+        "Death from illegal acts"
+      ],
+      "riders": [
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 60,
+        "minTerm": 1,
+        "maxTerm": 5,
+        "minSumAssured": 500000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 6,
+        "referenceTerm": 2
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Migrant workers"
+      ],
+      "sourceUrl": "https://citizenlifenepal.com/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "citizen-life-savings-growth",
+      "companyId": "citizen-life",
+      "name": "Citizen Savings Growth Plan",
+      "category": "endowment",
+      "summary": "A universal-life savings plan that combines life cover with a savings fund that grows over time.",
+      "features": [
+        "Savings fund with life cover",
+        "Flexible premium payments",
+        "Loan facility"
+      ],
+      "benefits": [
+        "Fund value paid on maturity",
+        "Death benefit to the family"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false health information",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Critical illness rider",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Long-term savers"
+      ],
+      "sourceUrl": "https://citizenlifenepal.com/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "citizen-life-jeevan-sarathi",
+      "companyId": "citizen-life",
+      "name": "Citizen Jeevan Sarathi Yojana",
+      "category": "whole-life",
+      "summary": "Long-term protection cover for the family, with a survival benefit at the end of the premium term.",
+      "features": [
+        "Long coverage period",
+        "Loan facility",
+        "Family protection focus"
+      ],
+      "benefits": [
+        "Death benefit to the family",
+        "Survival benefit at end of premium term"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false health information",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Critical illness rider",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 80,
+        "minTerm": 15,
+        "maxTerm": 30,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 30,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "People wanting lasting cover"
+      ],
+      "sourceUrl": "https://citizenlifenepal.com/",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

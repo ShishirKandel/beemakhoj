@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BeemaKhoj — Compare insurance in Nepal</title>
+  <meta name="description" content="Compare life, health, motor, travel and home insurance from every licensed insurer in Nepal. Set your budget, see indicative premiums, and shortlist the right policy." />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: { DEFAULT: '#14213D', soft: '#3A4763', mute: '#6B7590' },
+            paper: '#F6F8FB',
+            line: '#DDE3EC',
+            sky: { DEFAULT: '#E8EEF7', deep: '#C9D6EA' },
+            crimson: { DEFAULT: '#C8102E', dark: '#9E0B23', tint: '#FCE8EB' },
+            pine: { DEFAULT: '#0F766E', tint: '#E3F3F1' },
+            marigold: { DEFAULT: '#E0A526', tint: '#FDF3DC' },
+          },
+          fontFamily: {
+            display: ['"Bricolage Grotesque"', 'Mukta', 'system-ui', 'sans-serif'],
+            sans: ['Mukta', 'system-ui', 'sans-serif'],
+          },
+          maxWidth: { page: '1200px' },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+<body class="bg-paper text-ink font-sans antialiased">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header id="site-header"></header>
+  <main id="main" tabindex="-1"></main>
+  <footer id="site-footer"></footer>
+  <div id="compare-tray"></div>
+  <div id="modal-root"></div>
+  <div id="toast-root" aria-live="polite"></div>
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/views/home.js"></script>
+  <script src="js/views/quote.js"></script>
+  <script src="js/views/results.js"></script>
+  <script src="js/views/compare.js"></script>
+  <script src="js/views/policy.js"></script>
+  <script src="js/views/companies.js"></script>
+  <script src="js/views/learn.js"></script>
+  <script src="js/views/about.js"></script>
+  <script src="js/router.js"></script>
+</body>
+</html>

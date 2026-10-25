@@ -1,0 +1,223 @@
+{
+  "company": {
+    "id": "guardian-micro-life",
+    "name": "Guardian Micro Life Insurance Limited",
+    "shortName": "Guardian Micro Life",
+    "type": "micro-life",
+    "established": 2023,
+    "headquarters": "Munal Path, Biratnagar",
+    "website": "https://gmli.com.np/",
+    "phone": "021-590902",
+    "email": "info@gmli.com.np",
+    "branches": 24,
+    "paidUpCapitalNPR": 525000000,
+    "about": "Guardian Micro Life is a micro life insurer based in Biratnagar, licensed in April 2023 and operating since July 2023. It sells term, endowment, money-back and whole life micro plans through agents and branches.",
+    "highlights": [
+      "Over 1.1 million policyholders reported on its site",
+      "24 branches and 1,100+ agents",
+      "Went public with an IPO in January 2025",
+      "Kathmandu regional office at Sano Gaucharan"
+    ],
+    "sources": [
+      "https://gmli.com.np/",
+      "https://www.sharesansar.com/newsdetail/things-to-know-before-applying-for-ipo-of-guardian-micro-life-insurance-ipo-opens-today-for-general-public-2025-01-05"
+    ],
+    "dataConfidence": "partial"
+  },
+  "policies": [
+    {
+      "id": "guardian-micro-life-micro-term-life",
+      "companyId": "guardian-micro-life",
+      "name": "Micro Term Life Insurance",
+      "category": "term-life",
+      "summary": "Low-cost cover that pays your family if you die or become disabled during the term.",
+      "features": [
+        "Affordable protection against early death or disability",
+        "No savings component",
+        "Simple to buy"
+      ],
+      "benefits": [
+        "Sum assured paid on death during the term"
+      ],
+      "exclusions": [
+        "Suicide within the first year of the policy",
+        "Death from war, riots or criminal acts by the insured"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver on disability"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 65,
+        "minTerm": 1,
+        "maxTerm": 20,
+        "minSumAssured": 50000,
+        "maxSumAssured": 500000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 4,
+        "referenceTerm": 10
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Low-income earners wanting cheap protection"
+      ],
+      "sourceUrl": "https://gmli.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "guardian-micro-life-dirghayu-bachat",
+      "companyId": "guardian-micro-life",
+      "name": "Dirghayu Bachat Laghu Beema Yojana",
+      "category": "endowment",
+      "summary": "A micro endowment plan where you pay once and receive more than the sum assured back at maturity, with life cover during the term.",
+      "features": [
+        "Single premium, paid once",
+        "Term of 12 to 16 years",
+        "Maturity benefit of 110% (12 years) to 120% (16 years) of sum assured, plus guaranteed additions"
+      ],
+      "benefits": [
+        "Death benefit during the term",
+        "Maturity benefit with bonus"
+      ],
+      "exclusions": [
+        "Suicide within the first year of the policy",
+        "Death from war, riots or criminal acts by the insured"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver on disability"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 12,
+        "maxTerm": 16,
+        "minSumAssured": 10000,
+        "maxSumAssured": 500000
+      },
+      "premiumModes": [
+        "single"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 12
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "People with a lump sum who want a fixed, guaranteed return"
+      ],
+      "sourceUrl": "https://gmli.com.np/?p=3231",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "guardian-micro-life-sana-bachat",
+      "companyId": "guardian-micro-life",
+      "name": "Sana Bachat Laghu Jeevan Beema Yojana",
+      "category": "endowment",
+      "summary": "A small-savings micro endowment plan with life cover.",
+      "features": [
+        "Cover plus savings",
+        "Term of 6 to 25 years",
+        "Small premiums"
+      ],
+      "benefits": [
+        "Death benefit during the term",
+        "Maturity benefit with bonus"
+      ],
+      "exclusions": [
+        "Suicide within the first year of the policy",
+        "Death from war, riots or criminal acts by the insured"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver on disability"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 6,
+        "maxTerm": 25,
+        "minSumAssured": 10000,
+        "maxSumAssured": 500000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 10
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "First-time savers"
+      ],
+      "sourceUrl": "https://gmli.com.np/?p=3641",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "guardian-micro-life-bal-samriddha",
+      "companyId": "guardian-micro-life",
+      "name": "Bal Samriddha Laghu Beema Yojana",
+      "category": "child-plan",
+      "summary": "A micro plan to build savings for a child's future.",
+      "features": [
+        "Built around a child's future needs",
+        "Cover plus savings",
+        "Parent pays the premium"
+      ],
+      "benefits": [
+        "Maturity benefit paid for the child",
+        "Death benefit during the term"
+      ],
+      "exclusions": [
+        "Suicide within the first year of the policy",
+        "Death from war, riots or criminal acts by the insured"
+      ],
+      "riders": [
+        "Premium waiver on parent's death"
+      ],
+      "eligibility": {
+        "minEntryAge": 0,
+        "maxEntryAge": 15,
+        "maxMaturityAge": 25,
+        "minTerm": 5,
+        "maxTerm": 20,
+        "minSumAssured": 50000,
+        "maxSumAssured": 500000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 15
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Parents saving for a child"
+      ],
+      "sourceUrl": "https://gmli.com.np/",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

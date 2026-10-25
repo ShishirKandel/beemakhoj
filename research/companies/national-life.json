@@ -1,0 +1,381 @@
+{
+  "company": {
+    "id": "national-life",
+    "name": "National Life Insurance Company Limited",
+    "nameNe": "नेशनल लाइफ इन्स्योरेन्स कम्पनी लिमिटेड",
+    "shortName": "National Life",
+    "type": "life",
+    "established": 1988,
+    "headquarters": "Lazimpat, Kathmandu",
+    "website": "http://www.nationallife.com.np/",
+    "phone": "01-4414799",
+    "tollFree": "18105000080",
+    "paidUpCapitalNPR": 4035158000,
+    "nepseSymbol": "NLICL",
+    "mergerHistory": "No merger.",
+    "about": "National Life Insurance is one of Nepal's older private life insurers, operating since 1988. It offers endowment, money-back, whole-life, term, child, pension and single-premium plans.",
+    "highlights": [
+      "Operating since 1988",
+      "About 1.6 million policies (FY 2078/79)",
+      "Wide range of Amrit-series endowment plans"
+    ],
+    "sources": [
+      "http://www.nationallife.com.np/",
+      "https://www.sharesansar.com/newsdetail/national-life-insurance-q4-highlights-net-profit-rises-by-192-to-rs-4088-crores-net-premium-and-claim-both-rises-eps-at-rs-1013-2022-08-16",
+      "https://en.beemapost.com/2024/02/3664/",
+      "https://beemaportal.com/best-life-insurance-companies/"
+    ],
+    "dataConfidence": "partial",
+    "email": "",
+    "claimSettlementRatio": 84.55,
+    "claimSettlementNote": "FY 2081/82, by amount: claims paid / (claims paid + claims outstanding), derived by Beema Portal from NIA Annual Report FY 2081/82 schedules 14-15 (NIA publishes no per-company ratio; year-end snapshot, excludes rejected claims). Third-party derived estimate."
+  },
+  "policies": [
+    {
+      "id": "national-life-jeewan-shree-sabadhik-amrit",
+      "companyId": "national-life",
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "taxBenefit": true,
+      "dataConfidence": "estimated",
+      "name": "Jeewan Shree Sabadhik Amrit Plan",
+      "category": "endowment",
+      "summary": "A bonus-earning endowment plan giving savings and life cover over a fixed term.",
+      "features": [
+        "Participates in bonus",
+        "Loan facility",
+        "Flexible terms",
+        "Riders available"
+      ],
+      "benefits": [
+        "Death: sum assured plus bonus",
+        "Maturity: sum assured plus bonus"
+      ],
+      "exclusions": [
+        "Suicide within first year",
+        "Non-disclosure of material facts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 70,
+      "bestFor": [
+        "Long-term savers"
+      ],
+      "sourceUrl": "http://www.nationallife.com.np/"
+    },
+    {
+      "id": "national-life-amrit-barsaha-money-back",
+      "companyId": "national-life",
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "taxBenefit": true,
+      "dataConfidence": "estimated",
+      "name": "Amrit Barsaha Money Back Policy",
+      "category": "money-back",
+      "summary": "Pays back portions of cover at set intervals while you stay insured.",
+      "features": [
+        "Periodic payouts",
+        "Full death cover retained",
+        "Bonus participating"
+      ],
+      "benefits": [
+        "Survival payments at intervals",
+        "Death: full sum assured plus bonus",
+        "Maturity: balance plus bonus"
+      ],
+      "exclusions": [
+        "Suicide within first year"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 75,
+        "minTerm": 15,
+        "maxTerm": 30,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 65,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 65,
+      "bestFor": [
+        "People wanting regular cash returns"
+      ],
+      "sourceUrl": "http://www.nationallife.com.np/"
+    },
+    {
+      "id": "national-life-bal-amrit-4",
+      "companyId": "national-life",
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "taxBenefit": true,
+      "dataConfidence": "estimated",
+      "name": "Bal Amrit 4 Endowment Policy",
+      "category": "child-plan",
+      "summary": "Savings plan for a child's future with protection on the parent.",
+      "features": [
+        "Child as life assured or beneficiary",
+        "Bonus participating",
+        "Premium waiver option"
+      ],
+      "benefits": [
+        "Lump sum at maturity with bonus",
+        "Death benefit protects the child fund"
+      ],
+      "exclusions": [
+        "Suicide within first year"
+      ],
+      "riders": [
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 20,
+        "maxEntryAge": 50,
+        "maxMaturityAge": 70,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 18
+      },
+      "bonusRatePer1000": 68,
+      "bestFor": [
+        "Parents planning education costs"
+      ],
+      "sourceUrl": "http://www.nationallife.com.np/"
+    },
+    {
+      "id": "national-life-traditional-whole-life",
+      "companyId": "national-life",
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "taxBenefit": true,
+      "dataConfidence": "estimated",
+      "name": "Traditional Whole Life Policy",
+      "category": "whole-life",
+      "summary": "Lifelong cover that pays your family whenever you die, with bonus.",
+      "features": [
+        "Cover up to age 99-100",
+        "Lower premiums than endowment",
+        "Bonus participating"
+      ],
+      "benefits": [
+        "Death: sum assured plus bonus",
+        "Maturity at advanced age"
+      ],
+      "exclusions": [
+        "Suicide within first year"
+      ],
+      "riders": [
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 100,
+        "minTerm": 20,
+        "maxTerm": 60,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 30,
+        "referenceTerm": 30
+      },
+      "bonusRatePer1000": 64,
+      "bestFor": [
+        "People wanting lifetime cover or legacy"
+      ],
+      "sourceUrl": "http://www.nationallife.com.np/"
+    },
+    {
+      "id": "national-life-saral-amrit-term",
+      "companyId": "national-life",
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "taxBenefit": true,
+      "dataConfidence": "estimated",
+      "name": "Saral Amrit (Term Insurance)",
+      "category": "term-life",
+      "summary": "Simple low-cost protection that pays only if death occurs within the term.",
+      "features": [
+        "High cover for low premium",
+        "No maturity benefit",
+        "Choose your own term"
+      ],
+      "benefits": [
+        "Death benefit equal to sum assured",
+        "Cover for the full term chosen"
+      ],
+      "exclusions": [
+        "Suicide within first year",
+        "Non-disclosure of material facts"
+      ],
+      "riders": [
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 65,
+        "minTerm": 5,
+        "maxTerm": 30,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 4,
+        "referenceTerm": 20
+      },
+      "bestFor": [
+        "Breadwinners wanting cheap cover"
+      ],
+      "sourceUrl": "http://www.nationallife.com.np/"
+    },
+    {
+      "id": "national-life-baideshik-rojgar",
+      "companyId": "national-life",
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "taxBenefit": true,
+      "dataConfidence": "estimated",
+      "name": "Baideshik Rojgar Jeevan Beema",
+      "category": "foreign-employment",
+      "summary": "Affordable cover for Nepalis working abroad for the contract period.",
+      "features": [
+        "Covers contract duration",
+        "Low premium",
+        "Easy enrolment before departure"
+      ],
+      "benefits": [
+        "Death benefit to nominee",
+        "Cover lasts for the chosen contract term"
+      ],
+      "exclusions": [
+        "Suicide",
+        "Death from illegal activities"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 50,
+        "maxMaturityAge": 55,
+        "minTerm": 2,
+        "maxTerm": 5,
+        "minSumAssured": 500000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 6,
+        "referenceTerm": 3
+      },
+      "bestFor": [
+        "Migrant workers"
+      ],
+      "sourceUrl": "http://www.nationallife.com.np/"
+    },
+    {
+      "id": "national-life-pension-plan",
+      "companyId": "national-life",
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "taxBenefit": true,
+      "dataConfidence": "estimated",
+      "name": "Pension Plan",
+      "category": "pension",
+      "summary": "Builds a retirement fund that pays regular income after you retire.",
+      "features": [
+        "Regular income in retirement",
+        "Death cover during accumulation",
+        "Bonus participating"
+      ],
+      "benefits": [
+        "Pension from vesting age",
+        "Death benefit before vesting"
+      ],
+      "exclusions": [
+        "Suicide within first year"
+      ],
+      "riders": [
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 48,
+        "referenceTerm": 25
+      },
+      "bonusRatePer1000": 64,
+      "bestFor": [
+        "Salaried workers planning retirement"
+      ],
+      "sourceUrl": "http://www.nationallife.com.np/"
+    }
+  ]
+}

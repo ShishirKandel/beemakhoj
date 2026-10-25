@@ -1,0 +1,80 @@
+{
+  "company": {
+    "id": "star-micro",
+    "name": "Star Micro Insurance Company Limited",
+    "shortName": "Star Micro",
+    "type": "micro-nonlife",
+    "established": 2023,
+    "headquarters": "Janakpurdham, Madhesh Province",
+    "website": "https://starmicroinsure.com",
+    "email": "info@starmicroinsure.com",
+    "about": "Star Micro Insurance is a micro non-life insurer based in Janakpurdham and licensed by the Nepal Insurance Authority in 2080 BS (2023). It offers low-cost motor, property, burglary, accident and cargo cover to underserved households and small businesses.",
+    "highlights": [
+      "About 1,44,000 policies issued and over NPR 4 crore in claims paid (company website)",
+      "45 licensed agents and 40+ service points",
+      "NPR 260 million in premium in the first 10 months of FY 2025/26"
+    ],
+    "sources": [
+      "https://starmicroinsure.com",
+      "https://en.beemapost.com/2026/05/13624/",
+      "https://www.sharesansar.com/index.php/newsdetail/star-micro-insurance-partners-with-nimb-ace-capital-for-upcoming-ipo-2024-08-28"
+    ],
+    "dataConfidence": "partial"
+  },
+  "policies": [
+    {
+      "id": "star-micro-motor-third-party",
+      "companyId": "star-micro",
+      "name": "Motor Insurance (Third Party)",
+      "category": "motor-bike",
+      "summary": "Legally required cover for injury or damage your vehicle causes to others.",
+      "features": ["Premium fixed by the NIA tariff", "Premium calculator on the website", "Covers two-wheelers and other vehicles"],
+      "benefits": ["Third-party death and injury claims as per tariff", "Third-party property damage up to the limit"],
+      "exclusions": ["Damage to your own vehicle", "Driving without a valid licence"],
+      "riders": [],
+      "eligibility": {"minEntryAge": 18, "maxEntryAge": null, "maxMaturityAge": null, "minTerm": 1, "maxTerm": 1, "minSumAssured": null, "maxSumAssured": null},
+      "premiumModes": ["yearly"],
+      "pricing": {"model": "fixed", "annualPremium": 1800, "coverAmount": 500000, "note": "Indicative third-party tariff, 150cc-250cc bike; check NIA tariff for your cc"},
+      "taxBenefit": false,
+      "bestFor": ["Anyone who needs the legal minimum vehicle cover"],
+      "sourceUrl": "https://starmicroinsure.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "star-micro-property",
+      "companyId": "star-micro",
+      "name": "Property Micro Insurance",
+      "category": "home",
+      "summary": "Covers your home, shop or small business against fire, flood, earthquake, landslide and burglary.",
+      "features": ["Homes, shops and small enterprises", "Natural disaster and fire cover", "Burglary cover included"],
+      "benefits": ["Compensation for damage to the insured property", "Cover for loss from fire and natural disasters"],
+      "exclusions": ["War and nuclear risks", "Deliberate damage by the owner"],
+      "riders": [],
+      "eligibility": {"minEntryAge": 18, "maxEntryAge": null, "maxMaturityAge": null, "minTerm": 1, "maxTerm": 1, "minSumAssured": null, "maxSumAssured": null},
+      "premiumModes": ["yearly"],
+      "pricing": {"model": "percent-of-value", "ratePercent": 0.3, "minPremium": 500},
+      "taxBenefit": false,
+      "bestFor": ["Small shopkeepers and rural homeowners"],
+      "sourceUrl": "https://starmicroinsure.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "star-micro-personal-accident",
+      "companyId": "star-micro",
+      "name": "Personal Accident Insurance",
+      "category": "personal-accident",
+      "summary": "Pays a lump sum for accidental death, permanent disability or loss of income.",
+      "features": ["Low yearly premium", "Covers death, disability and income loss", "Claims via email or service points"],
+      "benefits": ["Lump sum on accidental death", "Benefit for permanent disability"],
+      "exclusions": ["Self-inflicted injury", "Injury while committing a crime"],
+      "riders": [],
+      "eligibility": {"minEntryAge": 16, "maxEntryAge": 65, "maxMaturityAge": null, "minTerm": 1, "maxTerm": 1, "minSumAssured": null, "maxSumAssured": null},
+      "premiumModes": ["yearly"],
+      "pricing": {"model": "fixed", "annualPremium": 500, "coverAmount": 500000, "note": "Indicative micro plan"},
+      "taxBenefit": false,
+      "bestFor": ["Low-income workers who rely on daily wages"],
+      "sourceUrl": "https://starmicroinsure.com",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

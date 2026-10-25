@@ -1,0 +1,230 @@
+{
+  "company": {
+    "id": "liberty-micro-life",
+    "name": "Liberty Micro Life Insurance Limited",
+    "nameNe": "लिबर्टी माइक्रो लाइफ इन्स्योरेन्स लिमिटेड",
+    "shortName": "Liberty Micro Life",
+    "type": "micro-life",
+    "established": 2023,
+    "headquarters": "Newroad Complex, Newroad, Pokhara-8, Kaski",
+    "website": "https://libertymlife.com.np/",
+    "phone": "061-591097",
+    "email": "info@libertymlife.com.np",
+    "branches": 23,
+    "paidUpCapitalNPR": 525000000,
+    "creditRating": "ICRA NP-IR BB- (reaffirmed Oct 2025)",
+    "about": "Liberty Micro Life is a Pokhara-based micro life insurer that began operations in November 2023. It sells low-cost life cover and small savings plans mainly to borrowers, rural families and groups, with cover limited by the micro-insurance directive.",
+    "highlights": [
+      "Micro term insurance is about 72% of premium income",
+      "Also handles the Foreign Employment Insurance Fund business",
+      "Website lists 890,000+ policies issued and about 2,150 agents",
+      "Plans a future IPO"
+    ],
+    "sources": [
+      "https://libertymlife.com.np/",
+      "https://libertymlife.com.np/?p=108",
+      "https://en.beemapost.com/2025/10/12192/"
+    ],
+    "dataConfidence": "partial"
+  },
+  "policies": [
+    {
+      "id": "liberty-micro-life-samriddha-kawach-micro-term",
+      "companyId": "liberty-micro-life",
+      "name": "Samriddha Kavach Myadi Life Insurance (Micro Term)",
+      "nameNe": "समृद्ध कवच लघु जीवन बीमा",
+      "category": "term-life",
+      "summary": "Low-cost pure life cover for people who take loans or have no other life insurance.",
+      "features": [
+        "Non-linked, non-participating individual term plan",
+        "Policy term of 1 to 20 years",
+        "Premium paid yearly over the policy term",
+        "Rebate of Rs 1 per thousand for sum assured of Rs 1 lakh to 1.99 lakh",
+        "Suits borrowers from banks, finance companies and self-help groups"
+      ],
+      "benefits": [
+        "Sum assured paid to the family if the insured dies during the term",
+        "Optional rider benefits for accidental death and disability"
+      ],
+      "exclusions": [
+        "No maturity benefit (pure term cover)",
+        "Full exclusions per policy terms and conditions"
+      ],
+      "riders": [
+        "Accidental Death Benefit",
+        "ADB + Permanent Total Disability",
+        "ADB + PTD + Premium Waiver Benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 65,
+        "minTerm": 1,
+        "maxTerm": 20,
+        "minSumAssured": 10000,
+        "maxSumAssured": 500000
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 4,
+        "referenceTerm": 5
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Loan borrowers needing low-cost cover",
+        "Low-income families"
+      ],
+      "sourceUrl": "https://libertymlife.com.np/?p=108",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "liberty-micro-life-samriddha-bhavishya",
+      "companyId": "liberty-micro-life",
+      "name": "Samriddha Bhavishya Micro Life Insurance",
+      "nameNe": "समृद्ध भविष्य लघु जीवन बीमा",
+      "category": "endowment",
+      "summary": "A small savings plan that combines life cover with a lump sum when the term ends.",
+      "features": [
+        "Savings plus protection in one micro plan",
+        "Regular premiums over a fixed term",
+        "Sum assured capped by the micro-insurance directive",
+        "Rider options may be available"
+      ],
+      "benefits": [
+        "Sum assured paid on death during the term",
+        "Maturity amount paid if the insured survives the term"
+      ],
+      "exclusions": [
+        "Suicide in the initial policy period",
+        "Full exclusions per policy terms and conditions"
+      ],
+      "riders": [
+        "Accidental Death Benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "minTerm": 5,
+        "maxTerm": 20,
+        "minSumAssured": 25000,
+        "maxSumAssured": 500000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 45,
+        "referenceTerm": 15
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Small savers wanting disciplined long-term savings"
+      ],
+      "sourceUrl": "https://libertymlife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "liberty-micro-life-surakshit-bal-bhavishya",
+      "companyId": "liberty-micro-life",
+      "name": "Surakshit Bal Bhavishya Yojana",
+      "nameNe": "सुरक्षित बाल भविष्य योजना",
+      "category": "child-plan",
+      "summary": "A child plan to save for a child's education and keep the future protected.",
+      "features": [
+        "Built for children's education and future needs",
+        "Savings with protection",
+        "Parent or guardian pays the premium",
+        "Sum assured within micro-insurance limits"
+      ],
+      "benefits": [
+        "Lump sum when the plan matures",
+        "Death benefit if the policyholder dies during the term"
+      ],
+      "exclusions": [
+        "Suicide in the initial policy period",
+        "Full exclusions per policy terms and conditions"
+      ],
+      "riders": [
+        "Premium waiver",
+        "Accidental Death Benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 0,
+        "maxEntryAge": 15,
+        "minTerm": 5,
+        "maxTerm": 20,
+        "minSumAssured": 25000,
+        "maxSumAssured": 500000
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 15
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Parents saving for a child's school or college costs"
+      ],
+      "sourceUrl": "https://libertymlife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "liberty-micro-life-gramin-samuhik-myadi",
+      "companyId": "liberty-micro-life",
+      "name": "Gramin Samuhik Myadi Beema Yojana (Rural Group Term)",
+      "nameNe": "ग्रामीण सामूहिक म्यादी बीमा योजना",
+      "category": "term-life",
+      "summary": "Simple group life cover for rural communities, arranged through a cooperative or group.",
+      "features": [
+        "Group term cover for rural members",
+        "Arranged through cooperatives or community groups",
+        "Low yearly premium per member",
+        "Minimal paperwork"
+      ],
+      "benefits": [
+        "Fixed amount paid to the family on the member's death during the cover year",
+        "Cover is simple to arrange for the whole group under one policy"
+      ],
+      "exclusions": [
+        "No maturity benefit",
+        "Full exclusions per group policy terms"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 65,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": 10000,
+        "maxSumAssured": 500000
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 500,
+        "coverAmount": 100000,
+        "note": "Indicative per-member premium for a Rs 1 lakh group term cover; actual rate set per group"
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Members of rural cooperatives and village groups"
+      ],
+      "sourceUrl": "https://libertymlife.com.np/",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

@@ -1,0 +1,336 @@
+{
+  "company": {
+    "id": "rastriya-jeevan-beema",
+    "name": "Rastriya Jeevan Beema Company Limited",
+    "nameNe": "राष्ट्रिय जीवन बीमा कम्पनी लिमिटेड",
+    "shortName": "Rastriya Jeevan Beema",
+    "type": "life",
+    "established": 1967,
+    "headquarters": "Ramshahpath, Kathmandu",
+    "website": "https://rbs.gov.np/",
+    "phone": "01-5362520",
+    "email": "info@rbs.gov.np",
+    "branches": 23,
+    "paidUpCapitalNPR": 181000000,
+    "mergerHistory": "Founded 1967 (Poush 2024 BS) as Rastriya Beema Sansthan; converted into a company on 7 Nov 2023 under Insurance Act 2079; no merger.",
+    "about": "Rastriya Jeevan Beema is the state-owned life insurer, Nepal's first, carrying on the business of Rastriya Beema Sansthan (set up 1967). It sells traditional endowment, money-back, child, term and whole-life plans, plus public-servant and micro schemes.",
+    "highlights": [
+      "Government-owned and Nepal's oldest life insurer (set up 1967)",
+      "Life insurance fund of about NPR 62 billion (FY 2081/82)",
+      "Special collective plans for public servants",
+      "About 23 branches (approximate, from Wikipedia)"
+    ],
+    "sources": [
+      "https://rbs.gov.np/",
+      "https://en.wikipedia.org/wiki/Rastriya_Jeevan_Beema_Company_Limited",
+      "https://en.beemapost.com/2025/08/11323/",
+      "https://www.sharesansar.com/newsdetail/comparative-analysis-of-life-insurance-companies-in-q4-fy-208182-profits-capital-and-ratios-unveiled-2025-08-24",
+      "https://beemaportal.com/best-life-insurance-companies/"
+    ],
+    "dataConfidence": "partial",
+    "claimSettlementRatio": 89.94,
+    "claimSettlementNote": "FY 2081/82, by amount: claims paid / (claims paid + claims outstanding), derived by Beema Portal from NIA Annual Report FY 2081/82 schedules 14-15 (NIA publishes no per-company ratio; year-end snapshot, excludes rejected claims). Third-party derived estimate."
+  },
+  "policies": [
+    {
+      "id": "rastriya-jeevan-beema-endowment-life-assurance",
+      "companyId": "rastriya-jeevan-beema",
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "taxBenefit": true,
+      "dataConfidence": "partial",
+      "name": "Endowment Life Assurance",
+      "nameNe": "सावधिक जीवन बीमा",
+      "category": "endowment",
+      "summary": "Pays a lump sum with bonus if you survive the term, or to your family if you die earlier.",
+      "features": [
+        "Savings plus life cover",
+        "Participates in bonus",
+        "Loan facility against policy",
+        "Flexible term"
+      ],
+      "benefits": [
+        "Death: sum assured plus accrued bonus",
+        "Maturity: sum assured plus accrued bonus"
+      ],
+      "exclusions": [
+        "Suicide within first year",
+        "Non-disclosure of material facts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 55,
+      "bestFor": [
+        "Steady savers wanting a government-backed insurer"
+      ],
+      "sourceUrl": "https://rbs.gov.np/"
+    },
+    {
+      "id": "rastriya-jeevan-beema-anticipated-endowment",
+      "companyId": "rastriya-jeevan-beema",
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "taxBenefit": true,
+      "dataConfidence": "estimated",
+      "name": "Anticipated Endowment Life Assurance (Money Back)",
+      "category": "money-back",
+      "summary": "Pays part of the sum assured back at set intervals, with the rest and bonus at the end.",
+      "features": [
+        "Periodic survival payments",
+        "Death cover for full sum assured",
+        "Bonus participating",
+        "Loan facility"
+      ],
+      "benefits": [
+        "Survival benefits at fixed intervals",
+        "Death: full sum assured plus bonus",
+        "Maturity: balance plus bonus"
+      ],
+      "exclusions": [
+        "Suicide within first year",
+        "Non-disclosure of material facts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 75,
+        "minTerm": 15,
+        "maxTerm": 30,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 65,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 50,
+      "bestFor": [
+        "People wanting regular cash returns"
+      ],
+      "sourceUrl": "https://rbs.gov.np/"
+    },
+    {
+      "id": "rastriya-jeevan-beema-childrens-marriage-education",
+      "companyId": "rastriya-jeevan-beema",
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "taxBenefit": true,
+      "dataConfidence": "estimated",
+      "name": "Children's Marriage and Education Endowment",
+      "category": "child-plan",
+      "summary": "Builds a fund for your child's education or marriage, with cover on the parent.",
+      "features": [
+        "Payout timed to child's age",
+        "Premium waiver on parent death",
+        "Bonus participating"
+      ],
+      "benefits": [
+        "Lump sum at maturity with bonus",
+        "Death of parent: cover continues with waived premiums"
+      ],
+      "exclusions": [
+        "Suicide within first year"
+      ],
+      "riders": [
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 50,
+        "maxMaturityAge": 70,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 18
+      },
+      "bonusRatePer1000": 50,
+      "bestFor": [
+        "Parents of young children"
+      ],
+      "sourceUrl": "https://rbs.gov.np/"
+    },
+    {
+      "id": "rastriya-jeevan-beema-term-life-assurance",
+      "companyId": "rastriya-jeevan-beema",
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "taxBenefit": true,
+      "dataConfidence": "estimated",
+      "name": "Term Life Assurance",
+      "category": "term-life",
+      "summary": "Low-cost pure protection that pays your family if you die during the term.",
+      "features": [
+        "High cover at low cost",
+        "No maturity value",
+        "Simple terms"
+      ],
+      "benefits": [
+        "Death benefit equal to sum assured",
+        "Cover for the full term chosen"
+      ],
+      "exclusions": [
+        "Suicide within first year",
+        "Non-disclosure of material facts"
+      ],
+      "riders": [
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 65,
+        "minTerm": 5,
+        "maxTerm": 30,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 4,
+        "referenceTerm": 20
+      },
+      "bestFor": [
+        "Breadwinners wanting cheap cover"
+      ],
+      "sourceUrl": "https://rbs.gov.np/"
+    },
+    {
+      "id": "rastriya-jeevan-beema-jeevan-sathi",
+      "companyId": "rastriya-jeevan-beema",
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "taxBenefit": true,
+      "dataConfidence": "estimated",
+      "name": "Joint Life Plan (Jeevan Sathi)",
+      "category": "endowment",
+      "summary": "One endowment policy covering a couple, paying on the first death or at maturity.",
+      "features": [
+        "Covers two lives",
+        "Bonus participating",
+        "Single policy for spouses"
+      ],
+      "benefits": [
+        "Pays on first death",
+        "Maturity: sum assured plus bonus"
+      ],
+      "exclusions": [
+        "Suicide within first year"
+      ],
+      "riders": [
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 70,
+        "minTerm": 10,
+        "maxTerm": 30,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 55,
+      "bestFor": [
+        "Married couples"
+      ],
+      "sourceUrl": "https://rbs.gov.np/"
+    },
+    {
+      "id": "rastriya-jeevan-beema-foreign-employment",
+      "companyId": "rastriya-jeevan-beema",
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "taxBenefit": true,
+      "dataConfidence": "estimated",
+      "name": "Foreign Employment Plan",
+      "category": "foreign-employment",
+      "summary": "Short-term cover for Nepalis working abroad, protecting family in case of death.",
+      "features": [
+        "Covers duration of work contract",
+        "Low-cost protection",
+        "Easy enrolment before departure"
+      ],
+      "benefits": [
+        "Death benefit to nominee",
+        "Cover lasts for the chosen contract term"
+      ],
+      "exclusions": [
+        "Suicide",
+        "Death from illegal activities"
+      ],
+      "riders": [],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 50,
+        "maxMaturityAge": 55,
+        "minTerm": 2,
+        "maxTerm": 5,
+        "minSumAssured": 500000,
+        "maxSumAssured": null
+      },
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 6,
+        "referenceTerm": 3
+      },
+      "bestFor": [
+        "Migrant workers"
+      ],
+      "sourceUrl": "https://rbs.gov.np/"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "company": {
+    "id": "nepal-reinsurance",
+    "name": "Nepal Reinsurance Company Limited",
+    "shortName": "Nepal Re",
+    "type": "reinsurance",
+    "established": 2014,
+    "headquarters": "LS Building, Thapathali, Kathmandu-11",
+    "website": "http://www.nepalre.com.np/",
+    "phone": "01-5970401",
+    "email": "nepalre@ntc.net.np",
+    "paidUpCapitalNPR": 13422187100,
+    "nepseSymbol": "NRIC",
+    "creditRating": "ICRANP-IR AA-",
+    "mergerHistory": "Succeeded the Insurance Pool (set up 2003 for terrorism-related damage cover); incorporated 7 Nov 2014, inaugurated 22 Dec 2014.",
+    "about": "Nepal Re is the national reinsurer, set up in a public-private partnership with equity from the Government of Nepal. It sells reinsurance capacity to Nepali insurance companies and does not sell policies to the public.",
+    "highlights": ["Not a retail insurer: no products for individuals", "ISO 9001:2015 certified", "Listed on NEPSE as NRIC", "Required to raise capital to Rs 26 billion; a 100% right share issue was announced in 2025 (completion not confirmed)"],
+    "sources": ["http://www.nepalre.com.np/", "https://nepalipaisa.com/company/NRIC", "https://en.beemapost.com/2025/07/10828/"],
+    "dataConfidence": "partial"
+  },
+  "policies": []
+}

@@ -1,0 +1,314 @@
+{
+  "company": {
+    "id": "prabhu",
+    "name": "Prabhu Insurance Limited",
+    "shortName": "Prabhu Insurance",
+    "type": "nonlife",
+    "established": 1996,
+    "headquarters": "Tinkune, Kathmandu",
+    "website": "https://prabhuinsurance.com",
+    "phone": "01-5199220",
+    "tollFree": "16600100066",
+    "email": "info@prabhuinsurance.com",
+    "creditRating": "Infomerics BBB+ (Is), reaffirmed Aug 2025",
+    "about": "Prabhu Insurance is a general (non-life) insurer operating in Nepal since the mid-1990s and was not merged with another insurer. It sells house, property, motor, travel, accident, trekking, burglary and micro insurance. Employees Provident Fund and Prabhu Bank are among its major shareholders.",
+    "highlights": [
+      "Operating since the mid-1990s; not merged",
+      "Covers trekkers and mountaineers",
+      "Rated BBB+ (Is) by Infomerics Nepal",
+      "Toll-free line 16600100066"
+    ],
+    "sources": [
+      "https://prabhuinsurance.com",
+      "https://en.beemapost.com/?p=10934",
+      "https://prabhuinsurance.com/wp-content/uploads/2025/11/4th-Quarterly-2082-83_1.pdf"
+    ],
+    "dataConfidence": "partial"
+  },
+  "policies": [
+    {
+      "id": "prabhu-motor-bike",
+      "companyId": "prabhu",
+      "name": "Motor Insurance - Motorcycle (Third Party)",
+      "category": "motor-bike",
+      "summary": "Mandatory cover for damage or injury your bike causes to other people.",
+      "features": [
+        "Third-party liability as per NIA tariff",
+        "Issued online or at a branch",
+        "Renewable yearly"
+      ],
+      "benefits": [
+        "Compensation for third-party injury or death",
+        "Compensation for third-party property damage"
+      ],
+      "exclusions": [
+        "Damage to your own bike",
+        "Driving without a valid licence"
+      ],
+      "riders": [
+        "Driver and passenger accident cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 1800,
+        "coverAmount": 500000,
+        "note": "Third-party, indicative NIA tariff for a mid-size bike"
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Every bike owner needing the legal minimum"
+      ],
+      "sourceUrl": "https://prabhuinsurance.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "prabhu-motor-car",
+      "companyId": "prabhu",
+      "name": "Motor Insurance - Private Car (Comprehensive)",
+      "category": "motor-car",
+      "summary": "Covers your car for accident, theft and fire plus third-party liability.",
+      "features": [
+        "Own damage cover",
+        "Third-party liability",
+        "Theft and fire cover"
+      ],
+      "benefits": [
+        "Repair cost after accident",
+        "Payout if the car is stolen or a total loss"
+      ],
+      "exclusions": [
+        "Wear and tear",
+        "Drunk driving",
+        "Driving without a valid licence"
+      ],
+      "riders": [
+        "Driver and passenger accident cover",
+        "Strike, riot and terrorism cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 2.5,
+        "minPremium": 8000
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Private car owners wanting full protection"
+      ],
+      "sourceUrl": "https://prabhuinsurance.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "prabhu-travel",
+      "companyId": "prabhu",
+      "name": "Travel Insurance",
+      "category": "travel",
+      "summary": "Medical and trip cover when you travel abroad.",
+      "features": [
+        "Per-day pricing",
+        "Medical expense cover",
+        "Baggage and trip cover"
+      ],
+      "benefits": [
+        "Overseas medical expenses",
+        "Emergency evacuation"
+      ],
+      "exclusions": [
+        "Pre-existing conditions",
+        "Risky sports unless added"
+      ],
+      "riders": [
+        "Adventure sports extension"
+      ],
+      "eligibility": {
+        "minEntryAge": 1,
+        "maxEntryAge": 70,
+        "maxMaturityAge": null,
+        "minTerm": 1,
+        "maxTerm": 180,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "per-day",
+        "perDayPremium": 120,
+        "coverAmount": 5000000
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Students, tourists and business travellers"
+      ],
+      "sourceUrl": "https://prabhuinsurance.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "prabhu-accident",
+      "companyId": "prabhu",
+      "name": "Accident Insurance",
+      "category": "personal-accident",
+      "summary": "Lump-sum payout if you die or are disabled in an accident.",
+      "features": [
+        "Covers death and disability",
+        "24-hour cover",
+        "Low yearly premium"
+      ],
+      "benefits": [
+        "Payout on accidental death",
+        "Payout on permanent disability",
+        "Medical expense reimbursement"
+      ],
+      "exclusions": [
+        "Self-inflicted injury",
+        "Injury under the influence of alcohol or drugs"
+      ],
+      "riders": [
+        "Hospital cash"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "fixed",
+        "annualPremium": 1500,
+        "coverAmount": 1000000,
+        "note": "Indicative individual cover"
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Workers and daily commuters"
+      ],
+      "sourceUrl": "https://prabhuinsurance.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "prabhu-house",
+      "companyId": "prabhu",
+      "name": "House Insurance",
+      "category": "home",
+      "summary": "Protects your home and contents from fire, flood and quake damage.",
+      "features": [
+        "Fire and allied perils",
+        "Optional earthquake cover",
+        "Contents cover available"
+      ],
+      "benefits": [
+        "Repair or rebuild cost",
+        "Loss of contents"
+      ],
+      "exclusions": [
+        "War",
+        "Wear and tear",
+        "Intentional damage"
+      ],
+      "riders": [
+        "Earthquake cover",
+        "Burglary cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 1,
+        "maxTerm": 1,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "percent-of-value",
+        "ratePercent": 0.15,
+        "minPremium": 2000
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Homeowners"
+      ],
+      "sourceUrl": "https://prabhuinsurance.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "prabhu-trekking",
+      "companyId": "prabhu",
+      "name": "Trekking and Mountaineering Insurance",
+      "category": "travel",
+      "summary": "Accident, rescue and medical cover for trekkers and climbers in Nepal.",
+      "features": [
+        "High-altitude cover",
+        "Helicopter rescue",
+        "Per-day pricing"
+      ],
+      "benefits": [
+        "Rescue and evacuation costs",
+        "Medical treatment",
+        "Accidental death benefit"
+      ],
+      "exclusions": [
+        "Climbs above stated altitude unless declared",
+        "Reckless behaviour"
+      ],
+      "riders": [
+        "Extended altitude cover"
+      ],
+      "eligibility": {
+        "minEntryAge": 10,
+        "maxEntryAge": 70,
+        "maxMaturityAge": null,
+        "minTerm": 1,
+        "maxTerm": 90,
+        "minSumAssured": null,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly"
+      ],
+      "pricing": {
+        "model": "per-day",
+        "perDayPremium": 150,
+        "coverAmount": 3000000
+      },
+      "taxBenefit": false,
+      "bestFor": [
+        "Trekkers and guides"
+      ],
+      "sourceUrl": "https://prabhuinsurance.com",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

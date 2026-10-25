@@ -1,0 +1,285 @@
+{
+ "company": {
+  "id": "nepal-insurance",
+  "name": "Nepal Insurance Company Limited",
+  "shortName": "Nepal Insurance",
+  "type": "nonlife",
+  "established": 1947,
+  "website": "https://nepalinsurance.com.np",
+  "paidUpCapitalNPR": 1640000000,
+  "nepseSymbol": "NICL",
+  "about": "Nepal Insurance Company is the country's oldest insurer, started in 1947, and sells general (non-life) insurance such as motor, health, accident and property cover. It is listed on NEPSE as NICL.",
+  "highlights": [
+   "Oldest insurance company in Nepal (1947)",
+   "Listed on NEPSE (NICL)",
+   "Paid-up capital about Rs 1.64 arba as of early 2024"
+  ],
+  "sources": [
+   "https://nepalinsurance.com.np",
+   "https://www.sharesansar.com/newsdetail/rise-in-investment-income-propels-nepal-insurance-company-to-achieve-impressive-23233-net-profit-growth-eps-at-rs-6055-2024-02-12",
+   "https://www.sharesansar.com/company/nicl"
+  ],
+  "dataConfidence": "estimated",
+  "headquarters": "Heritage Plaza, Kamaladi, Kathmandu"
+ },
+ "policies": [
+  {
+   "id": "nepal-insurance-medical-health",
+   "companyId": "nepal-insurance",
+   "name": "Medical / Health Insurance",
+   "category": "health",
+   "summary": "Covers hospital bills for illness and injury up to the sum insured.",
+   "features": [
+    "Hospitalisation cover",
+    "Pre- and post-hospitalisation costs",
+    "Cashless at network hospitals (varies)"
+   ],
+   "benefits": [
+    "Hospital room and treatment costs",
+    "Surgery and ICU charges"
+   ],
+   "exclusions": [
+    "Pre-existing conditions during waiting period",
+    "Cosmetic treatment"
+   ],
+   "riders": [
+    "Maternity cover"
+   ],
+   "eligibility": {
+    "minEntryAge": 1,
+    "maxEntryAge": 65,
+    "minSumAssured": 100000,
+    "maxSumAssured": 1000000
+   },
+   "premiumModes": [
+    "yearly"
+   ],
+   "pricing": {
+    "model": "health-bands",
+    "bands": [
+     {
+      "sumInsured": 300000,
+      "annualPremiumAge30": 6000
+     },
+     {
+      "sumInsured": 500000,
+      "annualPremiumAge30": 9000
+     },
+     {
+      "sumInsured": 1000000,
+      "annualPremiumAge30": 15000
+     }
+    ]
+   },
+   "taxBenefit": true,
+   "bestFor": [
+    "Individuals and families wanting hospital cover"
+   ],
+   "sourceUrl": "https://nepalinsurance.com.np",
+   "dataConfidence": "estimated"
+  },
+  {
+   "id": "nepal-insurance-personal-accident",
+   "companyId": "nepal-insurance",
+   "name": "Personal Accident Insurance",
+   "category": "personal-accident",
+   "summary": "Pays a lump sum if you die or are disabled in an accident.",
+   "features": [
+    "Accidental death cover",
+    "Permanent disability cover",
+    "24-hour worldwide cover (typical)"
+   ],
+   "benefits": [
+    "Lump sum on accidental death",
+    "Part payment for disability"
+   ],
+   "exclusions": [
+    "Suicide or self-harm",
+    "Hazardous sports unless declared"
+   ],
+   "riders": [
+    "Medical expenses"
+   ],
+   "eligibility": {
+    "minEntryAge": 18,
+    "maxEntryAge": 65,
+    "minSumAssured": 500000,
+    "maxSumAssured": null
+   },
+   "premiumModes": [
+    "yearly"
+   ],
+   "pricing": {
+    "model": "fixed",
+    "annualPremium": 1500,
+    "coverAmount": 1000000,
+    "note": "Indicative, Rs 10 lakh cover"
+   },
+   "bestFor": [
+    "Anyone with income dependents"
+   ],
+   "sourceUrl": "https://nepalinsurance.com.np",
+   "dataConfidence": "estimated"
+  },
+  {
+   "id": "nepal-insurance-motor-bike-third-party",
+   "companyId": "nepal-insurance",
+   "name": "Motorcycle Third-Party Insurance",
+   "category": "motor-bike",
+   "summary": "Mandatory cover for harm your bike causes to other people and property.",
+   "features": [
+    "Legally required",
+    "Tariff fixed by Nepal Insurance Authority",
+    "Covers third-party death, injury and damage"
+   ],
+   "benefits": [
+    "Third-party injury or death compensation",
+    "Third-party property damage"
+   ],
+   "exclusions": [
+    "Damage to your own bike",
+    "Driving without a valid licence"
+   ],
+   "riders": [
+    "Driver and passenger accident cover"
+   ],
+   "eligibility": {
+    "minEntryAge": 18,
+    "maxEntryAge": 80
+   },
+   "premiumModes": [
+    "yearly"
+   ],
+   "pricing": {
+    "model": "fixed",
+    "annualPremium": 1800,
+    "coverAmount": 500000,
+    "note": "Third-party, 150cc-250cc bike, indicative only; current NIA tariff not confirmed"
+   },
+   "bestFor": [
+    "All bike owners needing legal cover"
+   ],
+   "sourceUrl": "https://nepalinsurance.com.np",
+   "dataConfidence": "estimated"
+  },
+  {
+   "id": "nepal-insurance-motor-car-comprehensive",
+   "companyId": "nepal-insurance",
+   "name": "Private Car Comprehensive Insurance",
+   "category": "motor-car",
+   "summary": "Covers damage to your own car as well as harm to others.",
+   "features": [
+    "Own damage from accident, fire, theft",
+    "Third-party liability included",
+    "Premium is a percent of car value"
+   ],
+   "benefits": [
+    "Repair or replacement of insured car",
+    "Third-party liability cover"
+   ],
+   "exclusions": [
+    "Wear and tear",
+    "Drunk driving"
+   ],
+   "riders": [
+    "Zero depreciation",
+    "Pillion/passenger cover"
+   ],
+   "eligibility": {
+    "minEntryAge": 18,
+    "maxEntryAge": 80
+   },
+   "premiumModes": [
+    "yearly"
+   ],
+   "pricing": {
+    "model": "percent-of-value",
+    "ratePercent": 2,
+    "minPremium": 8000
+   },
+   "bestFor": [
+    "New or valuable car owners"
+   ],
+   "sourceUrl": "https://nepalinsurance.com.np",
+   "dataConfidence": "estimated"
+  },
+  {
+   "id": "nepal-insurance-travel",
+   "companyId": "nepal-insurance",
+   "name": "Travel Insurance",
+   "category": "travel",
+   "summary": "Covers medical emergencies and trip problems while travelling abroad.",
+   "features": [
+    "Overseas medical expenses",
+    "Baggage loss",
+    "Trip delay or cancellation"
+   ],
+   "benefits": [
+    "Emergency medical costs",
+    "Evacuation"
+   ],
+   "exclusions": [
+    "Pre-existing conditions",
+    "Travel to war zones"
+   ],
+   "riders": [],
+   "eligibility": {
+    "minEntryAge": 1,
+    "maxEntryAge": 75
+   },
+   "premiumModes": [
+    "yearly"
+   ],
+   "pricing": {
+    "model": "per-day",
+    "perDayPremium": 120,
+    "coverAmount": 5000000
+   },
+   "bestFor": [
+    "Tourists, students and short-trip travellers"
+   ],
+   "sourceUrl": "https://nepalinsurance.com.np",
+   "dataConfidence": "estimated"
+  },
+  {
+   "id": "nepal-insurance-property-fire",
+   "companyId": "nepal-insurance",
+   "name": "Home and Property (Fire) Insurance",
+   "category": "home",
+   "summary": "Protects your house or shop against fire, earthquake and similar damage.",
+   "features": [
+    "Fire and allied perils",
+    "Optional earthquake cover",
+    "Premium is a percent of property value"
+   ],
+   "benefits": [
+    "Repair or rebuild cost up to insured value"
+   ],
+   "exclusions": [
+    "Wilful damage",
+    "War"
+   ],
+   "riders": [
+    "Burglary",
+    "Earthquake"
+   ],
+   "eligibility": {
+    "minEntryAge": 18,
+    "maxEntryAge": 99
+   },
+   "premiumModes": [
+    "yearly"
+   ],
+   "pricing": {
+    "model": "percent-of-value",
+    "ratePercent": 0.15,
+    "minPremium": 2000
+   },
+   "bestFor": [
+    "Homeowners and shopkeepers"
+   ],
+   "sourceUrl": "https://nepalinsurance.com.np",
+   "dataConfidence": "estimated"
+  }
+ ]
+}

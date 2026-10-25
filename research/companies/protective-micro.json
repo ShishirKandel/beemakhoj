@@ -1,0 +1,99 @@
+{
+  "company": {
+    "id": "protective-micro",
+    "name": "Protective Insurance Company Limited",
+    "shortName": "Protective Micro",
+    "type": "micro-nonlife",
+    "established": 2023,
+    "headquarters": "Chatakpur, Dhangadhi, Kailali",
+    "website": "https://protectivemicro.com",
+    "phone": "091-590707",
+    "email": "info@protectivemicro.com",
+    "about": "Protective Micro is one of four licensed micro non-life insurers in Nepal, licensed in 2023 and based in Dhangadhi. It sells small, affordable motor, property, personal accident and farm insurance, mainly to low-income households and farmers.",
+    "highlights": [
+      "Largest of the four micro non-life insurers by premium (about NPR 311 million in the first 10 months of FY 2025/26)",
+      "Reinsured with Nepal Reinsurance and Himalayan Reinsurance",
+      "Province office in Lalitpur (01-5916790); claims email claim@protectivemicro.com"
+    ],
+    "sources": [
+      "https://protectivemicro.com",
+      "https://en.beemapost.com/2026/05/13624/",
+      "https://www.sharesansar.com/index.php/newsdetail/protective-micro-insurance-limited-to-issue-2250000-shares-to-the-general-public-2024-09-10"
+    ],
+    "dataConfidence": "partial"
+  },
+  "policies": [
+    {
+      "id": "protective-micro-motor-third-party",
+      "companyId": "protective-micro",
+      "name": "Motor Insurance (Third Party)",
+      "category": "motor-bike",
+      "summary": "Legally required cover that pays for injury or damage your bike causes to other people.",
+      "features": ["Fixed premium set by the NIA tariff", "Covers motorbikes and scooters", "Claims can be reported by email or at a branch", "Premium calculator on the website"],
+      "benefits": ["Pays third-party death and injury claims as per tariff limits", "Pays third-party property damage up to the tariff limit"],
+      "exclusions": ["Damage to your own vehicle", "Driving without a valid licence", "Drunk driving"],
+      "riders": [],
+      "eligibility": {"minEntryAge": 18, "maxEntryAge": null, "maxMaturityAge": null, "minTerm": 1, "maxTerm": 1, "minSumAssured": null, "maxSumAssured": null},
+      "premiumModes": ["yearly"],
+      "pricing": {"model": "fixed", "annualPremium": 1800, "coverAmount": 500000, "note": "Indicative third-party tariff, 150cc-250cc bike; check NIA tariff for your cc"},
+      "taxBenefit": false,
+      "bestFor": ["Any bike or scooter owner who needs the legal minimum cover"],
+      "sourceUrl": "https://protectivemicro.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "protective-micro-motor-comprehensive",
+      "companyId": "protective-micro",
+      "name": "Motor Insurance (Comprehensive)",
+      "category": "motor-bike",
+      "summary": "Covers your own bike or scooter against accident and theft, plus third-party liability.",
+      "features": ["Own damage plus third-party cover", "Theft cover", "Premium is a percentage of the vehicle value", "Premium calculator on the website"],
+      "benefits": ["Repair cost after an accident", "Compensation if the vehicle is stolen", "Third-party liability as per tariff"],
+      "exclusions": ["Normal wear and tear", "Driving without a valid licence", "Drunk driving"],
+      "riders": [],
+      "eligibility": {"minEntryAge": 18, "maxEntryAge": null, "maxMaturityAge": null, "minTerm": 1, "maxTerm": 1, "minSumAssured": null, "maxSumAssured": null},
+      "premiumModes": ["yearly"],
+      "pricing": {"model": "percent-of-value", "ratePercent": 2.5, "minPremium": 3500},
+      "taxBenefit": false,
+      "bestFor": ["Owners of newer bikes who want repair and theft protection"],
+      "sourceUrl": "https://protectivemicro.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "protective-micro-personal-accident",
+      "companyId": "protective-micro",
+      "name": "Personal Accident Insurance",
+      "category": "personal-accident",
+      "summary": "Pays you or your family a lump sum if an accident causes injury, disability or death.",
+      "features": ["Low yearly premium", "Covers accidental death and disability", "Simple claim process via branch or email"],
+      "benefits": ["Lump sum on accidental death", "Benefit for permanent disability", "Medical expense help for accidental injury"],
+      "exclusions": ["Self-inflicted injury", "Injury from drunk or illegal activity"],
+      "riders": [],
+      "eligibility": {"minEntryAge": 16, "maxEntryAge": 65, "maxMaturityAge": null, "minTerm": 1, "maxTerm": 1, "minSumAssured": null, "maxSumAssured": null},
+      "premiumModes": ["yearly"],
+      "pricing": {"model": "fixed", "annualPremium": 500, "coverAmount": 500000, "note": "Indicative micro plan"},
+      "taxBenefit": false,
+      "bestFor": ["Daily-wage workers and low-income earners"],
+      "sourceUrl": "https://protectivemicro.com",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "protective-micro-agriculture-livestock",
+      "companyId": "protective-micro",
+      "name": "Agriculture and Livestock Insurance",
+      "category": "livestock",
+      "summary": "Protects crops, livestock and herbs against disease and weather losses.",
+      "features": ["Covers crops, livestock and herbs", "Aimed at smallholder farmers", "Climate and disease risks covered"],
+      "benefits": ["Compensation for animal death from disease or accident", "Compensation for crop loss from covered weather events"],
+      "exclusions": ["Deliberate slaughter or neglect", "Losses outside the policy period"],
+      "riders": [],
+      "eligibility": {"minEntryAge": 18, "maxEntryAge": null, "maxMaturityAge": null, "minTerm": 1, "maxTerm": 1, "minSumAssured": null, "maxSumAssured": null},
+      "premiumModes": ["yearly"],
+      "pricing": {"model": "fixed", "annualPremium": 1500, "coverAmount": 50000, "note": "Indicative, per animal; actual premium depends on animal type and value"},
+      "taxBenefit": false,
+      "bestFor": ["Small farmers with cattle, buffalo or goats"],
+      "sourceUrl": "https://protectivemicro.com",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

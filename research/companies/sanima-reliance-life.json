@@ -1,0 +1,492 @@
+{
+  "company": {
+    "id": "sanima-reliance-life",
+    "name": "Sanima Reliance Life Insurance Limited",
+    "nameNe": "सानिमा रिलायन्स लाइफ इन्स्योरेन्स लिमिटेड",
+    "shortName": "Sanima Reliance Life",
+    "type": "life",
+    "headquarters": "Sama Marga, Naxal, Kathmandu",
+    "website": "https://sanimareliancelife.com/",
+    "phone": "01-4797124 / 01-4797225",
+    "email": "info@sanimareliancelife.com",
+    "paidUpCapitalNPR": 5014924000,
+    "nepseSymbol": "SRLI",
+    "mergerHistory": "Formed by the merger of Sanima Life Insurance (started operations Dec 2017) and Reliance Life Insurance; joint business began 23 March 2023 (Chaitra 9, 2079 BS).",
+    "about": "Sanima Reliance Life is a Kathmandu-based life insurer formed in 2023 by the merger of Sanima Life and Reliance Life. It sells individual endowment, term, whole-life and child plans plus group and micro products.",
+    "highlights": [
+      "Life insurance fund of about Rs 18.2 arba (Q3 FY 2081/82)",
+      "Paid-up capital about Rs 5.01 arba (Q3 FY 2081/82)",
+      "Website lists Mero Mutu child plan, Limited Paying Whole Life and Triple Endowment"
+    ],
+    "sources": [
+      "https://sanimareliancelife.com/",
+      "https://www.sharesansar.com/newsdetail/sanima-reliance-life-insurance-sees-over-10-rise-in-net-profit-eps-drops-to-rs-898-2025-05-11",
+      "https://beemaportal.com/best-life-insurance-companies/"
+    ],
+    "dataConfidence": "partial",
+    "established": 2023,
+    "claimSettlementRatio": 80.97,
+    "claimSettlementNote": "FY 2081/82, by amount: claims paid / (claims paid + claims outstanding), derived by Beema Portal from NIA Annual Report FY 2081/82 schedules 14-15 (NIA publishes no per-company ratio; year-end snapshot, excludes rejected claims). Third-party derived estimate."
+  },
+  "policies": [
+    {
+      "id": "sanima-reliance-life-endowment",
+      "companyId": "sanima-reliance-life",
+      "name": "Endowment Assurance Policy",
+      "category": "endowment",
+      "summary": "A savings plan that pays a lump sum at the end of the term, or to your family if you die earlier.",
+      "features": [
+        "Fixed premium over the policy term",
+        "Life cover from day one (after underwriting)",
+        "Policy loan available after surrender value is acquired"
+      ],
+      "benefits": [
+        "Death benefit paid to nominee",
+        "Maturity benefit paid if you survive the term"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed pre-existing conditions or false declaration"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Total permanent disability benefit",
+        "Premium waiver benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 5,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Young earners saving for 15-20 years"
+      ],
+      "sourceUrl": "https://sanimareliancelife.com/",
+      "dataConfidence": "partial",
+      "bonusRatePer1000": 55
+    },
+    {
+      "id": "sanima-reliance-life-limited-endowment",
+      "companyId": "sanima-reliance-life",
+      "name": "Limited Endowment",
+      "category": "endowment",
+      "summary": "Pay premiums for a shorter period while cover and savings continue to maturity.",
+      "features": [
+        "Fixed premium over the policy term",
+        "Life cover from day one (after underwriting)",
+        "Policy loan available after surrender value is acquired"
+      ],
+      "benefits": [
+        "Death benefit paid to nominee",
+        "Maturity benefit paid if you survive the term"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed pre-existing conditions or false declaration"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Total permanent disability benefit",
+        "Premium waiver benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 5,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 58,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "People who want to finish paying premiums early"
+      ],
+      "sourceUrl": "https://sanimareliancelife.com/",
+      "dataConfidence": "partial"
+    },
+    {
+      "id": "sanima-reliance-life-triple-endowment",
+      "companyId": "sanima-reliance-life",
+      "name": "Triple Endowment",
+      "category": "money-back",
+      "summary": "Pays back part of the sum assured at set intervals during the term, with the balance at maturity.",
+      "features": [
+        "Fixed premium over the policy term",
+        "Life cover from day one (after underwriting)",
+        "Policy loan available after surrender value is acquired"
+      ],
+      "benefits": [
+        "Death benefit paid to nominee",
+        "Maturity benefit paid if you survive the term"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed pre-existing conditions or false declaration"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Total permanent disability benefit",
+        "Premium waiver benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 5,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 65,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Those wanting periodic cash back"
+      ],
+      "sourceUrl": "https://sanimareliancelife.com/",
+      "dataConfidence": "partial"
+    },
+    {
+      "id": "sanima-reliance-life-joint-life-endowment",
+      "companyId": "sanima-reliance-life",
+      "name": "Joint Life Endowment",
+      "category": "endowment",
+      "summary": "One endowment policy covering two lives, such as spouses.",
+      "features": [
+        "Fixed premium over the policy term",
+        "Life cover from day one (after underwriting)",
+        "Policy loan available after surrender value is acquired"
+      ],
+      "benefits": [
+        "Death benefit paid to nominee",
+        "Maturity benefit paid if you survive the term"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed pre-existing conditions or false declaration"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Total permanent disability benefit",
+        "Premium waiver benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 5,
+        "maxTerm": 35,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Couples wanting one shared savings plan"
+      ],
+      "sourceUrl": "https://sanimareliancelife.com/",
+      "dataConfidence": "partial"
+    },
+    {
+      "id": "sanima-reliance-life-term",
+      "companyId": "sanima-reliance-life",
+      "name": "Term Assurance Policy",
+      "category": "term-life",
+      "summary": "Low-cost pure protection that pays your family if you die during the term.",
+      "features": [
+        "Lowest premium for the cover",
+        "Pure protection with no savings",
+        "Fixed premium over the term"
+      ],
+      "benefits": [
+        "Death benefit paid to nominee",
+        "No maturity benefit"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed pre-existing conditions or false declaration"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Total permanent disability benefit",
+        "Premium waiver benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 5,
+        "maxTerm": 35,
+        "minSumAssured": 500000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 3.5,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Breadwinners wanting high cover cheaply"
+      ],
+      "sourceUrl": "https://sanimareliancelife.com/",
+      "dataConfidence": "partial"
+    },
+    {
+      "id": "sanima-reliance-life-limited-paying-whole-life",
+      "companyId": "sanima-reliance-life",
+      "name": "Limited Paying Whole Life",
+      "category": "whole-life",
+      "summary": "Pay premiums for a limited period and stay covered for life.",
+      "features": [
+        "Fixed premium over the policy term",
+        "Life cover from day one (after underwriting)",
+        "Policy loan available after surrender value is acquired"
+      ],
+      "benefits": [
+        "Death benefit paid to nominee whenever death occurs",
+        "Survival benefit at the end of the plan age"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed pre-existing conditions or false declaration"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Total permanent disability benefit",
+        "Premium waiver benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 5,
+        "maxTerm": 35,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 30,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Those wanting lifelong cover and a legacy"
+      ],
+      "sourceUrl": "https://sanimareliancelife.com/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "sanima-reliance-life-endowment-whole-life",
+      "companyId": "sanima-reliance-life",
+      "name": "Endowment/Whole Life",
+      "category": "whole-life",
+      "summary": "Combines endowment savings with lifelong cover after the endowment period.",
+      "features": [
+        "Fixed premium over the policy term",
+        "Life cover from day one (after underwriting)",
+        "Policy loan available after surrender value is acquired"
+      ],
+      "benefits": [
+        "Death benefit paid to nominee",
+        "Maturity benefit paid if you survive the term"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed pre-existing conditions or false declaration"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Total permanent disability benefit",
+        "Premium waiver benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 5,
+        "maxTerm": 35,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 35,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Long-term savers wanting lifelong cover"
+      ],
+      "sourceUrl": "https://sanimareliancelife.com/",
+      "dataConfidence": "partial"
+    },
+    {
+      "id": "sanima-reliance-life-mero-mutu",
+      "companyId": "sanima-reliance-life",
+      "name": "Mero Mutu (Child Plan)",
+      "category": "child-plan",
+      "summary": "A savings plan to fund your child's future, with cover on the parent.",
+      "features": [
+        "Built around the child's future needs",
+        "Premium waiver if the parent dies or is disabled",
+        "Lump sum at maturity"
+      ],
+      "benefits": [
+        "Death benefit paid to nominee",
+        "Maturity benefit paid if you survive the term"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed pre-existing conditions or false declaration"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Total permanent disability benefit",
+        "Premium waiver benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 55,
+        "referenceTerm": 18
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Parents saving for education or marriage costs"
+      ],
+      "sourceUrl": "https://sanimareliancelife.com/",
+      "dataConfidence": "partial"
+    },
+    {
+      "id": "sanima-reliance-life-micro-term",
+      "companyId": "sanima-reliance-life",
+      "name": "Micro Term Assurance",
+      "category": "term-life",
+      "summary": "A small, low-cost term cover aimed at lower-income and rural families.",
+      "features": [
+        "Fixed premium over the policy term",
+        "Life cover from day one (after underwriting)",
+        "Policy loan available after surrender value is acquired"
+      ],
+      "benefits": [
+        "Death benefit paid to nominee"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed pre-existing conditions or false declaration"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Total permanent disability benefit",
+        "Premium waiver benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 1,
+        "maxTerm": 10,
+        "minSumAssured": 50000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 6,
+        "referenceTerm": 5
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Low-income families wanting basic cover"
+      ],
+      "sourceUrl": "https://sanimareliancelife.com/",
+      "dataConfidence": "partial"
+    }
+  ]
+}

@@ -1,0 +1,500 @@
+{
+  "company": {
+    "id": "himalayan-life",
+    "name": "Himalayan Life Insurance Limited",
+    "shortName": "Himalayan Life",
+    "type": "life",
+    "established": 2023,
+    "website": "http://himalayanlife.com.np/",
+    "phone": "01-5970057",
+    "email": "info@himalayanlife.com.np",
+    "headquarters": "Manakamana Marga, Kathmandu",
+    "branches": 198,
+    "nepseSymbol": "HLI",
+    "mergerHistory": "Merger of Prime Life, Gurans Life and Union Life; joint operation as Himalayan Life began in Baisakh 2080 (May 2023). Established year shown is the merger date.",
+    "about": "Himalayan Life was formed by merging Prime Life, Gurans Life and Union Life. It is one of the largest Nepali life insurers by capital and branch network and sells endowment, money-back, child, pension, whole-life and term plans.",
+    "highlights": [
+      "Formed in 2023 from three life insurers",
+      "About 198 network points",
+      "Wide range of endowment, money-back, pension and whole-life plans"
+    ],
+    "sources": [
+      "http://himalayanlife.com.np/",
+      "https://www.sharesansar.com/newsdetail/biggest-merger-in-insurance-sector-of-nepal-concludes-himalayan-life-insurance-begins-joint-transaction-with-over-8-arba-paid-up-capital-2023-05-11",
+      "https://beemaportal.com/best-life-insurance-companies/"
+    ],
+    "dataConfidence": "partial",
+    "claimSettlementRatio": 98.09,
+    "claimSettlementNote": "FY 2081/82, by amount: claims paid / (claims paid + claims outstanding), derived by Beema Portal from NIA Annual Report FY 2081/82 schedules 14-15 (NIA publishes no per-company ratio; year-end snapshot, excludes rejected claims). Third-party derived estimate."
+  },
+  "policies": [
+    {
+      "id": "himalayan-life-new-term-assurance",
+      "companyId": "himalayan-life",
+      "name": "Himalayan Life New Term Assurance",
+      "category": "term-life",
+      "summary": "Affordable pure protection paying your family a lump sum if you pass away during the term.",
+      "features": [
+        "No maturity benefit",
+        "Low premium",
+        "Flexible term",
+        "Riders available"
+      ],
+      "benefits": [
+        "Death benefit: sum assured to nominee"
+      ],
+      "exclusions": [
+        "Death by suicide within the first policy year",
+        "Claims arising from false or concealed information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 5,
+        "maxTerm": 30,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 3.5,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Young families seeking maximum cover for low cost"
+      ],
+      "sourceUrl": "http://himalayanlife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "himalayan-life-endowment-plan",
+      "companyId": "himalayan-life",
+      "name": "Himalayan Endowment Plan",
+      "category": "endowment",
+      "summary": "Combines life cover and savings with a lump sum plus bonus at maturity.",
+      "features": [
+        "Participating with annual bonus",
+        "Loan against policy",
+        "Tax benefit",
+        "Choice of term"
+      ],
+      "benefits": [
+        "Maturity: sum assured plus bonus",
+        "Death: sum assured plus bonus"
+      ],
+      "exclusions": [
+        "Death by suicide within the first policy year",
+        "Claims arising from false or concealed information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 50,
+      "taxBenefit": true,
+      "bestFor": [
+        "Long-term savers"
+      ],
+      "sourceUrl": "http://himalayanlife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "himalayan-life-jeevan-sampanna",
+      "companyId": "himalayan-life",
+      "name": "Himalayan Jeevan Sampanna",
+      "category": "endowment",
+      "summary": "Endowment savings plan with life protection and bonus growth.",
+      "features": [
+        "Bonus participation",
+        "Life cover",
+        "Loan facility"
+      ],
+      "benefits": [
+        "Maturity benefit with bonus",
+        "Death benefit with bonus"
+      ],
+      "exclusions": [
+        "Death by suicide within the first policy year",
+        "Claims arising from false or concealed information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 75,
+        "minTerm": 10,
+        "maxTerm": 30,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 48,
+      "taxBenefit": true,
+      "bestFor": [
+        "Salaried savers"
+      ],
+      "sourceUrl": "http://himalayanlife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "himalayan-life-annual-cash-back",
+      "companyId": "himalayan-life",
+      "name": "Himalayan Barshik Nagad Firta Jeevan Beema Yojana (Annual Cash Back)",
+      "category": "money-back",
+      "summary": "Receive cash back every year while keeping full life cover.",
+      "features": [
+        "Yearly survival payouts",
+        "Full sum assured on death",
+        "Bonus participation"
+      ],
+      "benefits": [
+        "Annual cash back",
+        "Maturity payout with bonus",
+        "Death: full sum assured plus bonus"
+      ],
+      "exclusions": [
+        "Death by suicide within the first policy year",
+        "Claims arising from false or concealed information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 70,
+        "minTerm": 15,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 68,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 48,
+      "taxBenefit": true,
+      "bestFor": [
+        "People wanting regular cash flow"
+      ],
+      "sourceUrl": "http://himalayanlife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "himalayan-life-money-back-whole-life",
+      "companyId": "himalayan-life",
+      "name": "Himalayan Money Back Cum Whole Life Plan",
+      "category": "money-back",
+      "summary": "Periodic money-back payouts with lifelong cover afterwards.",
+      "features": [
+        "Money-back installments",
+        "Whole-life cover continues",
+        "Bonus"
+      ],
+      "benefits": [
+        "Survival benefits",
+        "Death benefit for life"
+      ],
+      "exclusions": [
+        "Death by suicide within the first policy year",
+        "Claims arising from false or concealed information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 80,
+        "minTerm": 15,
+        "maxTerm": 30,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 60,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 45,
+      "taxBenefit": true,
+      "bestFor": [
+        "Those wanting income plus lifelong cover"
+      ],
+      "sourceUrl": "http://himalayanlife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "himalayan-life-anmol-ratna-bal",
+      "companyId": "himalayan-life",
+      "name": "Himalayan Life Anmol Ratna Bal (Sawadhik) Jeevan Beema",
+      "category": "child-plan",
+      "summary": "Child plan that secures funds for education and future needs.",
+      "features": [
+        "Parent premium waiver",
+        "Milestone benefits",
+        "Bonus"
+      ],
+      "benefits": [
+        "Maturity benefit for the child",
+        "Premium waived on parent's death"
+      ],
+      "exclusions": [
+        "Death by suicide within the first policy year",
+        "Claims arising from false or concealed information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 50,
+        "maxMaturityAge": 25,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 55,
+        "referenceTerm": 18
+      },
+      "bonusRatePer1000": 45,
+      "taxBenefit": true,
+      "bestFor": [
+        "Parents of young children"
+      ],
+      "sourceUrl": "http://himalayanlife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "himalayan-life-pension-plan",
+      "companyId": "himalayan-life",
+      "name": "HimalayanLife Pension Plan",
+      "category": "pension",
+      "summary": "Build a retirement fund and receive regular pension income later.",
+      "features": [
+        "Retirement-focused savings",
+        "Regular pension after vesting",
+        "Tax benefit"
+      ],
+      "benefits": [
+        "Pension or lump sum at retirement age",
+        "Death benefit before vesting"
+      ],
+      "exclusions": [
+        "Death by suicide within the first policy year",
+        "Claims arising from false or concealed information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 65,
+        "minTerm": 10,
+        "maxTerm": 35,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 45,
+        "referenceTerm": 25
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "People planning retirement income"
+      ],
+      "sourceUrl": "http://himalayanlife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "himalayan-life-endowment-whole-life",
+      "companyId": "himalayan-life",
+      "name": "Himalayan Endowment Cum Whole Life Insurance Plan",
+      "category": "whole-life",
+      "summary": "Savings with cover that extends for life.",
+      "features": [
+        "Bonus participation",
+        "Limited premium payment options",
+        "Loan facility"
+      ],
+      "benefits": [
+        "Payout at endowment age",
+        "Death benefit with bonus"
+      ],
+      "exclusions": [
+        "Death by suicide within the first policy year",
+        "Claims arising from false or concealed information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 80,
+        "minTerm": 10,
+        "maxTerm": 40,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 30,
+        "referenceTerm": 25
+      },
+      "bonusRatePer1000": 45,
+      "taxBenefit": true,
+      "bestFor": [
+        "People wanting legacy and lifelong protection"
+      ],
+      "sourceUrl": "http://himalayanlife.com.np/",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "himalayan-life-naari-jeewan",
+      "companyId": "himalayan-life",
+      "name": "HimalayanLife Naari Jeewan Beema (Woman's Plan)",
+      "category": "endowment",
+      "summary": "Savings and protection plan designed for women.",
+      "features": [
+        "Tailored for women",
+        "Bonus participation",
+        "Critical illness rider options"
+      ],
+      "benefits": [
+        "Maturity with bonus",
+        "Death benefit with bonus"
+      ],
+      "exclusions": [
+        "Death by suicide within the first policy year",
+        "Claims arising from false or concealed information"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Premium waiver benefit",
+        "Critical illness rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 70,
+        "minTerm": 10,
+        "maxTerm": 30,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 48,
+      "taxBenefit": true,
+      "bestFor": [
+        "Women planning savings and cover"
+      ],
+      "sourceUrl": "http://himalayanlife.com.np/",
+      "dataConfidence": "estimated"
+    }
+  ]
+}

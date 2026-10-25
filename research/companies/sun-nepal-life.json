@@ -1,0 +1,403 @@
+{
+  "company": {
+    "id": "sun-nepal-life",
+    "name": "Sun Nepal Life Insurance Company Limited",
+    "shortName": "Sun Nepal Life",
+    "type": "life",
+    "established": 2017,
+    "headquarters": "New Plaza, Putalisadak, Kathmandu",
+    "website": "https://sunlife.com.np/",
+    "phone": "01-4536126",
+    "email": "info@snlic.com",
+    "branches": 120,
+    "paidUpCapitalNPR": 5000000000,
+    "nepseSymbol": "SNLI",
+    "creditRating": "CARE Ratings Nepal BBB+",
+    "mergerHistory": "No merger.",
+    "about": "Sun Nepal Life started in 2017 and offers protection, savings and investment-style life plans. It is listed on NEPSE and reported a life insurance fund of about Rs 10.1 billion in FY 2081/82.",
+    "highlights": [
+      "Life insurance fund about Rs 10.10 billion (FY 2081/82)",
+      "Net premium about Rs 4.32 billion",
+      "120+ branches in network"
+    ],
+    "sources": [
+      "https://sunlife.com.np/",
+      "https://en.beemapost.com/2025/08/11242/",
+      "https://beemaportal.com/best-life-insurance-companies/"
+    ],
+    "dataConfidence": "partial",
+    "claimSettlementRatio": 98.71,
+    "claimSettlementNote": "FY 2081/82, by amount: claims paid / (claims paid + claims outstanding), derived by Beema Portal from NIA Annual Report FY 2081/82 schedules 14-15 (NIA publishes no per-company ratio; year-end snapshot, excludes rejected claims). Third-party derived estimate."
+  },
+  "policies": [
+    {
+      "id": "sun-nepal-life-endowment",
+      "companyId": "sun-nepal-life",
+      "name": "Sunlife Endowment Assurance Life Insurance",
+      "category": "endowment",
+      "summary": "Save over a fixed term with life cover and a bonus-boosted lump sum at maturity.",
+      "features": [
+        "Fixed-term savings",
+        "Yearly bonus",
+        "Loan facility",
+        "Flexible premium modes"
+      ],
+      "benefits": [
+        "Sum assured plus bonus at maturity",
+        "Sum assured plus bonus on death"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false health information",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Critical illness rider",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 10,
+        "maxTerm": 30,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 55,
+      "taxBenefit": true,
+      "bestFor": [
+        "Young earners saving for 15-20 years"
+      ],
+      "sourceUrl": "https://sunlife.com.np/en/products",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "sun-nepal-life-moneyback-whole-life",
+      "companyId": "sun-nepal-life",
+      "name": "15-Years Money Back Cum Whole Life (Saarthak Ajeewan)",
+      "category": "money-back",
+      "summary": "Get money back at set intervals and keep lifelong cover.",
+      "features": [
+        "Money-back payments",
+        "Whole-life cover",
+        "Bonus accrual"
+      ],
+      "benefits": [
+        "Survival benefits",
+        "Death benefit with bonus"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false health information",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Critical illness rider",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 80,
+        "minTerm": 15,
+        "maxTerm": 15,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 68,
+        "referenceTerm": 15
+      },
+      "bonusRatePer1000": 50,
+      "taxBenefit": true,
+      "bestFor": [
+        "People wanting cash back and lasting cover"
+      ],
+      "sourceUrl": "https://sunlife.com.np/en/products",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "sun-nepal-life-dhananjaya-moneyback",
+      "companyId": "sun-nepal-life",
+      "name": "Dhananjaya Yearly Moneyback Endowment",
+      "category": "money-back",
+      "summary": "Yearly cash back while staying covered, with a maturity payout.",
+      "features": [
+        "Yearly money-back",
+        "Bonus at maturity",
+        "Loan facility"
+      ],
+      "benefits": [
+        "Annual survival benefit",
+        "Maturity benefit"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false health information",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Critical illness rider",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 70,
+        "minTerm": 12,
+        "maxTerm": 25,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 66,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 50,
+      "taxBenefit": true,
+      "bestFor": [
+        "Families wanting yearly cash flow"
+      ],
+      "sourceUrl": "https://sunlife.com.np/en/products",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "sun-nepal-life-renewable-term",
+      "companyId": "sun-nepal-life",
+      "name": "Renewable Term Life Insurance (Nabikaran Myadi)",
+      "category": "term-life",
+      "summary": "Low-cost cover for a set term that you can renew.",
+      "features": [
+        "Pure protection",
+        "Renewable",
+        "Low premium"
+      ],
+      "benefits": [
+        "Sum assured paid on death in term",
+        "Option to renew at the end of the term"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false health information",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Sun Medicare emergency medical rider"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 65,
+        "maxMaturityAge": 70,
+        "minTerm": 5,
+        "maxTerm": 25,
+        "minSumAssured": 250000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 3.5,
+        "referenceTerm": 20
+      },
+      "taxBenefit": true,
+      "bestFor": [
+        "Breadwinners with dependents"
+      ],
+      "sourceUrl": "https://sunlife.com.np/en/products",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "sun-nepal-life-golden-child",
+      "companyId": "sun-nepal-life",
+      "name": "Golden Child Endowment (Sunaulo Bal Samriddha)",
+      "category": "child-plan",
+      "summary": "Build a fund for your child's future with cover on the parent.",
+      "features": [
+        "Parent is life assured",
+        "Staged or lump payout",
+        "Premium waiver"
+      ],
+      "benefits": [
+        "Maturity benefit for the child",
+        "Bonus"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false health information",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Premium waiver",
+        "Accidental death benefit"
+      ],
+      "eligibility": {
+        "minEntryAge": 18,
+        "maxEntryAge": 50,
+        "maxMaturityAge": 65,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 52,
+        "referenceTerm": 18
+      },
+      "bonusRatePer1000": 50,
+      "taxBenefit": true,
+      "bestFor": [
+        "Parents of young children"
+      ],
+      "sourceUrl": "https://sunlife.com.np/en/products",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "sun-nepal-life-limited-payment-endowment",
+      "companyId": "sun-nepal-life",
+      "name": "Limited Payment Endowment (Nawa DhanaLaxmi)",
+      "category": "endowment",
+      "summary": "Pay premiums for a shorter period but stay covered for the full term.",
+      "features": [
+        "Limited premium paying term",
+        "Bonus",
+        "Loan facility"
+      ],
+      "benefits": [
+        "Maturity benefit with bonus",
+        "Death benefit"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false health information",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Critical illness rider",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 55,
+        "maxMaturityAge": 70,
+        "minTerm": 15,
+        "maxTerm": 25,
+        "minSumAssured": 200000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 56,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 52,
+      "taxBenefit": true,
+      "bestFor": [
+        "People who want to finish paying early"
+      ],
+      "sourceUrl": "https://sunlife.com.np/en/products",
+      "dataConfidence": "estimated"
+    },
+    {
+      "id": "sun-nepal-life-bhagyodaya",
+      "companyId": "sun-nepal-life",
+      "name": "Bhagyodaya Jeevan Beema",
+      "category": "endowment",
+      "summary": "Savings plan with life cover and bonus.",
+      "features": [
+        "Savings with cover",
+        "Bonus",
+        "Loan facility"
+      ],
+      "benefits": [
+        "Maturity benefit",
+        "Death benefit"
+      ],
+      "exclusions": [
+        "Suicide within the first policy year",
+        "Death due to concealed or false health information",
+        "Death from war or criminal acts"
+      ],
+      "riders": [
+        "Accidental death benefit",
+        "Critical illness rider",
+        "Premium waiver"
+      ],
+      "eligibility": {
+        "minEntryAge": 16,
+        "maxEntryAge": 60,
+        "maxMaturityAge": 70,
+        "minTerm": 10,
+        "maxTerm": 25,
+        "minSumAssured": 100000,
+        "maxSumAssured": null
+      },
+      "premiumModes": [
+        "yearly",
+        "half-yearly",
+        "quarterly",
+        "monthly"
+      ],
+      "pricing": {
+        "model": "rate-per-thousand",
+        "ratePer1000AtAge30": 50,
+        "referenceTerm": 20
+      },
+      "bonusRatePer1000": 50,
+      "taxBenefit": true,
+      "bestFor": [
+        "Long-term savers"
+      ],
+      "sourceUrl": "https://sunlife.com.np/en/products",
+      "dataConfidence": "estimated"
+    }
+  ]
+}
