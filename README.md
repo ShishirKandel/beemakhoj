@@ -1,5 +1,7 @@
 # BeemaKhoj — insurance comparison for Nepal (demo)
 
+**Live demo:** https://shishirkandel.github.io/beemakhoj/
+
 A static demo site where ordinary people pick what they want to insure, set a budget, and compare
 policies from every licensed insurer in Nepal.
 
@@ -30,3 +32,10 @@ Premiums are **indicative estimates** from a simple model (see About page), not 
 Each company/policy carries a confidence label: Verified / Partly verified / Indicative. Before going
 live, confirm product lists and premium tables with each insurer and replace estimates.
 Call-back requests are stored only in the visitor's browser (no backend).
+
+## Publishing (GitHub Pages)
+The `site/` folder is served from the `gh-pages` branch. After changing anything in `site/`:
+```
+git add -A && git commit -m "..." && git push
+git subtree push --prefix site origin gh-pages
+```
