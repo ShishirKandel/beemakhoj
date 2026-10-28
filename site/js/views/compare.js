@@ -1,4 +1,5 @@
-/* Compare view: #/compare  (reads Store.get().compare) */
+/* Compare view: #/compare  (reads Store.get().compare)
+ * v2 "calm & elegant": quiet actions row, hairline-only table, compact sticky policy cards, "Best" = pine dot + word. */
 (function () {
   const E = window.Engine, UI = window.UI;
   const esc = UI.esc;
@@ -6,6 +7,7 @@
   const arr = (a) => (Array.isArray(a) ? a.filter((x) => x != null && String(x).trim() !== '') : []);
   const CONF_LABEL = { verified: 'Verified', partial: 'Partly verified', estimated: 'Indicative' };
   const MODE_LABEL = { yearly: 'Yearly', 'half-yearly': 'Half-yearly', quarterly: 'Quarterly', monthly: 'Monthly', single: 'Single premium' };
+  const WRAP = 'max-w-page mx-auto px-5 sm:px-8';
 
   let onlyDiff = false; // view state, survives re-renders while on this page
 
@@ -19,18 +21,17 @@
     });
   }
 
-  const dash = '<span class="text-ink-mute" aria-label="not listed">Not listed</span>';
-  const txt = (s) => (has(s) && s !== '' ? esc(s) : dash);
+  const dash = '<span class="text-ink-mute">Not listed</span>';
   function bullets(a, n) {
     const l = arr(a);
     if (!l.length) return dash;
     const shown = l.slice(0, n || 5);
-    return `<ul class="grid gap-1.5 list-disc pl-4 marker:text-ink-mute">${shown.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>${l.length > shown.length ? `<p class="mt-1.5 text-xs text-ink-mute">+ ${l.length - shown.length} more on the policy page</p>` : ''}`;
+    return `<ul class="grid gap-2 text-ink-soft">${shown.map((x) => `<li class="flex gap-2.5"><span class="mt-[9px] h-1 w-1 shrink-0 rounded-full bg-ink-mute" aria-hidden="true"></span><span>${esc(x)}</span></li>`).join('')}</ul>${l.length > shown.length ? `<p class="mt-2 text-[13px] text-ink-mute">+ ${l.length - shown.length} more on the policy page</p>` : ''}`;
   }
   const rng = (lo, hi, unit) => (has(lo) && has(hi) ? (lo === hi ? `${lo} ${unit}` : `${lo} to ${hi} ${unit}`) : has(lo) ? `${lo}+ ${unit}` : has(hi) ? `Up to ${hi} ${unit}` : '');
   const sumRange = (el) => (has(el.minSumAssured) && has(el.maxSumAssured) ? `${E.nprShort(el.minSumAssured)} to ${E.nprShort(el.maxSumAssured)}` : has(el.minSumAssured) ? `${E.nprShort(el.minSumAssured)} and above` : has(el.maxSumAssured) ? `Up to ${E.nprShort(el.maxSumAssured)}` : '');
 
-  // Each row: label, key(item) -> comparable value (string|number|null), cell(item) -> html,
+  // Each row: label, key(item) -> comparable value (string|number|null), cell(item) -> text,
   // best: 'min' | 'max' | null for numeric highlighting. life: only for life categories.
   function buildRows(cat, list) {
     const hasCsr = (list || []).some((i) => has(i.co.claimSettlementRatio));
@@ -82,13 +83,20 @@
   }
 
   function empty() {
-    return `<div class="max-w-page mx-auto px-4 sm:px-6 py-14">
-      <h1 class="font-display text-3xl sm:text-4xl font-extrabold">Compare policies</h1>
-      <div class="panel mt-6 p-6 max-w-2xl">
-        <p class="font-semibold text-lg">You have not added any policies yet</p>
-        <p class="mt-2 text-ink-soft">To compare, find policies for what you want to protect, then press <strong>Compare</strong> on two or three of them. You can compare up to ${E.MAX_COMPARE} policies of the same type, side by side: price, claims record, cover, add-ons and what is not covered.</p>
-        <div class="mt-5 flex flex-wrap gap-3"><a class="btn btn-primary" href="#/">Find policies</a><a class="btn btn-ghost" href="#/companies">Browse insurers</a></div>
-      </div></div>`;
+    const starts = ['term-life', 'health', 'motor-bike', 'motor-car', 'travel'].map((id) => E.category(id)).filter(Boolean);
+    const steps = [
+      'Find policies for what you want to protect.',
+      `Press Compare on up to ${E.MAX_COMPARE} policies of the same type.`,
+      'Come back here to see them side by side.',
+    ];
+    return `<div class="${WRAP} py-20 sm:py-28"><div class="max-w-xl">
+      <span class="grid h-10 w-10 place-items-center rounded-xl bg-sky text-ink-soft">${UI.icon('scale', 'w-5 h-5')}</span>
+      <h1 class="mt-6 text-[32px] sm:text-[40px] font-semibold tracking-tight leading-[1.1]">Compare policies</h1>
+      <p class="mt-4 text-[17px] leading-relaxed text-ink-soft sm:text-lg">Put two or three policies side by side: price, claims record, cover, add-ons and what is not covered. You have not added any yet.</p>
+      <ol class="mt-8 divide-y divide-line border-y border-line">${steps.map((s, i) => `<li class="flex items-baseline gap-4 py-4"><span class="w-4 shrink-0 text-[14px] font-semibold tabular-nums text-ink-mute">${i + 1}</span><span class="text-[16px] text-ink-soft">${esc(s)}</span></li>`).join('')}</ol>
+      <div class="mt-8 flex flex-wrap gap-3"><a class="btn btn-primary" href="#/">Find policies</a><a class="btn btn-ghost" href="#/companies">Browse insurers</a></div>
+      ${starts.length ? `<div class="mt-10"><p class="text-[14px] text-ink-mute">Or start with</p><div class="mt-3 flex flex-wrap gap-2">${starts.map((c) => `<a class="btn btn-ghost btn-sm !rounded-full !font-medium !px-4" href="#/quote/${esc(c.id)}">${esc(c.label)}</a>`).join('')}</div></div>` : ''}
+    </div></div>`;
   }
 
   function render() {
@@ -97,65 +105,78 @@
     const cat = E.category(list[0].p.category);
     const rows = buildRows(cat, list);
     const ev = rows.map((r) => (r.g ? r : Object.assign({ ev: evalRow(r, list) }, r)));
+    const cols = list.length + 1;
 
     // Group sections: drop rows that are identical when "only differences" is on, and empty groups.
     let body = '', pendingGroup = null, shown = 0;
     ev.forEach((r) => {
       if (r.g) { pendingGroup = r.g; return; }
       if (onlyDiff && r.ev.same && !r.ev.bestIdx.length && list.length > 1) return;
-      if (pendingGroup) { body += `<tr><th scope="colgroup" colspan="${list.length + 1}" class="sticky left-0 bg-sky text-left font-display font-bold px-3 sm:px-4 py-2 text-base">${esc(pendingGroup)}</th></tr>`; pendingGroup = null; }
+      if (pendingGroup) { body += `<tr><th scope="colgroup" colspan="${cols}" class="bg-mist p-0 text-left"><span class="sticky left-0 block w-max px-5 py-3 text-[13px] font-medium text-ink-mute sm:px-4">${esc(pendingGroup)}</span></th></tr>`; pendingGroup = null; }
       shown++;
-      body += `<tr class="border-t border-line align-top"><th scope="row" class="sticky left-0 z-10 bg-white text-left font-medium text-ink-soft px-3 sm:px-4 py-3 w-28 sm:w-44 min-w-[7rem] border-r border-line">${esc(r.l)}</th>${r.ev.cells.map((c, idx) => {
+      body += `<tr class="border-t border-line align-top"><th scope="row" class="sticky left-0 z-10 w-28 min-w-[7rem] border-r border-line bg-white py-4 pl-5 pr-3 text-left align-top text-[14px] font-medium leading-snug text-ink-soft sm:w-44 sm:pl-4 sm:pr-4 lg:border-r-0">${esc(r.l)}</th>${r.ev.cells.map((c, idx) => {
         const best = r.ev.bestIdx.includes(idx);
-        return `<td class="px-3 sm:px-4 py-3 min-w-[11.5rem] ${best ? 'bg-pine-tint' : 'bg-white'} text-sm">${best ? `<span class="inline-flex items-center gap-1 mb-1 text-xs font-bold text-pine">${UI.icon('badge-check', 'w-4 h-4')}Best</span><br>` : ''}<span class="${best ? 'font-semibold text-ink' : ''}">${c}</span></td>`;
+        return `<td class="min-w-[11.5rem] bg-white px-4 py-4 text-[15px] leading-snug text-ink">${best ? `<span class="mb-1.5 flex items-center gap-1.5 text-[13px] font-medium text-pine"><span class="h-1.5 w-1.5 rounded-full bg-pine" aria-hidden="true"></span>Best</span>` : ''}<span class="${best ? 'font-semibold' : ''}">${c}</span></td>`;
       }).join('')}</tr>`;
     });
-    if (!shown) body = `<tr><td colspan="${list.length + 1}" class="px-4 py-6 text-ink-soft bg-white">These policies have no differences in the details we hold. Turn off "Show only differences" to see everything.</td></tr>`;
+    if (!shown) body = `<tr class="border-t border-line"><td colspan="${cols}" class="bg-white px-5 py-8 text-[15px] text-ink-soft sm:px-4">These policies have no differences in the details we hold. Turn off "Show only differences" to see everything.</td></tr>`;
 
+    const fig = 'text-[22px] font-semibold tabular-nums tracking-tight text-ink';
     const head = list.map((i) => {
       const e = i.est;
-      const price = e.annual == null ? 'Price on request' : e.perTrip ? `${E.npr(e.annual)} <span class="text-xs font-normal text-ink-mute">per trip, est.</span>` : `${E.npr(e.monthly)}<span class="text-xs font-normal text-ink-mute">/month est.</span>`;
-      return `<th scope="col" class="bg-white px-3 sm:px-4 py-4 text-left align-top min-w-[11.5rem] font-normal border-b border-line">
-        <div class="flex items-start gap-2.5">${UI.avatar(i.co, 'w-10 h-10 text-sm')}<div class="min-w-0"><a class="font-semibold leading-tight hover:underline block" href="#/policy/${esc(i.p.id)}">${esc(i.p.name)}</a><span class="text-sm text-ink-mute">${esc(i.co.shortName || i.co.name || '')}</span></div></div>
-        <p class="mt-2 font-display font-bold text-lg">${price}</p>
-        <div class="mt-3 grid gap-2">
-          <a class="btn btn-ghost btn-sm" href="#/policy/${esc(i.p.id)}">View details</a>
-          <button type="button" class="btn btn-primary btn-sm" data-callback="${esc(i.p.id)}">Get a call back</button>
-          <button type="button" class="btn btn-quiet btn-sm" data-remove="${esc(i.p.id)}" aria-label="Remove ${esc(i.p.name)} from comparison">${UI.icon('x', 'w-4 h-4')}Remove</button>
-        </div></th>`;
+      const price = e.annual == null ? '<span class="text-[16px] font-semibold text-ink">Price on request</span>'
+        : e.perTrip ? `<span class="${fig}">${E.npr(e.annual)}</span><span class="text-[13px] text-ink-mute">per trip, est.</span>`
+          : `<span class="${fig}">${E.npr(e.monthly)}</span><span class="text-[13px] text-ink-mute">/month est.</span>`;
+      return `<th scope="col" class="sticky top-0 z-20 min-w-[11.5rem] bg-white px-4 pb-4 pt-5 text-left align-top font-normal lg:top-[73px]">
+        <div class="flex items-center gap-3">${UI.avatar(i.co, 'w-10 h-10 text-sm')}<div class="min-w-0"><a class="block font-semibold leading-snug text-ink hover:underline" href="#/policy/${esc(i.p.id)}">${esc(i.p.name)}</a><span class="block truncate text-[13px] text-ink-mute">${esc(i.co.shortName || i.co.name || '')}</span></div></div>
+        <p class="mt-3 flex flex-wrap items-baseline gap-x-1.5">${price}</p></th>`;
     }).join('');
 
-    const hint = list.length < 2 ? `<p class="mt-4 rounded-lg bg-marigold-tint px-4 py-3 text-sm text-[#7C4A03]">Add at least one more ${esc(cat ? cat.label.toLowerCase() : '')} policy to see which is better value. Go back to the results and press <strong>Compare</strong> on another.</p>` : '';
+    const actions = list.map((i) => `<td class="bg-white px-4 pb-6 align-top"><div class="grid gap-2">
+        <a class="btn btn-ghost btn-sm" href="#/policy/${esc(i.p.id)}">View details</a>
+        <button type="button" class="btn btn-primary btn-sm" data-callback="${esc(i.p.id)}">Get a call back</button>
+        <button type="button" class="btn btn-quiet btn-sm" data-remove="${esc(i.p.id)}" aria-label="Remove ${esc(i.p.name)} from comparison">${UI.icon('x', 'w-4 h-4')}Remove</button>
+      </div></td>`).join('');
+
+    const hint = list.length < 2 ? `<p class="callout mt-8 flex gap-3 px-5 py-4 text-[15px] leading-relaxed text-ink-soft no-print">${UI.icon('info', 'w-5 h-5 shrink-0 mt-0.5 text-ink-soft')}<span>Add at least one more ${esc(cat ? cat.label.toLowerCase() : '')} policy to see which is better value. Go back to the results and press <strong class="font-semibold text-ink">Compare</strong> on another.</span></p>` : '';
+
+    const toggle = `<label class="inline-flex min-h-[44px] cursor-pointer items-center gap-3 rounded-[10px] px-3 text-[15px] font-medium text-ink-soft transition-colors hover:bg-sky hover:text-ink">
+        <span class="relative inline-flex h-6 w-10 shrink-0">
+          <input type="checkbox" role="switch" id="cmp-diff" class="peer sr-only" ${onlyDiff ? 'checked' : ''} />
+          <span class="absolute inset-0 rounded-full bg-line-strong transition-colors peer-checked:bg-ink peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-ink" aria-hidden="true"></span>
+          <span class="absolute left-1 top-1 h-4 w-4 rounded-full bg-white shadow-sm transition-transform peer-checked:translate-x-4" aria-hidden="true"></span>
+        </span>Show only differences</label>`;
 
     return `<style>@media print{#site-header,#site-footer,#compare-tray,#toast-root,.no-print{display:none!important}.cmp-scroll{max-height:none!important;overflow:visible!important}body{background:#fff!important}}</style>
-    <div class="max-w-page mx-auto px-4 sm:px-6 pt-6 pb-16">
-      <nav aria-label="Breadcrumb" class="text-sm text-ink-mute no-print"><a class="hover:underline" href="#/">Home</a><span aria-hidden="true" class="mx-1.5">/</span><span aria-current="page" class="text-ink-soft">Compare</span></nav>
-      <div class="mt-3 flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <h1 class="font-display text-3xl sm:text-4xl font-extrabold">Compare ${esc(cat ? cat.label.toLowerCase() : '')} policies</h1>
-          <p class="mt-1 text-ink-soft">${list.length} ${list.length === 1 ? 'policy' : 'policies'} side by side. Prices are estimates for the details you entered, or typical defaults. <a class="underline" href="#/about">How we estimate</a></p>
+    <div class="${WRAP} py-10 sm:py-14">
+      <div class="flex flex-wrap items-end justify-between gap-x-8 gap-y-5">
+        <div class="max-w-2xl">
+          <h1 class="text-[32px] sm:text-[40px] font-semibold tracking-tight leading-[1.1]">Compare ${esc(cat ? cat.label.toLowerCase() : '')} policies</h1>
+          <p class="mt-4 text-[17px] leading-relaxed text-ink-soft sm:text-lg">${list.length} ${list.length === 1 ? 'policy' : 'policies'} side by side. Prices are estimates for the details you entered, or typical defaults. <a class="link-inline" href="#/about">How we estimate</a></p>
         </div>
-        <div class="flex flex-wrap items-center gap-3 no-print">
-          <label class="inline-flex items-center gap-2 min-h-[44px] cursor-pointer"><input type="checkbox" id="cmp-diff" class="w-5 h-5 accent-[#0F766E]" ${onlyDiff ? 'checked' : ''} /><span>Show only differences</span></label>
-          <button type="button" class="btn btn-ghost btn-sm" id="cmp-print">${UI.icon('printer', 'w-4 h-4')}Print</button>
+        <div class="no-print -mx-3 flex flex-wrap items-center gap-x-1 sm:mx-0">
+          ${toggle}
+          <button type="button" class="btn btn-quiet btn-sm" id="cmp-print">${UI.icon('printer', 'w-4 h-4')}Print</button>
           <button type="button" class="btn btn-quiet btn-sm" id="cmp-clear">Clear all</button>
         </div>
       </div>
       ${hint}
       <p class="sr-only" id="cmp-live" aria-live="polite" role="status"></p>
-      <div class="cmp-scroll mt-6 overflow-auto sm:max-h-[85vh] rounded-xl border border-line bg-white" tabindex="0" role="region" aria-label="Policy comparison table. Scroll sideways on small screens.">
-        <table class="border-collapse w-full" style="min-width:${Math.min(list.length, 3) * 184 + 112}px">
+      <div class="cmp-scroll -mx-5 mt-8 overflow-x-auto border-b border-line sm:mx-0 sm:max-h-[80vh] sm:overflow-auto lg:max-h-none lg:overflow-visible" tabindex="0" role="region" aria-label="Policy comparison table. Scroll sideways on small screens.">
+        <table class="w-full border-collapse" style="min-width:${Math.min(list.length, 3) * 184 + 112}px">
           <caption class="sr-only">Side-by-side comparison of ${list.length} policies. The best value in each numeric row is marked Best.</caption>
-          <thead class="sticky top-0 z-20"><tr><th scope="col" class="sticky left-0 z-30 bg-white border-b border-r border-line px-3 sm:px-4 py-4 text-left align-bottom text-sm font-medium text-ink-mute w-28 sm:w-44 min-w-[7rem]">Compare</th>${head}</tr></thead>
+          <thead>
+            <tr><th scope="col" class="sticky left-0 top-0 z-30 w-28 min-w-[7rem] border-r border-line bg-white pb-4 pl-5 pr-3 pt-5 text-left align-top text-[13px] font-normal text-ink-mute sm:w-44 sm:pl-4 sm:pr-4 lg:top-[73px] lg:border-r-0">${list.length} of ${E.MAX_COMPARE} policies</th>${head}</tr>
+            <tr class="no-print"><td class="sticky left-0 z-10 border-r border-line bg-white lg:border-r-0"></td>${actions}</tr>
+          </thead>
           <tbody>${body}</tbody>
         </table>
       </div>
-      <p class="mt-4 text-sm text-ink-mute">"Best" marks the lowest price, the highest claim ratio, or the highest bonus in a row. The cheapest policy is not always the best: check what is not covered.</p>
+      <p class="mt-6 max-w-2xl text-[14px] leading-relaxed text-ink-mute">"Best" marks the lowest price, the highest claim ratio, or the highest bonus in a row. The cheapest policy is not always the best: check what is not covered.</p>
     </div>`;
   }
 
   function mount(root) {
-    const list = items();
     const rerender = () => window.Router.render();
     root.querySelectorAll('[data-callback]').forEach((b) => b.addEventListener('click', () => UI.openCallback(b.dataset.callback)));
     root.querySelectorAll('[data-remove]').forEach((b) => b.addEventListener('click', () => {
@@ -173,7 +194,10 @@
     const pr = root.querySelector('#cmp-print');
     if (pr) pr.addEventListener('click', () => window.print());
     const cl = root.querySelector('#cmp-clear');
-    if (cl) cl.addEventListener('click', () => { E.Store.clearCompare(); rerender(); });
+    if (cl) cl.addEventListener('click', () => {
+      E.Store.clearCompare(); rerender();
+      const h = document.querySelector('#main h1'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
+    });
   }
 
   window.Views = window.Views || {};

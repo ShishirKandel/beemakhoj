@@ -14,9 +14,31 @@
     } catch (e) { return null; }
   };
   const coName = (r) => (r && r.company && (r.company.shortName || r.company.name)) || 'one insurer';
-  const note = (html) => `<aside class="my-6 rounded-xl border border-line bg-sky p-4 text-[15px] text-ink-soft not-prose">${html}</aside>`;
+  // Callout inside an article: the shared mist callout with a quiet icon. The wrapper div takes the prose rhythm margin.
+  const note = (html) => `<div class="py-2"><aside class="callout flex gap-3.5 p-5 text-[16px] leading-relaxed text-ink-soft">${UI.icon('info', 'mt-0.5 h-5 w-5 text-ink-soft')}<div class="min-w-0">${html}</div></aside></div>`;
   const steps = (list) => `<ol>${arr(list).map((s) => `<li>${esc(s)}</li>`).join('')}</ol>`;
-  const table = (head, rows, cap) => `<div class="my-6 overflow-x-auto rounded-xl border border-line bg-white not-prose"><table class="w-full min-w-[480px] text-left text-[15px]">${cap ? `<caption class="sr-only">${esc(cap)}</caption>` : ''}<thead class="bg-sky text-ink-soft"><tr>${head.map((h) => `<th scope="col" class="px-4 py-3 font-semibold">${esc(h)}</th>`).join('')}</tr></thead><tbody>${rows.map((r) => `<tr class="border-t border-line">${r.map((c, i) => (i === 0 ? `<th scope="row" class="px-4 py-3 font-semibold align-top">${c}</th>` : `<td class="px-4 py-3 align-top">${c}</td>`)).join('')}</tr>`).join('')}</tbody></table></div>`;
+  // Tables rely on the .prose-nk table rules (hairline rows, no boxes). The first column is a real row header
+  // (th scope="row") so screen readers announce it; the ! utilities tone it down to match the body cells.
+  // Three or more columns get a floor width inside a keyboard-focusable scroll region: on a phone the table scrolls
+  // sideways rather than squeezing long notes into a sliver. Two-column tables just fit.
+  const table = (head, rows, cap) => {
+    const longText = rows.some((r) => r.some((c) => String(c).replace(/<[^>]+>/g, '').length > 90));
+    const floor = head.length < 3 ? '' : longText ? 'min-w-[40rem]' : 'min-w-[30rem]';
+    const th = (h) => `<th scope="col">${h ? esc(h) : '<span class="sr-only">Feature</span>'}</th>`;
+    const rowHead = (c, last) => `<th scope="row" class="!whitespace-normal !border-line !font-medium${last ? ' !border-b-0' : ''}">${c}</th>`;
+    const tr = (r, ri) => `<tr>${r.map((c, i) => (i === 0 ? rowHead(c, ri === rows.length - 1) : `<td>${c}</td>`)).join('')}</tr>`;
+    return `<div class="overflow-x-auto" role="region" tabindex="0"${cap ? ` aria-label="${esc(cap)}"` : ''}><table class="${floor}">${cap ? `<caption class="sr-only">${esc(cap)}</caption>` : ''}<thead><tr>${head.map(th).join('')}</tr></thead><tbody>${rows.map(tr).join('')}</tbody></table></div>`;
+  };
+  // One guide as a hairline-separated row: icon well, title, Nepali, one-line description, read time.
+  const guideRow = (t) => `<li class="border-b border-line"><a href="#/learn/${esc(t.id)}" class="group flex items-start gap-4 py-6 sm:gap-5">
+      <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-sky text-ink-soft">${UI.icon(t.icon, 'h-5 w-5')}</span>
+      <span class="min-w-0 flex-1">
+        <span class="block text-[18px] font-semibold leading-snug text-ink underline-offset-4 group-hover:underline sm:text-[20px]">${esc(t.title)}</span>
+        <span class="mt-1 block text-[14px] text-ink-mute">${esc(t.titleNe)}<span class="sm:hidden"> &middot; ${minutes(t)} min read</span></span>
+        <span class="mt-2 block text-[16px] leading-relaxed text-ink-soft">${esc(t.desc)}</span>
+      </span>
+      <span class="hidden shrink-0 items-center gap-1 self-start pt-1.5 text-[14px] text-ink-mute sm:flex">${minutes(t)} min read${UI.icon('chevron-right', 'h-4 w-4 transition-transform group-hover:translate-x-0.5')}</span>
+    </a></li>`;
 
   // ---------- guide bodies ----------
   const TOPICS = [];
@@ -66,7 +88,7 @@ ${note('<strong>Start with protection, then savings.</strong> Cover for your fam
       const t = cheapest('term-life', { age: 30, sumAssured: 2500000, term: 20 });
       const en = cheapest('endowment', { age: 30, sumAssured: 1000000, term: 20 });
       const example = t || en ? `<h2>What it costs, with our numbers</h2>
-<p>For a 30-year-old,${t ? ` the lowest estimate we hold for <strong>Rs 25 lakh of term cover over 20 years</strong> is about <strong>${E.npr(t.est.annual)} a year</strong> (about ${E.npr(t.est.monthly)}/month, ${esc(coName(t))}).` : ''}${en ? ` The lowest estimate for an <strong>endowment of Rs 10 lakh over 20 years</strong> is about <strong>${E.npr(en.est.annual)} a year</strong> (${esc(coName(en))}).` : ''} ${t && en ? 'Notice that the savings plan costs far more for far less cover. That is not a trick: part of your premium is being saved for you.' : ''} These are indicative estimates, not quotes. <a class="underline text-crimson" href="#/about">How we estimate</a>.</p>` : '';
+<p>For a 30-year-old,${t ? ` the lowest estimate we hold for <strong>Rs 25 lakh of term cover over 20 years</strong> is about <strong>${E.npr(t.est.annual)} a year</strong> (about ${E.npr(t.est.monthly)}/month, ${esc(coName(t))}).` : ''}${en ? ` The lowest estimate for an <strong>endowment of Rs 10 lakh over 20 years</strong> is about <strong>${E.npr(en.est.annual)} a year</strong> (${esc(coName(en))}).` : ''} ${t && en ? 'Notice that the savings plan costs far more for far less cover. That is not a trick: part of your premium is being saved for you.' : ''} These are indicative estimates, not quotes. <a href="#/about">How we estimate</a>.</p>` : '';
       return `
 <p>Most Nepali life insurance is bought as a savings habit, usually after an agent visits. That is fine if you know what you are buying. The cleanest way to choose is to ask one question first: <strong>what happens to my family if I am gone next year?</strong></p>
 <h2>Term insurance: pure protection</h2>
@@ -110,7 +132,7 @@ ${note('<strong>Be honest on the form.</strong> Health, smoking and occupation a
       const prem = g.premiumPerFamilyNPR, cover = g.coverNPR;
       const y30 = cheapest('health', { age: 30, coverAmount: 500000 });
       const y50 = cheapest('health', { age: 50, coverAmount: 500000 });
-      const cost = y30 ? `<p>For a Rs 5 lakh yearly cover, the lowest estimate we hold is about <strong>${E.npr(y30.est.annual)} a year at age 30</strong>${y50 ? ` and about <strong>${E.npr(y50.est.annual)} at age 50</strong>` : ''}. Age is the biggest driver: premiums climb steeply after 45. These are indicative estimates, see <a class="underline text-crimson" href="#/about">how we estimate</a>.</p>` : '';
+      const cost = y30 ? `<p>For a Rs 5 lakh yearly cover, the lowest estimate we hold is about <strong>${E.npr(y30.est.annual)} a year at age 30</strong>${y50 ? ` and about <strong>${E.npr(y50.est.annual)} at age 50</strong>` : ''}. Age is the biggest driver: premiums climb steeply after 45. These are indicative estimates, see <a href="#/about">how we estimate</a>.</p>` : '';
       return `
 <p>A hospital stay can wipe out years of savings. Health insurance is meant to stop that: you pay a premium, and when you are admitted the insurer pays eligible bills up to your <strong>sum insured</strong> for the year.</p>
 <h2>The government scheme (Health Insurance Board)</h2>
@@ -129,7 +151,7 @@ ${cost}
 <li><strong>Renewal.</strong> Can you renew into old age, and does the premium jump?</li>
 </ul>
 <h2>Which one for whom?</h2>
-<p>If money is tight, enrolling in the government scheme is much better than having nothing. If you earn a steady income, a private plan can sit on top for bigger or faster care. Parents over 60 should compare carefully, since few plans accept new entrants at that age and premiums are high. Pair health cover with a <a class="underline text-crimson" href="#/learn/tax-benefits">tax deduction</a> by keeping your premium receipts.</p>
+<p>If money is tight, enrolling in the government scheme is much better than having nothing. If you earn a steady income, a private plan can sit on top for bigger or faster care. Parents over 60 should compare carefully, since few plans accept new entrants at that age and premiums are high. Pair health cover with a <a href="#/learn/tax-benefits">tax deduction</a> by keeping your premium receipts.</p>
 <p>Always declare existing conditions honestly. Pre-existing illnesses are usually excluded at first, but hiding them can get a later claim rejected.</p>`;
     },
   });
@@ -164,7 +186,7 @@ ${steps([
         'No-claim discount. Each claim-free year earns a discount on renewal, and a comprehensive claim usually resets it. For tiny dents it can be cheaper to pay yourself.',
         'Gaps in renewal. A lapsed policy means no cover and a lost discount. If you have an accident one day after expiry, you are on your own.',
       ])}
-${note('<strong>After an accident</strong>: do not move the vehicle unless needed, take photos, call the insurer and the Traffic Police, and ask for the police report. Our <a class="underline text-crimson" href="#/learn/claims">claims guide</a> has the full steps.')}`;
+${note('<strong>After an accident</strong>: do not move the vehicle unless needed, take photos, call the insurer and the Traffic Police, and ask for the police report. Our <a href="#/learn/claims">claims guide</a> has the full steps.')}`;
     },
   });
 
@@ -175,7 +197,7 @@ ${note('<strong>After an accident</strong>: do not move the vehicle unless neede
     cta: { href: '#/companies', label: 'See insurers and their claim records' }, related: ['life-insurance-guide', 'health-insurance-guide', 'motor-insurance-guide'],
     body() {
       const c = ctx(); const cp = c.claimProcess || {}; const reg = c.regulator || {};
-      const block = (title, list, tip) => arr(list).length ? `<h2>${title}</h2>${steps(list)}${tip ? `<p class="text-[15px] text-ink-soft">${tip}</p>` : ''}` : '';
+      const block = (title, list, tip) => arr(list).length ? `<h2>${title}</h2>${steps(list)}${tip ? `<p class="border-l-2 border-line-strong pl-4 text-[16px] leading-relaxed">${tip}</p>` : ''}` : '';
       return `
 <p>A policy is only as good as the day you claim on it. Most claim problems are not fraud; they are missing papers, missed deadlines or a misunderstanding about what was covered. These checklists come from our research into how Nepali insurers process claims. Your policy document is the final word, so read its claims section too.</p>
 ${block('Life insurance claim (for the nominee)', cp.life, 'Tip: tell your family now which insurer you have, where the bond is, and who the nominee is.')}
@@ -262,7 +284,7 @@ ${steps([
         'Never pay an agent in cash without an official receipt. Commissions on these policies are no longer allowed.',
       ])}
 <h2>If something happens</h2>
-<p>Your family should contact the insurer first, then the recruiting agency and the Foreign Employment Board. Use the life claim steps in our <a class="underline text-crimson" href="#/learn/claims">claims guide</a>. If payment is delayed, file a complaint with the Nepal Insurance Authority. Some insurers also sell policies digitally using your passport number, which is handy for renewals.</p>`;
+<p>Your family should contact the insurer first, then the recruiting agency and the Foreign Employment Board. Use the life claim steps in our <a href="#/learn/claims">claims guide</a>. If payment is delayed, file a complaint with the Nepal Insurance Authority. Some insurers also sell policies digitally using your passport number, which is handy for renewals.</p>`;
     },
   });
 
@@ -301,7 +323,7 @@ ${steps([
         'For crop loss, do not harvest or clear the field until the surveyor has visited.',
         'Take dated photos and keep all papers. Follow up in writing.',
       ])}
-${note('<strong>If payment is slow:</strong> write to the insurer, then to the Nepal Insurance Authority. Our <a class="underline text-crimson" href="#/learn/claims">claims guide</a> explains how to escalate.')}`;
+${note('<strong>If payment is slow:</strong> write to the insurer, then to the Nepal Insurance Authority. Our <a href="#/learn/claims">claims guide</a> explains how to escalate.')}`;
     },
   });
 
@@ -311,24 +333,23 @@ ${note('<strong>If payment is slow:</strong> write to the insurer, then to the N
     const letters = {};
     g.forEach((x) => { const l = String(x.term || '?').charAt(0).toUpperCase(); (letters[l] = letters[l] || []).push(x); });
     const keys = Object.keys(letters).sort();
-    if (!g.length) return '<p>The glossary could not be loaded right now.</p>';
+    if (!g.length) return '<p class="text-ink-soft">The glossary could not be loaded right now.</p>';
     return `
-<div class="not-prose">
 <label class="field max-w-md"><span>Search the glossary</span><input id="gl-q" type="search" placeholder="Try premium, nominee, बोनस" autocomplete="off" /></label>
-<p id="gl-count" class="mt-2 text-sm text-ink-mute" aria-live="polite">${g.length} terms</p>
-<div class="mt-4 flex flex-wrap gap-2" role="group" aria-label="Jump to letter">${keys.map((k) => `<button type="button" class="chip bg-sky text-ink-soft min-h-[44px] min-w-[44px] justify-center" data-jump="${esc(k)}">${esc(k)}</button>`).join('')}</div>
-<div id="gl-list" class="mt-6">${keys.map((k) => `<section data-letter="${esc(k)}" class="mb-8" aria-labelledby="gl-${esc(k)}"><h2 id="gl-${esc(k)}" class="font-display text-2xl font-bold border-b border-line pb-2">${esc(k)}</h2><dl class="mt-3 divide-y divide-line">${letters[k].map((x) => `<div class="py-3" data-term="${esc((x.term + ' ' + (x.termNe || '') + ' ' + (x.meaning || '')).toLowerCase())}"><dt class="font-semibold">${esc(x.term)}${x.termNe ? ` <span class="ml-1 text-sm font-normal text-ink-mute">${esc(x.termNe)}</span>` : ''}</dt><dd class="mt-1 text-ink-soft">${esc(x.meaning || '')}</dd></div>`).join('')}</dl></section>`).join('')}</div>
-<p id="gl-empty" class="hidden rounded-xl border border-line bg-white p-4 text-ink-soft">No term matches that search. Try a shorter word.</p>
-</div>`;
+<p id="gl-count" class="mt-2 text-[14px] text-ink-mute" aria-live="polite">${g.length} terms</p>
+<div class="mt-5 flex flex-wrap gap-0.5" role="group" aria-label="Jump to letter">${keys.map((k) => `<button type="button" class="inline-grid h-11 min-w-[44px] place-items-center rounded-[10px] px-2 text-[15px] font-medium text-ink-soft transition-colors hover:bg-sky hover:text-ink" data-jump="${esc(k)}">${esc(k)}</button>`).join('')}</div>
+<div id="gl-list" class="mt-8">${keys.map((k) => `<section data-letter="${esc(k)}" class="grid gap-3 border-t border-line py-8 sm:grid-cols-[88px_minmax(0,1fr)] sm:gap-6" aria-labelledby="gl-${esc(k)}"><h2 id="gl-${esc(k)}" class="text-[26px] font-semibold leading-none tracking-tight text-ink sm:sticky sm:top-24 sm:self-start">${esc(k)}</h2><dl class="min-w-0 space-y-6">${letters[k].map((x) => `<div data-term="${esc((x.term + ' ' + (x.termNe || '') + ' ' + (x.meaning || '')).toLowerCase())}"><dt class="text-[17px] font-semibold text-ink">${esc(x.term)}${x.termNe ? `<span class="ml-2 text-[14px] font-normal text-ink-mute">${esc(x.termNe)}</span>` : ''}</dt><dd class="mt-1 text-[16px] leading-relaxed text-ink-soft">${esc(x.meaning || '')}</dd></div>`).join('')}</dl></section>`).join('')}</div>
+<p id="gl-empty" class="callout mt-8 p-5 text-[16px] text-ink-soft" hidden>No term matches that search. Try a shorter word.</p>`;
   }
+  // Filtering uses the [hidden] attribute (app.css forces display:none) so it never fights a display utility.
   function mountGlossary(root) {
     const q = root.querySelector('#gl-q'); if (!q) return;
     const total = root.querySelectorAll('[data-term]').length;
     q.addEventListener('input', () => {
       const v = q.value.trim().toLowerCase(); let n = 0;
-      root.querySelectorAll('[data-term]').forEach((el) => { const show = !v || el.dataset.term.includes(v); el.classList.toggle('hidden', !show); if (show) n++; });
-      root.querySelectorAll('[data-letter]').forEach((s) => s.classList.toggle('hidden', !s.querySelector('[data-term]:not(.hidden)')));
-      root.querySelector('#gl-empty').classList.toggle('hidden', n > 0);
+      root.querySelectorAll('[data-term]').forEach((el) => { const show = !v || el.dataset.term.includes(v); el.hidden = !show; if (show) n++; });
+      root.querySelectorAll('[data-letter]').forEach((s) => { s.hidden = !s.querySelector('[data-term]:not([hidden])'); });
+      root.querySelector('#gl-empty').hidden = n > 0;
       root.querySelector('#gl-count').textContent = v ? `${n} of ${total} terms` : `${total} terms`;
     });
     root.querySelectorAll('[data-jump]').forEach((b) => b.addEventListener('click', () => {
@@ -338,30 +359,35 @@ ${note('<strong>If payment is slow:</strong> write to the insurer, then to the N
   }
   function faqBody() {
     const f = arr(ctx().faqs);
-    if (!f.length) return '<p>The questions could not be loaded right now.</p>';
-    return `<div class="not-prose divide-y divide-line rounded-xl border border-line bg-white">${f.map((x) => `<details class="group px-4"><summary class="flex min-h-[56px] cursor-pointer list-none items-center justify-between gap-4 py-3 font-semibold"><span>${esc(x.q)}</span><span class="shrink-0 text-ink-mute transition-transform group-open:rotate-45" aria-hidden="true">+</span></summary><p class="pb-4 text-ink-soft">${esc(x.a)}</p></details>`).join('')}</div>`;
+    if (!f.length) return '<p class="text-ink-soft">The questions could not be loaded right now.</p>';
+    return `<div class="border-t border-line">${f.map((x) => `<details class="group border-b border-line"><summary class="flex min-h-[64px] cursor-pointer list-none items-center justify-between gap-6 py-5 text-[17px] font-medium leading-snug text-ink [&::-webkit-details-marker]:hidden"><span>${esc(x.q)}</span><span class="shrink-0 text-ink-mute transition-transform duration-200 group-open:rotate-180" aria-hidden="true">${UI.icon('chevron-down', 'h-5 w-5')}</span></summary><p class="max-w-[64ch] pb-6 pr-10 leading-relaxed text-ink-soft">${esc(x.a)}</p></details>`).join('')}</div>`;
   }
   add({
     id: 'glossary', icon: 'book-a', title: 'Insurance words, A to Z', titleNe: 'बीमा शब्दकोश',
     desc: 'Every term you will meet on a policy, in English and Nepali. Searchable.',
     short: 'Insurance papers are full of unfamiliar words. This glossary explains them in plain language, with the Nepali term beside each one.',
-    cta: { href: '#/', label: 'Start comparing' }, related: ['how-insurance-works', 'faq', 'claims'], body: glossaryBody, mount: mountGlossary, mins: 4,
+    cta: { href: '#/', label: 'Start comparing' }, related: ['how-insurance-works', 'faq', 'claims'], body: glossaryBody, mount: mountGlossary, mins: 4, plain: true,
   });
   add({
     id: 'faq', icon: 'circle-help', title: 'Frequently asked questions', titleNe: 'सोधिने प्रश्नहरू',
     desc: 'Short answers on tax, lapsing, cancelling, claims and spotting a genuine agent.',
     short: 'Quick answers to what Nepali buyers ask most. For the detail, follow the links to the full guides.',
-    cta: { href: '#/', label: 'Start comparing' }, related: ['how-insurance-works', 'claims', 'glossary'], body: faqBody, mins: 5,
+    cta: { href: '#/', label: 'Start comparing' }, related: ['how-insurance-works', 'claims', 'glossary'], body: faqBody, mins: 5, plain: true,
   });
 
   const byId = (id) => TOPICS.find((t) => t.id === id);
+  // Read time is worked out once per guide (guide bodies run engine lookups, and the hub asks for every guide).
   const minutes = (t) => {
     if (t.mins) return t.mins;
-    try { return Math.max(3, Math.round(t.body().replace(/<[^>]+>/g, ' ').split(/\s+/).length / 200)); } catch (e) { return 5; }
+    if (!t._mins) {
+      try { t._mins = Math.max(3, Math.round(t.body().replace(/<[^>]+>/g, ' ').split(/\s+/).length / 200)); } catch (e) { t._mins = 5; }
+    }
+    return t._mins;
   };
 
   // ---------- views ----------
-  const crumbs = (cur) => `<nav aria-label="Breadcrumb" class="text-sm text-ink-mute"><a class="underline" href="#/learn">Learn</a>${cur ? ` <span aria-hidden="true">/</span> <span>${esc(cur)}</span>` : ''}</nav>`;
+  const H1 = 'text-[32px] font-semibold leading-[1.1] tracking-tight text-ink sm:text-[40px]';
+  const crumbs = (cur) => UI.breadcrumb([['#/', 'Home'], ['#/learn', 'Learn']], cur);
 
   window.Views = window.Views || {};
 
@@ -371,35 +397,45 @@ ${note('<strong>If payment is slow:</strong> write to the insurer, then to the N
       const featured = byId('life-insurance-guide');
       const rest = TOPICS.filter((t) => t !== featured);
       return `
-<div class="max-w-page mx-auto px-4 sm:px-6 py-10 sm:py-14">
-  ${crumbs()}
-  <div class="mt-4 max-w-2xl">
-    <h1 class="font-display text-3xl sm:text-4xl font-extrabold tracking-tight">Understand insurance before you buy it</h1>
-    <p class="mt-3 text-lg text-ink-soft">Short, honest guides for Nepali families. No jargon without an explanation, and Nepali terms where they help. Read one, then compare real policies.</p>
-  </div>
-  <div class="mt-10 grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:gap-12 items-start">
-    <a href="#/learn/${featured.id}" class="group block rounded-xl bg-ink p-6 sm:p-8 text-white focus-visible:outline-offset-4">
-      ${UI.icon(featured.icon, 'w-8 h-8 text-marigold')}
-      <p class="mt-5 text-sm text-white/70">Start here &middot; ${minutes(featured)} min read</p>
-      <h2 class="mt-2 font-display text-2xl sm:text-3xl font-bold leading-tight">${esc(featured.title)}</h2>
-      <p class="mt-3 text-white/80">${esc(featured.short)}</p>
-      <span class="btn btn-primary mt-6 inline-flex">Read the guide</span>
+<div class="mx-auto max-w-page px-5 sm:px-8">
+  <header class="max-w-2xl pt-12 sm:pt-20">
+    <h1 class="${H1}">Understand insurance before you buy it</h1>
+    <p class="mt-4 max-w-xl text-[17px] leading-relaxed text-ink-soft sm:text-lg">Short, honest guides for Nepali families. No jargon without an explanation, and Nepali terms where they help. Read one, then compare real policies.</p>
+  </header>
+
+  <section class="mt-12 sm:mt-16" aria-label="Featured guide">
+    <a href="#/learn/${esc(featured.id)}" class="group block rounded-2xl bg-ink p-7 sm:p-12" aria-labelledby="featured-h">
+      <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between lg:gap-16">
+        <div class="max-w-2xl">
+          <span class="grid h-11 w-11 place-items-center rounded-xl bg-white/10 text-white">${UI.icon(featured.icon, 'h-5 w-5')}</span>
+          <p class="mt-7 text-[14px] text-white/70">Featured guide &middot; ${minutes(featured)} min read</p>
+          <h2 id="featured-h" class="mt-2 text-[26px] font-semibold tracking-tight sm:text-[30px]">${esc(featured.title)}</h2>
+          <p class="mt-2 text-[14px] text-white/60">${esc(featured.titleNe)}</p>
+          <p class="mt-5 text-[17px] leading-relaxed text-white/75">${esc(featured.short)}</p>
+        </div>
+        <span class="btn btn-light shrink-0 self-start transition-colors group-hover:bg-sky lg:self-auto">Read the guide</span>
+      </div>
     </a>
-    <div>
-      <h2 class="font-display text-xl font-bold">All guides</h2>
-      <ul class="mt-3 divide-y divide-line border-y border-line">
-        ${rest.map((t) => `<li><a href="#/learn/${t.id}" class="flex gap-4 py-4 min-h-[44px] hover:bg-sky/60 -mx-2 px-2 rounded-lg">
-          <span class="mt-0.5 text-ink-soft shrink-0">${UI.icon(t.icon, 'w-5 h-5')}</span>
-          <span class="min-w-0"><span class="block font-semibold">${esc(t.title)}</span>
-          <span class="block text-sm text-ink-mute">${esc(t.titleNe)} &middot; ${minutes(t)} min</span>
-          <span class="mt-1 block text-[15px] text-ink-soft">${esc(t.desc)}</span></span></a></li>`).join('')}
-      </ul>
+  </section>
+
+  <section class="mt-20 grid gap-8 pb-20 sm:mt-28 sm:pb-28 lg:grid-cols-12 lg:gap-12" aria-labelledby="all-guides">
+    <div class="lg:col-span-4">
+      <div class="lg:sticky lg:top-24">
+        <h2 id="all-guides" class="text-[26px] font-semibold tracking-tight sm:text-[30px]">All guides</h2>
+        <p class="mt-3 max-w-xs text-[16px] leading-relaxed text-ink-soft">${rest.length} short reads in plain words. Pick the one that matches what you are about to buy.</p>
+      </div>
     </div>
-  </div>
-  <div class="mt-12 rounded-xl border border-line bg-white p-5 sm:p-6 max-w-3xl">
-    <h2 class="font-display text-xl font-bold">Ready to see real options?</h2>
-    <p class="mt-1 text-ink-soft">Answer two or three questions and compare policies from every licensed insurer, with a price shown as an estimate.</p>
-    <a class="btn btn-primary mt-4" href="#/">Compare policies</a>
+    <ul class="border-t border-line lg:col-span-8">${rest.map(guideRow).join('')}</ul>
+  </section>
+</div>
+
+<div class="bg-mist">
+  <div class="mx-auto flex max-w-page flex-col gap-8 px-5 py-20 sm:flex-row sm:items-center sm:justify-between sm:gap-10 sm:px-8 sm:py-28">
+    <div class="max-w-xl">
+      <h2 class="text-[26px] font-semibold tracking-tight sm:text-[30px]">Ready to see real options?</h2>
+      <p class="mt-3 text-[16px] leading-relaxed text-ink-soft sm:text-[17px]">Answer two or three questions and compare policies from every licensed insurer, with a price shown as an estimate.</p>
+    </div>
+    <a class="btn btn-primary w-full shrink-0 sm:w-auto" href="#/">Compare policies</a>
   </div>
 </div>`;
     },
@@ -410,33 +446,40 @@ ${note('<strong>If payment is slow:</strong> write to the insurer, then to the N
     render(params) {
       const t = byId(params.topic);
       if (!t) {
-        return `<div class="max-w-page mx-auto px-4 sm:px-6 py-14 max-w-2xl">
-  ${crumbs('Not found')}
-  <h1 class="mt-4 font-display text-3xl font-bold">We do not have that guide</h1>
-  <p class="mt-3 text-ink-soft">The link may be old or mistyped. These guides are available:</p>
-  <ul class="mt-4 space-y-1">${TOPICS.map((x) => `<li><a class="underline text-crimson inline-block py-2" href="#/learn/${x.id}">${esc(x.title)}</a></li>`).join('')}</ul>
-  <a class="btn btn-ghost mt-4" href="#/learn">Back to all guides</a></div>`;
+        return `<div class="mx-auto max-w-page px-5 pb-20 pt-6 sm:px-8 sm:pb-28 sm:pt-8">
+  <div class="max-w-[44rem]">
+    ${crumbs('Not found')}
+    <h1 class="mt-6 ${H1}">We do not have that guide</h1>
+    <p class="mt-4 text-[17px] leading-relaxed text-ink-soft">The link may be old or mistyped. These guides are available:</p>
+    <ul class="mt-8 border-t border-line">${TOPICS.map(guideRow).join('')}</ul>
+    <a class="btn btn-ghost mt-10" href="#/learn">Back to all guides</a>
+  </div>
+</div>`;
       }
       const rel = arr(t.related).map(byId).filter(Boolean);
       return `
-<article class="max-w-page mx-auto px-4 sm:px-6 py-10 sm:py-14">
-  <div class="max-w-3xl">
+<article class="mx-auto max-w-page px-5 pb-20 pt-6 sm:px-8 sm:pb-28 sm:pt-8">
+  <div class="max-w-[68ch] text-[18px]">
     ${crumbs(t.title)}
-    <h1 class="mt-4 font-display text-3xl sm:text-4xl font-extrabold tracking-tight">${esc(t.title)}</h1>
-    <p class="mt-2 text-ink-mute">${esc(t.titleNe)} &middot; ${minutes(t)} min read</p>
-    <div class="mt-6 rounded-xl border-l-4 border-ink bg-sky p-4 sm:p-5">
-      <p class="font-display font-bold text-ink">In short</p>
-      <p class="mt-1 text-ink">${esc(t.short)}</p>
-    </div>
-    <div class="prose-nk mt-8">${t.body()}</div>
-    <div class="mt-10 rounded-xl border border-line bg-white p-5 sm:p-6">
-      <h2 class="font-display text-xl font-bold">Compare now</h2>
-      <p class="mt-1 text-ink-soft">See matching policies from licensed insurers, sorted by your budget.</p>
-      <a class="btn btn-primary mt-4" href="${esc(t.cta.href)}">${esc(t.cta.label)}</a>
-    </div>
-    <p class="mt-6 text-sm text-ink-mute">This guide is general information, not financial advice. Figures are estimates as of 2026 from public sources; confirm with your insurer or the <a class="underline" href="#/about">regulator</a>. How we work: <a class="underline" href="#/about">About BeemaKhoj</a>.</p>
-    ${rel.length ? `<section class="mt-10" aria-labelledby="rel-h"><h2 id="rel-h" class="font-display text-xl font-bold">Related guides</h2>
-    <ul class="mt-3 divide-y divide-line border-y border-line">${rel.map((r) => `<li><a href="#/learn/${r.id}" class="flex items-start gap-3 py-3 min-h-[44px] hover:bg-sky/60 -mx-2 px-2 rounded-lg"><span class="mt-0.5 text-ink-soft">${UI.icon(r.icon, 'w-5 h-5')}</span><span><span class="block font-semibold">${esc(r.title)}</span><span class="block text-sm text-ink-soft">${esc(r.desc)}</span></span></a></li>`).join('')}</ul></section>` : ''}
+    <h1 class="mt-6 ${H1}">${esc(t.title)}</h1>
+    <p class="mt-4 text-[14px] text-ink-mute">${esc(t.titleNe)} &middot; ${minutes(t)} min read</p>
+    <aside class="callout mt-8" aria-label="In short">
+      <p class="text-[14px] font-semibold text-ink">In short</p>
+      <p class="mt-2 text-[17px] leading-relaxed text-ink">${esc(t.short)}</p>
+    </aside>
+    <div class="${t.plain ? '' : 'prose-nk '}mt-10 sm:mt-12">${t.body()}</div>
+    <section class="panel mt-14 p-6 sm:p-8 md:flex md:items-center md:justify-between md:gap-8" aria-labelledby="cta-h">
+      <div>
+        <h2 id="cta-h" class="text-[22px] font-semibold tracking-tight">Ready to compare?</h2>
+        <p class="mt-2 max-w-sm text-[16px] leading-relaxed text-ink-soft">See matching policies from licensed insurers, sorted by your budget.</p>
+      </div>
+      <a class="btn btn-primary mt-6 w-full md:mt-0 md:w-auto md:shrink-0" href="${esc(t.cta.href)}">${esc(t.cta.label)}</a>
+    </section>
+    <p class="mt-8 text-[14px] leading-relaxed text-ink-mute">This guide is general information, not financial advice. Figures are estimates as of 2026 from public sources; confirm with your insurer or the <a class="link-inline" href="#/about">regulator</a>. How we work: <a class="link-inline" href="#/about">About BeemaKhoj</a>.</p>
+    ${rel.length ? `<section class="mt-16" aria-labelledby="rel-h">
+      <h2 id="rel-h" class="text-[22px] font-semibold tracking-tight">Related guides</h2>
+      <ul class="mt-4 border-t border-line">${rel.map(guideRow).join('')}</ul>
+    </section>` : ''}
   </div>
 </article>`;
     },
