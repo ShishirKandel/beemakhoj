@@ -65,6 +65,10 @@
   ];
   const LIFE_CATS = new Set(['term-life', 'endowment', 'money-back', 'child-plan', 'pension', 'whole-life', 'foreign-employment']);
   const SUBSIDISED = new Set(['livestock', 'crop']);
+  // Which profile field is "the cover asked for" — checked against a plan's sum-assured limits.
+  const coverField = (cat) => LIFE_CATS.has(cat) ? 'sumAssured'
+    : ['health', 'critical-illness', 'personal-accident'].includes(cat) ? 'coverAmount'
+    : ['home', 'livestock', 'crop'].includes(cat) ? 'propertyValue' : null;
 
   const category = (id) => CATEGORIES.find((c) => c.id === id);
   const company = (id) => DATA.companies.find((c) => c.id === id);
@@ -133,24 +137,33 @@
     const def = (category(cat) || {}).defaults || {};
     const prof = Object.assign({ age: 30 }, def, profile || {});
     const notes = [];
-    let eligible = true;
+    // Reasons the plan can't be bought; listed ahead of other notes so views showing the first note show the real reason.
+    const blockers = [];
+    const years = (n) => (n === 1 ? '1 year' : `${n} years`);
     const el = p.eligibility || {};
     if (LIFE_CATS.has(cat) || ['health', 'critical-illness', 'personal-accident', 'travel'].includes(cat)) {
-      if (el.minEntryAge != null && prof.age < el.minEntryAge) { eligible = false; notes.push(`Minimum entry age is ${el.minEntryAge}`); }
-      if (el.maxEntryAge != null && prof.age > el.maxEntryAge) { eligible = false; notes.push(`Maximum entry age is ${el.maxEntryAge}`); }
+      if (el.minEntryAge != null && prof.age < el.minEntryAge) blockers.push(`Minimum entry age is ${el.minEntryAge}`);
+      if (el.maxEntryAge != null && prof.age > el.maxEntryAge) blockers.push(`Maximum entry age is ${el.maxEntryAge}`);
     }
     let term = prof.term;
     if (LIFE_CATS.has(cat)) {
-      if (el.minTerm != null && term < el.minTerm) { notes.push(`Term raised to minimum ${el.minTerm} years`); term = el.minTerm; }
-      if (el.maxTerm != null && term > el.maxTerm) { notes.push(`Term capped at ${el.maxTerm} years`); term = el.maxTerm; }
+      if (el.minTerm != null && term < el.minTerm) { notes.push(`Term raised to minimum ${years(el.minTerm)}`); term = el.minTerm; }
+      if (el.maxTerm != null && term > el.maxTerm) { notes.push(`Term capped at ${years(el.maxTerm)}`); term = el.maxTerm; }
       if (el.maxMaturityAge != null && prof.age + term > el.maxMaturityAge) {
         const t2 = el.maxMaturityAge - prof.age;
-        if (t2 < (el.minTerm || 1)) { eligible = false; notes.push(`Maturity age limit is ${el.maxMaturityAge}`); }
-        else { notes.push(`Term shortened to ${t2} years (max maturity age ${el.maxMaturityAge})`); term = t2; }
+        if (t2 < (el.minTerm || 1)) blockers.push(`Maturity age limit is ${el.maxMaturityAge}`);
+        else { notes.push(`Term shortened to ${years(t2)} (max maturity age ${el.maxMaturityAge})`); term = t2; }
       }
-      if (el.minSumAssured != null && prof.sumAssured < el.minSumAssured) notes.push(`Minimum sum assured is ${npr(el.minSumAssured)}`);
-      if (el.maxSumAssured != null && prof.sumAssured > el.maxSumAssured) notes.push(`Maximum sum assured is ${npr(el.maxSumAssured)}`);
+      // Less cover than the plan's minimum can still be bought — at the minimum, so price it there.
+      if (el.minSumAssured != null && prof.sumAssured < el.minSumAssured) { notes.push(`Priced at the minimum sum assured of ${npr(el.minSumAssured)}`); prof.sumAssured = el.minSumAssured; }
     }
+    // More cover than the plan's maximum can't be bought at all, so don't quote a price for it.
+    const field = coverField(cat);
+    if (field && el.maxSumAssured != null && prof[field] > el.maxSumAssured) {
+      blockers.push(`${field === 'sumAssured' ? 'Maximum sum assured' : 'Maximum cover'} is ${npr(el.maxSumAssured)}`);
+    }
+    const eligible = !blockers.length;
+    notes.unshift(...blockers);
 
     let annual = null, basis = '';
     switch (pr.model) {

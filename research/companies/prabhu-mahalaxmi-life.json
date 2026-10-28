@@ -142,14 +142,13 @@
       "companyId": "prabhu-mahalaxmi-life",
       "name": "Mahalaxmi Term Life Insurance",
       "category": "term-life",
-      "summary": "Term cover for your family with a small bonus on top.",
+      "summary": "Term cover that pays your family if you die during the chosen term.",
       "features": [
-        "Bonus NPR 45-52 per 1,000 depending on term",
-        "Death cover over the chosen term"
+        "Death cover over the chosen term",
+        "Terms from 10 to 30 years"
       ],
       "benefits": [
-        "Death benefit: sum assured plus bonus",
-        "Maturity benefit with bonus"
+        "Death benefit: sum assured paid to your nominee"
       ],
       "exclusions": [
         "Suicide within the first policy year",
@@ -179,9 +178,8 @@
         "referenceTerm": 20
       },
       "taxBenefit": true,
-      "bonusRatePer1000": 45,
       "bestFor": [
-        "People wanting protection with some return"
+        "Families who want high cover for a low premium"
       ],
       "sourceUrl": "https://en.beemapost.com/2025/04/7736/",
       "dataConfidence": "estimated"

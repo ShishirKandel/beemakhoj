@@ -40,6 +40,8 @@ for (const f of fs.readdirSync(dir).filter((f) => f.endsWith('.json')).sort()) {
     if (!pricingOk(p.pricing)) why.push('bad pricing');
     if (!p.name) why.push('no name');
     if (why.length) { problems.push(`${f}: policy ${p.id || '?'} dropped — ${why.join(', ')}`); continue; }
+    // Pure term cover is non-participating; a bonus here means the record is mislabelled or mixed up.
+    if (p.category === 'term-life' && p.bonusRatePer1000) problems.push(`${f}: policy ${p.id} is term-life but has a bonus rate — check the category`);
     seenPolicy.add(p.id);
     p.features = p.features || []; p.benefits = p.benefits || []; p.exclusions = p.exclusions || []; p.riders = p.riders || []; p.bestFor = p.bestFor || [];
     p.eligibility = p.eligibility || {};
