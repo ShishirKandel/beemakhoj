@@ -15,6 +15,8 @@
 
   const csrNum = (co) => { let v = co && co.claimSettlementRatio; v = typeof v === 'string' ? Number(v) : v; return typeof v === 'number' && isFinite(v) ? v : null; };
   const catCompanies = (cat) => [...new Set(E.policiesFor(cat.id).map((p) => p.companyId))].map((id) => E.company(id)).filter(Boolean);
+  // The "verified only" filter is offered only where it can return something.
+  const hasVerified = (cat) => E.policiesFor(cat.id).some((p) => p.dataConfidence === 'verified');
   const sortAvailable = (cat, key) => (key === 'bonus' ? isLife(cat) : key === 'claims' ? catCompanies(cat).some((c) => csrNum(c) != null) : true);
 
   function parseState(cat, q) {
@@ -32,7 +34,7 @@
       sort: SORTS.some((s) => s[0] === q.sort) && sortAvailable(cat, q.sort) ? q.sort : 'recommended',
       ins: q.ins ? q.ins.split(',').filter(Boolean) : [],
       hideOver: q.hideOver === '1',
-      verified: q.verified === '1',
+      verified: q.verified === '1' && hasVerified(cat),
     };
   }
 
@@ -231,7 +233,7 @@
               <fieldset>${railLegend('Refine')}
                 <div class="grid">
                   ${checkRow(`<input type="checkbox" id="f-over" class="mt-[2px] h-4 w-4" ${st.hideOver ? 'checked' : ''}><span>Hide policies over my budget</span>`)}
-                  ${checkRow(`<input type="checkbox" id="f-ver" class="mt-[2px] h-4 w-4" ${st.verified ? 'checked' : ''}><span>Show only verified data</span>`)}
+                  ${hasVerified(cat) ? checkRow(`<input type="checkbox" id="f-ver" class="mt-[2px] h-4 w-4" ${st.verified ? 'checked' : ''}><span>Show only verified data</span>`) : ''}
                 </div>
               </fieldset>
               <fieldset>${railLegend('Insurer')}
@@ -315,7 +317,7 @@
         if (reset) reset.addEventListener('click', () => {
           st.ins = []; st.hideOver = false; st.verified = false; delete st.profile.coverType;
           root.querySelectorAll('input[name=f-ins]').forEach((c) => { c.checked = false; });
-          $('#f-over').checked = false; $('#f-ver').checked = false;
+          $('#f-over').checked = false; if ($('#f-ver')) $('#f-ver').checked = false;
           const any = root.querySelector('input[name=f-ct][value=any]'); if (any) any.checked = true;
           syncUrl(); update();
         });
@@ -330,7 +332,7 @@
       root.querySelectorAll('input[name=f-period]').forEach((r) => r.addEventListener('change', () => { st.period = r.value; update(); }));
       $('#f-sort').addEventListener('change', (e) => { st.sort = e.target.value; update(); });
       $('#f-over').addEventListener('change', (e) => { st.hideOver = e.target.checked; update(); });
-      $('#f-ver').addEventListener('change', (e) => { st.verified = e.target.checked; update(); });
+      if ($('#f-ver')) $('#f-ver').addEventListener('change', (e) => { st.verified = e.target.checked; update(); });
       root.querySelectorAll('input[name=f-ct]').forEach((r) => r.addEventListener('change', () => { st.profile.coverType = r.value; update(); }));
       root.querySelectorAll('input[name=f-ins]').forEach((c) => c.addEventListener('change', () => {
         st.ins = [...root.querySelectorAll('input[name=f-ins]:checked')].map((x) => x.value); update();

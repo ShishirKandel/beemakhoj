@@ -114,7 +114,13 @@
     // Term cover pays out only on death, so a maturity-bonus badge would contradict the example. Keep the other two.
     const badges = E.badges(list);
     const badgeFor = (id) => (badges[id] || []).find((b) => !/bonus/i.test(b));
-    const rows = list.slice(0, 3);
+    // Three plans at different prices so the example shows a real spread; placeholder-named plans are left out.
+    const rows = [];
+    for (const r of list) {
+      if (rows.length === 3) break;
+      if (/\(indicative\)/i.test(r.policy.name) || rows.some((x) => x.est.monthly === r.est.monthly)) continue;
+      rows.push(r);
+    }
     const href = '#/results/' + PREVIEW.cat + '?' + new URLSearchParams(PREVIEW.profile).toString();
     const p = PREVIEW.profile;
     return `<aside class="panel-float p-6 sm:p-8" aria-labelledby="hv-pv-h">
@@ -139,7 +145,7 @@
           </a></li>`;
         }).join('')}
       </ol>
-      <p class="mt-4 text-[13px] leading-relaxed text-ink-mute">A live estimate from our data, in our recommended order. Your own age, cover and term will change these figures.</p>
+      <p class="mt-4 text-[13px] leading-relaxed text-ink-mute">A live estimate from our data: three plans at different prices, in our recommended order. Your own age, cover and term will change these figures.</p>
       <a href="${esc(href)}" class="mt-2 -mb-2 inline-flex items-center gap-1.5 min-h-[44px] text-[15px] font-semibold text-ink underline-offset-4 hover:underline">See all ${esc(String(list.length))} plans ${UI.icon('arrow-right', 'w-4 h-4')}</a>
     </aside>`;
   }
