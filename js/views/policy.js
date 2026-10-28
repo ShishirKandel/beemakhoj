@@ -1,4 +1,5 @@
-/* Policy detail view: #/policy/:id  (profile keys may be in the query string) */
+/* Policy detail view: #/policy/:id  (profile keys may be in the query string)
+ * v2 "calm & elegant": mist header, white two-column body with a sticky premium card, similar policies on mist. */
 (function () {
   const E = window.Engine, UI = window.UI;
   const esc = UI.esc;
@@ -19,6 +20,8 @@
   const isUrl = (u) => typeof u === 'string' && /^https?:\/\//i.test(u);
   const arr = (a) => (Array.isArray(a) ? a.filter((x) => x != null && String(x).trim() !== '') : []);
   const has = (v) => v !== undefined && v !== null && v !== '';
+  const WRAP = 'max-w-page mx-auto px-5 sm:px-8';
+  const LINK = 'link-inline';
 
   function profileFrom(src) {
     const prof = {};
@@ -57,51 +60,61 @@
     return '';
   };
 
+  // ---------- building blocks ----------
   function list(items, icon, tone) {
-    return `<ul class="mt-3 grid gap-2">${items.map((t) => `<li class="flex gap-2.5 text-ink-soft">${UI.icon(icon || 'check', 'w-5 h-5 shrink-0 mt-0.5 ' + (tone || 'text-pine'))}<span>${esc(t)}</span></li>`).join('')}</ul>`;
+    return `<ul class="mt-5 grid gap-3.5">${items.map((t) => `<li class="flex gap-3 text-[16px] leading-relaxed text-ink-soft">${UI.icon(icon || 'check', 'w-5 h-5 shrink-0 mt-[3px] ' + (tone || 'text-pine'))}<span>${esc(t)}</span></li>`).join('')}</ul>`;
   }
-  function section(title, body, id) {
-    return `<section class="py-6 border-t border-line first:border-t-0 first:pt-0"${id ? ` id="${id}"` : ''}><h2 class="font-display text-xl font-bold">${esc(title)}</h2>${body}</section>`;
+  // note is trusted markup (already escaped / static text).
+  function section(title, body, id, note) {
+    return `<section class="mt-12 first:mt-0 sm:mt-14"${id ? ` id="${id}"` : ''}><h2 class="text-[22px] font-semibold tracking-tight text-ink">${esc(title)}</h2>${note ? `<p class="mt-2 max-w-[62ch] text-[15px] leading-relaxed text-ink-mute">${note}</p>` : ''}${body}</section>`;
   }
 
   function premiumInner(p, profile) {
     const est = E.estimate(p, profile);
+    const big = 'text-[36px] leading-none font-semibold tabular-nums tracking-tight text-ink';
     let main;
     if (est.annual == null) {
-      main = `<p class="font-display text-2xl font-bold">Price on request</p><p class="mt-1 text-sm text-ink-soft">The insurer has not published a price we can estimate. Ask for a quote.</p>`;
+      main = `<p class="text-[28px] leading-tight font-semibold tracking-tight text-ink">Price on request</p><p class="mt-2 text-[15px] leading-relaxed text-ink-soft">The insurer has not published a price we can estimate. Ask for a quote.</p>`;
     } else if (est.perTrip) {
-      main = `<p class="text-sm text-ink-mute">Est. for this trip</p><p class="font-display text-4xl font-extrabold leading-tight">${E.npr(est.annual)}</p><p class="text-sm text-ink-soft">one-off, not per year</p>`;
+      main = `<p class="flex flex-wrap items-baseline gap-x-2 gap-y-1"><span class="${big}">${E.npr(est.annual)}</span><span class="text-[15px] text-ink-mute">for this trip</span></p><p class="mt-3 text-[14px] text-ink-mute">One-off, not per year</p>`;
     } else {
-      main = `<p class="text-sm text-ink-mute">Est. what you pay</p><p class="font-display text-4xl font-extrabold leading-tight">${E.npr(est.monthly)}<span class="text-base font-semibold text-ink-mute">/month</span></p><p class="text-ink-soft">${E.npr(est.annual)}<span class="text-sm text-ink-mute">/year</span></p>`;
+      main = `<p class="flex flex-wrap items-baseline gap-x-1.5 gap-y-1"><span class="${big}">${E.npr(est.monthly)}</span><span class="text-[15px] text-ink-mute">/month</span></p><p class="mt-3 text-[14px] text-ink-mute tabular-nums">${E.npr(est.annual)} a year</p>`;
     }
-    const warn = !est.eligible ? `<p class="mt-3 rounded-lg bg-marigold-tint text-[#7C4A03] px-3 py-2 text-sm" role="alert">With these details you may not be able to buy this policy. See the notes below.</p>` : '';
-    const notes = est.notes.length ? `<ul class="mt-3 grid gap-1.5 text-sm text-ink-soft">${est.notes.map((n) => `<li class="flex gap-2">${UI.icon('info', 'w-4 h-4 shrink-0 mt-0.5 text-ink-mute')}<span>${esc(n)}</span></li>`).join('')}</ul>` : '';
-    const basis = est.basis ? `<p class="mt-3 text-xs text-ink-mute">Based on ${esc(est.basis)}.</p>` : '';
+    const warn = !est.eligible ? `<p class="mt-4 flex gap-2.5 rounded-xl bg-mist px-3.5 py-3 text-[14px] leading-snug text-ink" role="alert">${UI.icon('alert-circle', 'w-4 h-4 shrink-0 mt-0.5 text-ink-soft')}<span>With these details you may not be able to buy this policy. See the notes below.</span></p>` : '';
+    const notes = est.notes.length ? `<ul class="mt-4 grid gap-2 text-[14px] leading-snug text-ink-soft">${est.notes.map((n) => `<li class="flex gap-2.5">${UI.icon('info', 'w-4 h-4 shrink-0 mt-0.5 text-ink-mute')}<span>${esc(n)}</span></li>`).join('')}</ul>` : '';
+    const basis = est.basis ? `<p class="mt-4 text-[13px] leading-relaxed text-ink-mute">Based on ${esc(est.basis)}.</p>` : '';
     return `${main}${warn}${notes}${basis}`;
   }
 
+  // Short fields (age, term, trip length) pair up two to a row; the money / engine fields get a full row.
   function recalcForm(p, profile) {
     const cat = E.category(p.category) || { fields: [], group: '' };
     const f = fullProfile(p, profile);
     const fields = cat.fields || [];
     const am = AMOUNT[cat.group];
-    const input = (key, label, val, o) => `<label class="field"><span>${esc(label)}</span><input type="number" inputmode="numeric" name="${key}" value="${esc(val)}" min="${o.min}" ${o.max ? `max="${o.max}"` : ''} step="${o.step}" /></label>`;
-    let h = '';
-    if (fields.includes('age')) h += input('age', 'Your age', f.age, { min: 0, max: 80, step: 1 });
-    if (am && fields.includes(am.key)) h += input(am.key, am.label, f[am.key], am);
-    if (fields.includes('cc')) h += input('cc', 'Engine size (cc)', f.cc, { min: 50, max: 6000, step: 25 });
-    if (fields.includes('term')) h += input('term', cat.id === 'foreign-employment' ? 'Contract length (years)' : 'Policy term (years)', f.term, { min: 1, max: 60, step: 1 });
-    return h;
+    const input = (key, label, val, o) => ({ short: !!o.short, html: (span) => `<label class="field ${span}"><span>${esc(label)}</span><input type="number" inputmode="numeric" name="${key}" value="${esc(val)}" min="${o.min}" ${o.max ? `max="${o.max}"` : ''} step="${o.step}" /></label>` });
+    const shorts = [], longs = [];
+    if (fields.includes('age')) shorts.push(input('age', 'Your age', f.age, { min: 0, max: 80, step: 1, short: true }));
+    if (fields.includes('term')) shorts.push(input('term', cat.id === 'foreign-employment' ? 'Contract (years)' : 'Term (years)', f.term, { min: 1, max: 60, step: 1, short: true }));
+    if (am && fields.includes(am.key)) (am.key === 'tripDays' ? shorts : longs).push(input(am.key, am.key === 'tripDays' ? 'Trip (days)' : am.label, f[am.key], Object.assign({ short: am.key === 'tripDays' }, am)));
+    if (fields.includes('cc')) longs.push(input('cc', 'Engine size (cc)', f.cc, { min: 50, max: 6000, step: 25 }));
+    const oddShort = shorts.length % 2 === 1;
+    return shorts.map((s, i) => s.html(oddShort && i === shorts.length - 1 ? 'col-span-2' : 'col-span-1')).join('') + longs.map((l) => l.html('col-span-2')).join('');
   }
 
   function breadcrumb(p, cat, co) {
-    const sep = `<span aria-hidden="true" class="mx-1.5 text-ink-mute">/</span>`;
-    const a = (href, t) => `<a class="hover:text-ink underline-offset-2 hover:underline" href="${href}">${esc(t)}</a>`;
-    return `<nav aria-label="Breadcrumb" class="text-sm text-ink-mute">${a('#/', 'Home')}${sep}${cat ? a('#/results/' + cat.id, cat.label) + sep : ''}${co ? a('#/company/' + co.id, co.shortName || co.name) + sep : ''}<span aria-current="page" class="text-ink-soft">${esc(p.name)}</span></nav>`;
+    const trail = [['#/', 'Home']];
+    if (cat) trail.push(['#/results/' + cat.id, cat.label]);
+    if (co) trail.push(['#/company/' + co.id, co.shortName || co.name]);
+    return UI.breadcrumb(trail, p.name);
   }
 
   function notFound() {
-    return `<div class="max-w-page mx-auto px-4 sm:px-6 py-16"><h1 class="font-display text-3xl font-bold">We could not find that policy</h1><p class="mt-3 max-w-xl text-ink-soft">The link may be old, or the policy may have been renamed. Start from what you want to protect and we will show you the policies that match.</p><div class="mt-6 flex flex-wrap gap-3"><a class="btn btn-primary" href="#/">Find a policy</a><a class="btn btn-ghost" href="#/companies">Browse insurers</a></div></div>`;
+    return UI.notFoundPage({
+      title: 'We could not find that policy',
+      body: 'The link may be old, or the policy may have been renamed. Start from what you want to protect and we will show you the policies that match.',
+      actions: [['#/', 'Find a policy', 'primary'], ['#/companies', 'Browse insurers', 'ghost']],
+    });
   }
 
   function eligibilityRows(p) {
@@ -117,7 +130,7 @@
   function insurerBlock(co) {
     if (!co) return '';
     const rows = [];
-    const tel = (n) => `<a class="text-ink font-medium underline underline-offset-2" href="tel:${esc(String(n).replace(/[^\d+]/g, ''))}">${esc(n)}</a>`;
+    const tel = (n) => `<a class="link-inline" href="tel:${esc(String(n).replace(/[^\d+]/g, ''))}">${esc(n)}</a>`;
     if (has(co.claimSettlementRatio)) rows.push(['Claims paid', `<span${has(co.claimSettlementNote) ? ` title="${esc(co.claimSettlementNote)}"` : ''}>${esc(co.claimSettlementRatio)}% of claims settled</span>`]);
     if (has(co.established)) rows.push(['Started', esc(co.established)]);
     if (has(co.branches)) rows.push(['Branches', esc(co.branches)]);
@@ -125,20 +138,23 @@
     if (co.creditRating) rows.push(['Credit rating', esc(co.creditRating)]);
     if (co.phone) rows.push(['Phone', tel(co.phone)]);
     if (co.tollFree) rows.push(['Toll free', tel(co.tollFree)]);
-    if (isUrl(co.website)) rows.push(['Website', `<a class="text-ink font-medium underline underline-offset-2 break-all" href="${esc(co.website)}" target="_blank" rel="noopener noreferrer">${esc(co.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''))}</a>`]);
-    const csrNote = has(co.claimSettlementRatio) ? '' : `<p class="mt-3 text-sm text-ink-mute">This insurer has not published a claim settlement ratio we could verify.</p>`;
-    return section('About the insurer', `<div class="mt-3 flex items-center gap-3">${UI.avatar(co)}<div><a class="font-semibold hover:underline" href="#/company/${esc(co.id)}">${esc(co.name)}</a>${co.nameNe ? `<div class="text-sm text-ink-mute">${esc(co.nameNe)}</div>` : ''}</div></div>
-      ${co.about ? `<p class="mt-3 text-ink-soft">${esc(co.about)}</p>` : ''}
-      <dl class="mt-4 grid sm:grid-cols-2 gap-x-8">${rows.map((r) => `<div class="flex justify-between gap-4 py-2 border-b border-line text-sm"><dt class="text-ink-mute">${esc(r[0])}</dt><dd class="text-right font-medium">${r[1]}</dd></div>`).join('')}</dl>${csrNote}`);
+    if (isUrl(co.website)) rows.push(['Website', `<a class="link-inline break-all" href="${esc(co.website)}" target="_blank" rel="noopener noreferrer">${esc(co.website.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''))}</a>`]);
+    const csrNote = has(co.claimSettlementRatio) ? '' : `<p class="mt-4 text-[14px] text-ink-mute">This insurer has not published a claim settlement ratio we could verify.</p>`;
+    const facts = rows.length ? `<dl class="mt-6 grid sm:grid-cols-2 sm:gap-x-10">${rows.map((r) => `<div class="flex items-baseline justify-between gap-6 border-t border-line py-3.5 text-[15px]"><dt class="text-ink-mute">${esc(r[0])}</dt><dd class="text-right font-medium text-ink">${r[1]}</dd></div>`).join('')}</dl>` : '';
+    return section('About the insurer', `<div class="panel mt-5 p-6 sm:p-8">
+      <div class="flex items-center gap-4">${UI.avatar(co, 'w-12 h-12 text-base')}<div class="min-w-0"><a class="text-[17px] font-semibold text-ink hover:underline" href="#/company/${esc(co.id)}">${esc(co.name)}</a>${co.nameNe ? `<div class="text-[14px] text-ink-mute">${esc(co.nameNe)}</div>` : ''}</div></div>
+      ${co.about ? `<p class="mt-5 max-w-[62ch] text-[16px] leading-relaxed text-ink-soft">${esc(co.about)}</p>` : ''}
+      ${facts}${csrNote}</div>`);
   }
 
+  // Claim steps are a real sequence: numbered, joined by a hairline.
   function claimBlock(cat) {
     const ctx = (E.DATA.context || {}).claimProcess || {};
     const steps = arr(ctx[CLAIM_GROUP[cat && cat.group]]);
     if (!steps.length) {
-      return section('How to claim', `<p class="mt-3 text-ink-soft">Call the insurer as soon as something happens, keep every bill and document, and ask for a claim number in writing. If a claim is delayed or refused unfairly, you can complain to the Nepal Insurance Authority.</p>`);
+      return section('How to claim', `<p class="mt-5 max-w-[62ch] text-[16px] leading-relaxed text-ink-soft">Call the insurer as soon as something happens, keep every bill and document, and ask for a claim number in writing. If a claim is delayed or refused unfairly, you can complain to the Nepal Insurance Authority.</p>`);
     }
-    return section('How to claim', `<ol class="mt-3 grid gap-3">${steps.map((s, i) => `<li class="flex gap-3 text-ink-soft"><span class="font-display font-bold text-ink w-6 shrink-0">${i + 1}.</span><span>${esc(s)}</span></li>`).join('')}</ol>`);
+    return section('How to claim', `<ol class="mt-6">${steps.map((s, i) => `<li class="relative flex gap-4 pb-6 last:pb-0">${i < steps.length - 1 ? '<span class="absolute left-[13px] top-9 bottom-1.5 w-px bg-line-strong" aria-hidden="true"></span>' : ''}<span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-sky text-[13px] font-semibold tabular-nums text-ink">${i + 1}</span><span class="max-w-[62ch] pt-0.5 text-[16px] leading-relaxed text-ink-soft">${esc(s)}</span></li>`).join('')}</ol>`);
   }
 
   function taxBlock(p) {
@@ -150,8 +166,9 @@
       const hit = key && tb.find((t) => key.test(t.type || ''));
       if (hit && has(hit.limitNPR)) cap = ` The deduction is limited to the lower of what you pay or ${E.npr(hit.limitNPR)} a year. Limits change with each Finance Act, so confirm with the Inland Revenue Department.`;
     }
-    if (p.taxBenefit === true) return section('Tax benefit', `<p class="mt-3 text-ink-soft">Premiums on this policy may be deducted from your taxable income, which lowers your income tax if you are a salaried or business taxpayer.${esc(cap)}</p>`);
-    if (p.taxBenefit === false) return section('Tax benefit', `<p class="mt-3 text-ink-soft">We found no income-tax deduction for this policy.</p>`);
+    const para = (t) => `<p class="mt-5 max-w-[62ch] text-[16px] leading-relaxed text-ink-soft">${t}</p>`;
+    if (p.taxBenefit === true) return section('Tax benefit', para(`Premiums on this policy may be deducted from your taxable income, which lowers your income tax if you are a salaried or business taxpayer.${esc(cap)}`));
+    if (p.taxBenefit === false) return section('Tax benefit', para('We found no income-tax deduction for this policy.'));
     return '';
   }
 
@@ -161,12 +178,22 @@
     rows.sort((a, b) => (a.est.eligible === b.est.eligible ? 0 : a.est.eligible ? -1 : 1) || (a.est.annual ?? Infinity) - (b.est.annual ?? Infinity));
     const top = rows.slice(0, 3);
     if (!top.length) return '';
-    return `<section class="mt-10"><h2 class="font-display text-xl font-bold">Similar policies</h2><p class="text-sm text-ink-mute mt-1">Other ${esc(((E.category(p.category) || {}).label || '').toLowerCase())} policies, cheapest first for the same details.</p>
-      <div class="mt-4 grid gap-3 md:grid-cols-3">${top.map(({ x, est }) => {
+    const fig = 'text-[22px] font-semibold tabular-nums tracking-tight text-ink';
+    return `<section class="bg-mist" aria-labelledby="sim-h"><div class="${WRAP} py-10 sm:py-14">
+      <h2 id="sim-h" class="text-[22px] font-semibold tracking-tight text-ink">Similar policies</h2>
+      <p class="mt-2 text-[15px] text-ink-mute">Other ${esc(((E.category(p.category) || {}).label || '').toLowerCase())} policies, cheapest first for the same details.</p>
+      <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3">${top.map(({ x, est }) => {
         const co = E.company(x.companyId);
-        const price = est.annual == null ? 'Price on request' : est.perTrip ? `${E.npr(est.annual)} per trip` : `${E.npr(est.monthly)}/month`;
-        return `<a class="panel p-4 block hover:border-ink-mute" href="#/policy/${esc(x.id)}${qs ? '?' + qs : ''}"><div class="flex items-center gap-3">${UI.avatar(co)}<div class="min-w-0"><div class="font-semibold leading-tight">${esc(x.name)}</div><div class="text-sm text-ink-mute">${esc(co ? co.shortName : '')}</div></div></div><p class="mt-3 font-display font-bold text-lg">${esc(price)} <span class="text-xs font-sans font-normal text-ink-mute">est.</span></p>${est.eligible ? '' : '<p class="text-xs text-[#7C4A03] mt-1">May not suit these details</p>'}</a>`;
-      }).join('')}</div></section>`;
+        const price = est.annual == null
+          ? `<span class="text-[18px] font-semibold tracking-tight text-ink">Price on request</span>`
+          : est.perTrip
+            ? `<span class="${fig}">${E.npr(est.annual)}</span><span class="text-[13px] text-ink-mute">per trip, est.</span>`
+            : `<span class="${fig}">${E.npr(est.monthly)}</span><span class="text-[13px] text-ink-mute">/month est.</span>`;
+        return `<a class="panel block p-5 transition-colors hover:border-line-strong sm:p-6" href="#/policy/${esc(x.id)}${qs ? '?' + qs : ''}">
+          <div class="flex items-center gap-3">${UI.avatar(co, 'w-10 h-10 text-sm')}<div class="min-w-0"><div class="truncate text-[13px] text-ink-mute">${esc(co ? (co.shortName || co.name) : '')}</div><div class="text-[16px] font-semibold leading-snug text-ink">${esc(x.name)}</div></div></div>
+          <p class="mt-5 flex flex-wrap items-baseline gap-x-1.5">${price}</p>
+          ${est.eligible ? '' : '<p class="mt-2 text-[13px] text-ink-mute">May not suit these details</p>'}</a>`;
+      }).join('')}</div></div></section>`;
   }
 
   function render(params, query) {
@@ -184,53 +211,63 @@
       : p.dataConfidence === 'partial'
         ? "Some details were checked against the insurer's published documents; others are standard for this kind of policy."
         : "Details are indicative. They are based on typical terms for this kind of policy, not a full reading of the insurer's policy document.";
+    const date = fmtDate(E.DATA.builtAt);
+    const chipCls = UI.CHIP_ON_MIST;
+    const formFields = recalcForm(p, profile);
 
     const body = [
       benefits.length ? section('What you get', list(benefits, 'check')) : '',
-      features.length ? section('Features', list(features, 'sparkles')) : '',
-      riders.length ? section('Optional add-ons (riders)', `<p class="mt-1 text-sm text-ink-mute">Riders cost extra. Ask the insurer for the exact price before you add one.</p>${list(riders, 'plus')}`) : '',
-      excl.length ? section('Not covered', `<p class="mt-1 text-sm text-ink-mute">Read these before you buy. A claim for any of these can be refused.</p>${list(excl, 'x', 'text-ink-mute')}`) : '',
-      elig.length ? section('Who can buy', `<dl class="mt-3">${elig.map((r) => `<div class="flex justify-between gap-4 py-2.5 border-b border-line"><dt class="text-ink-mute">${esc(r[0])}</dt><dd class="text-right font-medium">${esc(r[1])}</dd></div>`).join('')}</dl>`) : '',
-      modes.length ? section('Payment options', `<div class="mt-3 flex flex-wrap gap-2">${modes.map((m) => UI.chip(MODE_LABEL[m] || m)).join('')}</div><p class="mt-3 text-sm text-ink-mute">Paying yearly is usually a little cheaper overall than paying monthly. Ask your insurer.</p>`) : '',
-      bonus != null ? section('Bonus', `<p class="mt-3 text-ink-soft"><strong class="text-ink">Rs ${esc(E.num(bonus))} bonus for every Rs 1,000 of cover, each year.</strong> The insurer adds this to your cover and pays it with the final amount. On Rs 10 lakh cover that is about ${esc(E.npr(bonus * 1000))} a year.</p><p class="mt-2 text-sm text-ink-mute">Bonus is declared every year by the insurer and is not guaranteed. The rate shown is the latest we found.</p>`) : '',
-      best.length ? section('Good for', list(best, 'user-check')) : '',
+      features.length ? section('Features', list(features, 'check')) : '',
+      riders.length ? section('Optional add-ons (riders)', list(riders, 'plus', 'text-ink-soft'), null, 'Riders cost extra. Ask the insurer for the exact price before you add one.') : '',
+      excl.length ? section('Not covered', list(excl, 'x', 'text-ink-mute'), null, 'Read these before you buy. A claim for any of these can be refused.') : '',
+      elig.length ? section('Who can buy', `<dl class="mt-5 divide-y divide-line border-y border-line">${elig.map((r) => `<div class="grid gap-1 py-4 sm:grid-cols-[minmax(0,15rem)_minmax(0,1fr)] sm:gap-6"><dt class="text-[15px] text-ink-mute">${esc(r[0])}</dt><dd class="font-medium text-ink">${esc(r[1])}</dd></div>`).join('')}</dl>`) : '',
+      modes.length ? section('Payment options', `<div class="mt-5 flex flex-wrap gap-2">${modes.map((m) => UI.chip(MODE_LABEL[m] || m)).join('')}</div><p class="mt-4 max-w-[62ch] text-[15px] text-ink-mute">Paying yearly is usually a little cheaper overall than paying monthly. Ask your insurer.</p>`) : '',
+      bonus != null ? section('Bonus', `<p class="mt-5 flex flex-wrap items-baseline gap-x-3 gap-y-1"><span class="text-[32px] font-semibold leading-none tabular-nums tracking-tight text-ink">Rs ${esc(E.num(bonus))}</span><span class="text-[16px] text-ink-soft">bonus for every Rs 1,000 of cover, each year</span></p><p class="mt-4 max-w-[62ch] text-[16px] leading-relaxed text-ink-soft">The insurer adds this to your cover and pays it with the final amount. On Rs 10 lakh cover that is about ${esc(E.npr(bonus * 1000))} a year.</p><p class="mt-2 max-w-[62ch] text-[14px] text-ink-mute">Bonus is declared every year by the insurer and is not guaranteed. The rate shown is the latest we found.</p>`) : '',
+      best.length ? section('Good for', list(best, 'check')) : '',
       taxBlock(p),
       insurerBlock(co),
       claimBlock(cat),
-      section('Where this information comes from', `<p class="mt-3 text-ink-soft">${esc(conf)} Always read the policy document before you pay.</p><p class="mt-2 flex flex-wrap items-center gap-2">${UI.confidence(p.dataConfidence)}${isUrl(p.sourceUrl) ? `<a class="text-ink font-medium underline underline-offset-2 break-all" href="${esc(p.sourceUrl)}" target="_blank" rel="noopener noreferrer">View the insurer's page</a>` : ''}</p>${fmtDate(E.DATA.builtAt) ? `<p class="mt-2 text-sm text-ink-mute">Data last updated ${esc(fmtDate(E.DATA.builtAt))}.</p>` : ''}`),
+      section('Where this information comes from', `<div class="callout mt-5"><p class="max-w-[62ch] text-[16px] leading-relaxed text-ink-soft">${esc(conf)} Always read the policy document before you pay.</p><div class="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2">${UI.confidence(p.dataConfidence, true)}${isUrl(p.sourceUrl) ? `<a class="inline-flex items-center gap-1.5 text-[15px] break-all ${LINK}" href="${esc(p.sourceUrl)}" target="_blank" rel="noopener noreferrer">View the insurer's page${UI.icon('arrow-up-right', 'w-4 h-4')}</a>` : ''}</div>${date ? `<p class="mt-4 text-[14px] text-ink-mute">Data last updated ${esc(date)}.</p>` : ''}</div>`),
     ].join('');
 
-    return `<div class="max-w-page mx-auto px-4 sm:px-6 pt-5 pb-16">
-      ${breadcrumb(p, cat, co)}
-      <header class="mt-5 flex gap-4 items-start">
-        ${UI.avatar(co, 'w-14 h-14 text-base')}
-        <div class="min-w-0">
-          <h1 class="font-display text-3xl sm:text-4xl font-extrabold leading-tight">${esc(p.name)}</h1>
-          ${p.nameNe ? `<p class="text-ink-mute">${esc(p.nameNe)}</p>` : ''}
-          ${co ? `<p class="mt-1"><a class="font-semibold text-ink-soft hover:underline" href="#/company/${esc(co.id)}">${esc(co.name)}</a></p>` : ''}
-          <div class="mt-2 flex flex-wrap gap-2">${cat ? UI.chip(cat.label) : ''}${UI.confidence(p.dataConfidence)}</div>
-        </div>
-      </header>
-      ${p.summary ? `<p class="mt-4 max-w-3xl text-lg text-ink-soft">${esc(p.summary)}</p>` : ''}
-      <div class="mt-8 grid lg:grid-cols-[minmax(0,1fr)_380px] gap-8 items-start">
-        <div class="order-2 lg:order-1 min-w-0">${body}</div>
-        <aside class="order-1 lg:order-2 lg:sticky lg:top-24" aria-label="Estimated premium">
-          <div class="panel p-5">
-            <div id="pol-premium" aria-live="polite">${premiumInner(p, profile)}</div>
-            <form id="pol-recalc" class="mt-5 grid gap-3 pt-5 border-t border-line" novalidate>
-              <p class="font-semibold">Change your details</p>
-              ${recalcForm(p, profile)}
-            </form>
-            <p class="mt-4 text-xs text-ink-mute">This is an estimate, not a quote. <a class="underline" href="#/about">How we estimate</a></p>
-            <div class="mt-5 grid gap-2.5">
-              <button type="button" class="btn btn-primary w-full" data-callback="${esc(p.id)}">Get a call back</button>
-              <div class="grid grid-cols-2 gap-2.5">
-                <button type="button" class="btn btn-ghost" data-compare="${esc(p.id)}" aria-pressed="false">${UI.icon('scale', 'w-4 h-4')}<span data-label>Compare</span></button>
-                <button type="button" class="btn btn-ghost" data-save="${esc(p.id)}" aria-pressed="false">${UI.icon('bookmark', 'w-4 h-4')}<span>Save</span></button>
-              </div>
+    return `<div>
+      <header class="bg-mist">
+        <div class="${WRAP} pt-6 pb-10 sm:pt-8 sm:pb-14">
+          ${breadcrumb(p, cat, co)}
+          <div class="mt-6 flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-7">
+            ${UI.avatar(co, 'w-16 h-16 sm:w-20 sm:h-20 text-xl sm:text-2xl !rounded-2xl !bg-white')}
+            <div class="min-w-0">
+              <h1 class="text-[32px] sm:text-[40px] font-semibold tracking-tight leading-[1.1] text-ink">${esc(p.name)}</h1>
+              ${p.nameNe ? `<p class="mt-2 text-[16px] text-ink-mute">${esc(p.nameNe)}</p>` : ''}
+              ${co ? `<p class="mt-3 text-[15px] text-ink-soft">Offered by <a class="${LINK}" href="#/company/${esc(co.id)}">${esc(co.name)}</a></p>` : ''}
+              <div class="mt-5 flex flex-wrap gap-2">${cat ? UI.chip(cat.label, chipCls) : ''}${UI.confidence(p.dataConfidence, true)}${p.taxBenefit === true ? UI.chip('Tax benefit', chipCls) : ''}</div>
             </div>
           </div>
-        </aside>
+          ${p.summary ? `<p class="mt-8 max-w-[62ch] text-[17px] sm:text-lg leading-relaxed text-ink-soft">${esc(p.summary)}</p>` : ''}
+        </div>
+      </header>
+      <div class="${WRAP} py-10 sm:py-14">
+        <div class="grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-16">
+          <div class="order-2 lg:order-1 min-w-0">${body}</div>
+          <aside class="order-1 lg:order-2 min-w-0 lg:sticky lg:top-24" aria-label="Estimated premium">
+            <div class="panel-float p-6">
+              <p class="text-[13px] font-medium text-ink-mute">Estimated cost</p>
+              <div id="pol-premium" aria-live="polite" class="mt-3">${premiumInner(p, profile)}</div>
+              ${formFields ? `<form id="pol-recalc" class="mt-6 border-t border-line pt-6" aria-labelledby="pol-recalc-h" novalidate>
+                <p id="pol-recalc-h" class="text-[15px] font-semibold text-ink">Change your details</p>
+                <div class="mt-4 grid grid-cols-2 gap-x-3 gap-y-4">${formFields}</div>
+              </form>` : ''}
+              <div class="mt-6 grid gap-2.5">
+                <button type="button" class="btn btn-primary w-full" data-callback="${esc(p.id)}">Get a call back</button>
+                <div class="grid grid-cols-[minmax(0,1fr)_auto] gap-2.5">
+                  <button type="button" class="btn btn-ghost btn-sm" data-compare="${esc(p.id)}" aria-pressed="false">${UI.icon('scale', 'w-4 h-4')}<span data-label>Compare</span></button>
+                  <button type="button" class="btn btn-ghost btn-sm" data-save="${esc(p.id)}" aria-pressed="false">${UI.icon('heart', 'w-4 h-4')}<span>Save</span></button>
+                </div>
+              </div>
+              <p class="mt-5 text-[13px] leading-relaxed text-ink-mute">This is an estimate, not a quote. <a class="link-inline" href="#/about">How we estimate</a></p>
+            </div>
+          </aside>
+        </div>
       </div>
       ${similar(p, profile)}
     </div>`;
